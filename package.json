@@ -39,9 +39,11 @@
 		]
 	},
 	"devDependencies": {
+		"@tailwindcss/vite": "^4.3.2",
 		"@vitejs/plugin-react": "^5.0.4",
 		"baseline-browser-mapping": "^2.10.0",
 		"sharp": "^0.34.5",
+		"tailwindcss": "^4.3.2",
 		"vite": "^7.1.10"
 	}
 }

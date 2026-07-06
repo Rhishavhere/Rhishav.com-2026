@@ -27,16 +27,16 @@
     "signature": "designed & built by yunus emre korkmaz"
   },
   "intro": {
-    "marqueeText": "• minimalism • obsession • perfectionism • aesthetics",
-    "clock": "local time"
+    "marqueeText": "• building software • obsession • engineering • agents • beauty o' maths • ai harness • aesthetics",
+    "clock": "uptime"
   },
   "music": {
-    "play": "lend an ear",
-    "pause": "tune it out"
+    "play": "hit the disc",
+    "pause": "dim it out"
   },
   "welcome": {
     "greeting": "[hey, i'm]",
-    "name": "[yunus emre korkmaz]",
+    "name": "[Rhishav Dhali]",
     "description": "i design, and i write code. what i care about is making the complex simple — and the simple meaningful.",
     "cursor": "● who is this?"
   },

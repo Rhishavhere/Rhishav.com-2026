@@ -1,0 +1,30 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+@theme {
+  --font-sans: "Outfit", system-ui, sans-serif;
+
+  --color-wb-50: var(--wb50);
+  --color-wb-100: var(--wb100);
+  --color-wb-200: var(--wb200);
+  --color-wb-300: var(--wb300);
+  --color-wb-400: var(--wb400);
+  --color-wb-500: var(--wb500);
+  --color-wb-600: var(--wb600);
+  --color-wb-700: var(--wb700);
+  --color-wb-800: var(--wb800);
+  --color-wb-900: var(--wb900);
+  --color-wb-950: var(--wb950);
+
+  --color-main-50: var(--main-color50);
+  --color-main-100: var(--main-color100);
+  --color-main-200: var(--main-color200);
+  --color-main-300: var(--main-color300);
+  --color-main-400: var(--main-color400);
+  --color-main-500: var(--main-color500);
+  --color-main-600: var(--main-color600);
+  --color-main-700: var(--main-color700);
+  --color-main-800: var(--main-color800);
+  --color-main-900: var(--main-color900);
+  --color-main-950: var(--main-color950);
+}

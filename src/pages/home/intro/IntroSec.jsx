@@ -11,33 +11,15 @@ const FAST_MULT = 3; // hover left → speed up
 const REVERSE_MULT = -1.4; // hover right → reverse
 const SMOOTH = 6; // speed transition smoothness (higher = settles faster)
 
-const prefersLightVideoLoad = () =>
-  prefersReducedMotion() ||
-  (typeof window !== "undefined" &&
-    typeof window.matchMedia === "function" &&
-    window.matchMedia("(max-width: 600px)").matches);
-
 const IntroSec = ({ active = true }) => {
   const { t } = useTranslation();
   const text = t("intro.marqueeText");
-  const reduceMotion = prefersReducedMotion();
-  const lightVideoLoad = prefersLightVideoLoad();
 
   const containerRef = useRef(null);
   const hoverRef = useRef(null);
   const whiteTrackRef = useRef(null);
   const darkTrackRef = useRef(null);
-  const videoRef = useRef(null);
   const [copies, setCopies] = useState(4);
-
-  // while the signature plays on top, don't decode/play hero video while hidden;
-  // start when it appears. on return visit (active true from the start) plays immediately.
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v || !active || reduceMotion) return;
-    const p = v.play();
-    if (p && typeof p.catch === "function") p.catch(() => {});
-  }, [active, reduceMotion]);
 
   // animation mutable state (does not trigger render)
   const anim = useRef({
@@ -147,16 +129,14 @@ const IntroSec = ({ active = true }) => {
     <div className={styles.container} ref={containerRef}>
       <IntroTopBar />
       <p className={styles.identity} aria-hidden="true">{t("welcome.name")}</p>
-      <video
-        ref={videoRef}
-        className={styles.vid}
-        src="/assets/videos/videoo.webm"
-        loop
-        muted
-        playsInline
-        preload={lightVideoLoad ? "metadata" : "auto"}
-        fetchPriority={lightVideoLoad ? "auto" : "high"}
-      />
+      <div className={styles.vid}>
+        <img
+          className={styles.vidMedia}
+          src="/assets/me/back.jpg"
+          alt=""
+          fetchPriority={active ? "high" : "auto"}
+        />
+      </div>
 
       <div className={styles.marquee_div}>
         <div className={styles.marquee_div_content}>
