@@ -6,8 +6,6 @@ import { useProjects } from "@/hooks/useProjects";
 import { useProjectCursor } from "@/hooks/useProjectCursor";
 import ProjectCard from "@/components/project-card/ProjectCard";
 import ProjectSkeleton from "@/components/project-skeleton/ProjectSkeleton";
-
-// Styles
 import styles from "./style.module.css";
 
 const WorksHomePage = () => {
@@ -34,8 +32,8 @@ const WorksHomePage = () => {
 
   if (isLoading) {
     return (
-      <div className={styles.container}>
-        <div className={styles.main}>
+      <div className="relative flex w-screen flex-col items-start gap-[10vh]">
+        <div className="grid w-screen grid-cols-4 gap-x-0 gap-y-[10vh] max-[1024px]:grid-cols-2 max-[1024px]:gap-y-[5vh] max-[600px]:grid-cols-1 max-[600px]:gap-y-[2.5vh]">
           {Array.from({ length: 6 }).map((_, index) => (
             <ProjectSkeleton key={`skeleton-${index}`} />
           ))}
@@ -46,14 +44,16 @@ const WorksHomePage = () => {
 
   if (isError)
     return (
-      <div className={styles.container}>
-        <p className={styles.error}>● {t("worksHome.error")}</p>
+      <div className="relative flex w-screen flex-col items-start gap-[10vh]">
+        <p className="px-[1vw] py-[6em] !text-[0.9em] !font-[300] text-[var(--wb500)]">
+          ● {t("worksHome.error")}
+        </p>
       </div>
     );
 
   return (
-    <div className={styles.container}>
-      <div className={styles.main}>
+    <div className="relative flex w-screen flex-col items-start gap-[10vh]">
+      <div className="grid w-screen grid-cols-4 gap-x-0 gap-y-[10vh] max-[1024px]:grid-cols-2 max-[1024px]:gap-y-[5vh] max-[600px]:grid-cols-1 max-[600px]:gap-y-[2.5vh]">
         {lastThreeWorks.map((work, index) => (
           <ProjectCard
             key={work.link}

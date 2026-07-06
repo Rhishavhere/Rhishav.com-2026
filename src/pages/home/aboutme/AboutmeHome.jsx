@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import styles from "./style.module.css";
 import { useTranslation } from "react-i18next";
 import PrimerLink from "@/ui/link/PrimerLink";
 
@@ -61,17 +60,17 @@ const AboutmeHome = () => {
   }, [t]);
 
   return (
-    <div className={styles.container}>
+    <div className="relative flex w-full select-none flex-col items-center justify-center gap-[10vh] px-[1vw] py-[20vh] max-[1024px]:gap-[5vh] max-[600px]:gap-[5vh] max-[600px]:px-[5vw] max-[600px]:py-[20vh]">
       <div
         key={i18n.language}
         ref={textRef}
-        className={styles.main}
+        className="relative w-[20em] text-center text-[1.25em] font-[200] max-[600px]:w-[75vw] max-[600px]:text-[1em]"
         data-animate
       >
         {t("aboutHome.mainText")}
       </div>
 
-      <footer ref={footerRef} className={styles.footer}>
+      <footer ref={footerRef}>
         <PrimerLink
           href="/about-me"
           buttonText={t("aboutHome.link")}

@@ -1,7 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import SignatureIntro from "@/components/signature-intro/SignatureIntro";
 import IntroSec from "./intro/IntroSec";
-import styles from "./style.module.css";
 
 const WelcomeSec = lazy(() => import("./welcome/WelcomeSec"));
 const AboutmeHome = lazy(() => import("./aboutme/AboutmeHome"));
@@ -15,8 +14,8 @@ const HomePage = () => {
   //   () => sessionStorage.getItem("animationPlayed") === "true",
   // );
 
-    // TODO: restore sessionStorage gate when intro visuals are finalized
-    const [isAnimationPlayed, setIsAnimationPlayed] = useState(false);
+  // TODO: restore sessionStorage gate when intro visuals are finalized
+  const [isAnimationPlayed, setIsAnimationPlayed] = useState(false);
 
   useEffect(() => {
     const warmHomeSections = () => {
@@ -47,15 +46,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="flex w-full flex-col items-center gap-[10vh] max-[1024px]:gap-[0vh]">
       {!isAnimationPlayed && (
         <SignatureIntro onAnimationComplete={handleAnimationComplete} />
       )}
       <IntroSec active={isAnimationPlayed} />
-      {/* mounting 6 heavy sections below (3 read layout via ScrollTrigger) while the
-          signature plays drops frames. warm prefetches chunks on idle; mount after
-          signature ends → signature and sections never on screen together; opening
-          stays smooth. */}
       {isAnimationPlayed && (
         <Suspense fallback={null}>
           <WelcomeSec />

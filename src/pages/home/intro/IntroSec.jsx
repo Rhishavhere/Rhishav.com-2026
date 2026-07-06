@@ -120,7 +120,7 @@ const IntroSec = ({ active = true }) => {
   }, []);
 
   const units = Array.from({ length: copies }, (_, i) => (
-    <span key={i} data-unit className={styles.unit}>
+    <span key={i} data-unit className="flex-none pr-[15px]">
       {text}
     </span>
   ));

@@ -15,7 +15,6 @@ const reduceMotion = () =>
 const ManifestHomePage = () => {
   const { t, i18n } = useTranslation();
 
-  // only one principle open at a time (radio semantics)
   const [activeTopic, setActiveTopic] = useState("aesthetic");
 
   const topics = t("manifest.topics", { returnObjects: true });
@@ -24,7 +23,6 @@ const ManifestHomePage = () => {
   const listRef = useRef(null);
   const rowsRef = useRef([]);
 
-  // rows enter like the rest of the page: rise + hop, staggered
   useEffect(() => {
     if (reduceMotion()) return;
     const ctx = gsap.context(() => {
@@ -45,11 +43,14 @@ const ManifestHomePage = () => {
   }, [i18n.language]);
 
   return (
-    <section className={styles.container} key={i18n.language}>
-      <div className={styles.context}>
+    <section
+      className="flex w-[98vw] items-center justify-center bg-[var(--wb50)] px-[2.5vw] py-[12vh] max-[600px]:px-[15vw] max-[600px]:py-[12vh]"
+      key={i18n.language}
+    >
+      <div className="flex w-[30vw] flex-col gap-[6vh] pt-[3vh] max-[1024px]:w-[50vw] max-[600px]:w-full max-[600px]:gap-[5vh]">
         <AnimatedSplit
           text={t("manifest.title")}
-          className={styles.title}
+          className="!text-[0.875em] !font-[200] text-[var(--wb950)] opacity-50"
           tagName="h2"
           stagger={0.012}
           duration={1.5}
@@ -58,7 +59,7 @@ const ManifestHomePage = () => {
 
         <AnimatedSplit
           text={t("manifest.desc")}
-          className={styles.desc}
+          className="!text-[1em] !font-[200] tracking-[-2.5%] text-[var(--wb950)] max-[1024px]:!text-[1.5em] max-[600px]:max-w-full max-[600px]:!text-[1.3em]"
           tagName="p"
           stagger={0.012}
           duration={1.5}
@@ -101,7 +102,7 @@ const ManifestHomePage = () => {
           })}
         </div>
 
-        <div className={styles.action}>
+        <div className="self-end">
           <PrimerLink
             href="/manifest"
             buttonText={t("manifest.button")}

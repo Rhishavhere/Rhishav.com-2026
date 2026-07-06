@@ -10,17 +10,14 @@ import ReadWash from "@/components/reveal/ReadWash";
 const ContactHomePage = () => {
   const { t } = useTranslation();
 
-  // React State (useState) fully removed — no re-renders.
-
   const contextRef = useRef(null);
-  const containerRef = useRef(null); // container where words are stamped
+  const containerRef = useRef(null);
   const wordIndexRef = useRef(0);
   const styleIndexRef = useRef(0);
   const lastSpawnRef = useRef(null);
 
   const sentencesData = t("contactHome.sentences", { returnObjects: true });
 
-  // collect CSS Module classes into an array
   const stylesArray = [
     styles.style1,
     styles.style2,
@@ -34,7 +31,6 @@ const ContactHomePage = () => {
 
   const minimumDistance = 60;
 
-  // Burst a single word at the given screen position (clientX/Y).
   const spawnWord = useCallback(
     (clientX, clientY) => {
       const context = contextRef.current;
@@ -54,7 +50,6 @@ const ContactHomePage = () => {
       const styleClass = stylesArray[styleIndexRef.current];
       styleIndexRef.current += 1;
 
-      // Write directly to the DOM to avoid React render per word.
       const span = document.createElement("span");
       span.textContent = word;
       span.className = styleClass;
@@ -94,7 +89,6 @@ const ContactHomePage = () => {
     [sentencesData],
   );
 
-  // Cursor/finger tracking: leave a trail while moving (mouse hover + touch drag).
   const handlePointerMove = useCallback(
     throttle((e) => {
       const last = lastSpawnRef.current;
@@ -108,34 +102,38 @@ const ContactHomePage = () => {
     [spawnWord],
   );
 
-  // Touch/click: on mobile without "tracking", burst a small cluster at one point.
   const handlePointerDown = useCallback(
     (e) => {
       lastSpawnRef.current = { x: e.clientX, y: e.clientY };
       const burst = e.pointerType === "touch" ? 3 : 1;
       for (let i = 0; i < burst; i++) {
-        spawnWord(e.clientX + (Math.random() * 50 - 25), e.clientY + (Math.random() * 50 - 25));
+        spawnWord(
+          e.clientX + (Math.random() * 50 - 25),
+          e.clientY + (Math.random() * 50 - 25),
+        );
       }
     },
     [spawnWord],
   );
 
   return (
-    <div className={styles.container}>
+    <div className="relative flex w-screen items-center justify-center bg-[var(--wb50)] p-[1vw]">
       <div
-        className={styles.context}
+        className="relative flex w-[98vw] items-center justify-center px-[20vw] py-[30vh] max-[1024px]:gap-[0.5em] max-[1024px]:px-[1vw] max-[1024px]:py-[30vh]"
         ref={contextRef}
         onPointerMove={handlePointerMove}
         onPointerDown={handlePointerDown}
       >
-        <div className={styles.context_div}>
-          <div className={styles.context_header}>
+        <div className="flex flex-col items-start justify-center gap-[10vh]">
+          <div>
             <ReadWash
-              className={styles.context_text}
+              className="text-[1.15em] font-[400] max-[1024px]:text-[1.5em] max-[600px]:text-[1.25em]"
               text={t("contactHome.header")}
               tagName="div"
             />
-            <div className={styles.contact_me}>{t("contactHome.subtext")}</div>
+            <div className="text-[1em] font-[200] opacity-50 max-[1024px]:text-[1.25em] max-[600px]:text-[1.15em]">
+              {t("contactHome.subtext")}
+            </div>
           </div>
           <PrimerLink
             buttonText={t("contactHome.link")}
@@ -143,8 +141,10 @@ const ContactHomePage = () => {
             random
           />
         </div>
-        {/* fixed container where words are stamped via vanilla JS */}
-        <div className={styles.sentences} ref={containerRef} />
+        <div
+          className="pointer-events-none absolute left-0 top-0 h-full w-full"
+          ref={containerRef}
+        />
       </div>
     </div>
   );

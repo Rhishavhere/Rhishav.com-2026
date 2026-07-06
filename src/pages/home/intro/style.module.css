@@ -72,11 +72,6 @@
   transform: translateX(0);
 }
 
-.unit {
-  flex: none;
-  padding-right: 15px;
-}
-
 .identity {
   position: absolute;
   bottom: 15dvh;
