@@ -1,0 +1,122 @@
+.progress {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  mix-blend-mode: difference;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.progress[data-visible="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* item: by default just a thin tick. When nav appears, enters from the left
+   in sequence (stagger); on active/hover the name slides open. */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 3px 0;
+  font: inherit;
+
+  opacity: 0;
+  transform: translateX(-12px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.6s cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.progress[data-visible="true"] .item {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: calc(var(--i, 0) * 0.06s);
+}
+
+.tick {
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+  transition:
+    width 0.55s cubic-bezier(0.9, 0, 0.1, 1),
+    opacity 0.4s ease;
+}
+
+.item:hover .tick {
+  width: 28px;
+  opacity: 0.6;
+}
+
+.item.active .tick {
+  width: 46px;
+  opacity: 1;
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  opacity: 0;
+  transform: translateX(-8px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.55s cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.item:hover .meta {
+  opacity: 0.5;
+  transform: translateX(0);
+}
+
+.item.active .meta {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.index {
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+@media screen and (max-width: 800px) {
+  .progress {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .tick,
+  .meta {
+    transition-duration: 0.2s;
+  }
+
+  .progress[data-visible="true"] .item {
+    transition-delay: 0s;
+  }
+}

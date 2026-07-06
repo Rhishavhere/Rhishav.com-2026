@@ -1,0 +1,24 @@
+.animatedText {
+  display: block;
+  line-height: 1.2;
+  white-space: initial;
+}
+
+.wordMask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+
+.word {
+  display: inline-block;
+  transform: translateY(0%);
+  will-change: transform;
+}
+
+.center {
+  text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
+}

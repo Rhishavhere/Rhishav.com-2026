@@ -1,0 +1,31 @@
+.filter_container {
+  padding-inline: 1vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.filter_btn {
+  padding: 0.375em 0.5em 0.375em 0.5em;
+  border-radius: 0.25em;
+  position: relative;
+  color: var(--wb950);
+  line-height: 1em;
+  font-size: 1em;
+  opacity: 0.5;
+  font-weight: 200;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.active {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .filter_container {
+    width: 100vw;
+  }
+}

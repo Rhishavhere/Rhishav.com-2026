@@ -1,0 +1,164 @@
+.container {
+  width: 98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wb50);
+  padding: 12vh 2.5vw;
+}
+
+/* single asymmetric layout: sentence left, index full width, action right */
+.context {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  padding-top: 3vh;
+}
+
+.title {
+  font-size: 0.875em;
+  font-weight: 200;
+  color: var(--wb950);
+  opacity: 0.5;
+}
+
+.desc {
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: -2.5%;
+  color: var(--wb950);
+}
+
+/* ---------------------------------------------------------------- */
+/*  PRINCIPLE INDEX — large type, hairline rows, accordion              */
+/* ---------------------------------------------------------------- */
+.index {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--wb100);
+}
+
+.row {
+  width: auto;
+  border-bottom: 1px solid var(--wb100);
+}
+
+.rowButton {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  padding: 0.6em 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+  color: var(--wb400);
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rowButton:not(.rowActive):hover {
+    color: var(--wb800);
+    padding-left: 0.5em;
+  }
+}
+
+.rowIndex {
+  font-size: 0.75em;
+  font-weight: 300;
+  width: 3em;
+  opacity: 0.6;
+}
+
+.rowLabel {
+  font-size: 2em;
+  font-weight: 200;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.rowActive {
+  color: var(--wb950);
+}
+
+.rowActive .rowLabel {
+  font-weight: 300;
+}
+
+.rowActive .rowIndex {
+  opacity: 1;
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+.panelOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.panelText {
+  padding: 0 0 1.5em 2.25em;
+  max-width: 44ch;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -2.5%;
+  color: var(--wb600);
+}
+
+.action {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+  .context {
+    width: 50vw;
+  }
+
+  .desc {
+    font-size: 1.5em;
+  }
+
+  .rowLabel {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 12vh 15vw;
+  }
+
+  .context {
+    width: 100%;
+    gap: 5vh;
+  }
+
+  .desc {
+    font-size: 1.3em;
+    max-width: 100%;
+  }
+
+  .rowLabel {
+    font-size: 1.4em;
+  }
+
+  .panelText {
+    padding-left: 0;
+  }
+}

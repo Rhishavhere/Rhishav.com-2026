@@ -1,0 +1,227 @@
+/* five doors: annotation top-left, doors centered in one row.
+   thin-lined panels; one opens to dark threshold, four fade to ghost. */
+.container {
+  width: 100%;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: 1vw;
+  row-gap: 7.5vh;
+  padding: 15vh 20vw;
+  background-color: var(--wb50);
+  position: relative;
+  z-index: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+.annotation {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.annotation h4 {
+  font-size: 0.875em;
+  font-weight: 200;
+  color: var(--wb950);
+  opacity: 0.5;
+}
+
+.annotation p {
+  font-size: 0.925em;
+  line-height: 1.2;
+  font-weight: 300;
+  color: var(--wb600);
+}
+
+.stage {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.75vh;
+}
+
+.choiceGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+
+.stage_line {
+  font-size: 0.925em;
+  font-weight: 300;
+  color: var(--wb500);
+}
+
+.doors {
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25em;
+  will-change: transform, opacity;
+}
+
+.frame {
+  position: relative;
+  perspective: 900px;
+}
+
+/* threshold visible when open: dark depth */
+.doorway {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--wb100);
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* door: thin-lined panel, hinged on the left */
+.door {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: clamp(60px, 6.5vw, 104px);
+  aspect-ratio: 1 / 2.2;
+  background-color: var(--wb50);
+  border: 1px solid var(--wb300);
+  padding: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition:
+    border-color 0.4s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* handle: small dot */
+.handle {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 50%;
+  background-color: var(--wb300);
+  transition: background-color 0.4s ease;
+}
+
+/* hover / keyboard focus: door cracks open, line darkens */
+.cell:hover .door:enabled,
+.cell:has(.door:focus-visible) .door:enabled {
+  transform: rotateY(-14deg);
+  border-color: var(--wb600);
+}
+
+.cell:hover .door:enabled .handle,
+.cell:has(.door:focus-visible) .door:enabled .handle {
+  background-color: var(--wb600);
+}
+
+/* after choice css transform must not fight gsap */
+.spent .door {
+  transition: border-color 0.4s ease;
+}
+
+/* whisper: appears on hover/focus on desktop (on mobile door opens directly) */
+.whisper {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--wb500);
+  text-align: center;
+  max-width: 16ch;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.cell:hover .whisper,
+.cell:has(.door:focus-visible) .whisper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* outcome area: height reserved from start, nothing jumps on selection */
+.outcome {
+  min-height: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25em;
+  text-align: center;
+}
+
+.sentence {
+  font-size: 1.3em;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--wb950);
+  max-width: 38ch;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.final {
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--wb400);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 10vh 10vw;
+    row-gap: 4vh;
+  }
+
+  .annotation {
+    grid-column: 1;
+  }
+
+  .doors {
+    gap: 4vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 15vh 5vw;
+  }
+
+  .doors {
+    gap: 3vw;
+  }
+
+  .door {
+    width: clamp(44px, 14vw, 70px);
+  }
+
+  .sentence {
+    font-size: 1.1em;
+  }
+}

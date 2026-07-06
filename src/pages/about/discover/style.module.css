@@ -1,0 +1,213 @@
+.container {
+  width: 100vw;
+  padding: 20vh 1vw 10vh 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+}
+
+.header {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.title {
+  font-size: 0.875em;
+  font-weight: 200;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.subtitle {
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+/*  CARD — same paper as page, hairline frame                     */
+/* ---------------------------------------------------------------- */
+.cardsGrid {
+  width: 60vw;
+  display: flex;
+  align-items: stretch;
+  gap: 1.5vw;
+}
+
+.card {
+  flex: 1;
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em;
+  background-color: var(--wb50);
+  transition: border-color 0.3s ease;
+}
+
+/* meta row: accent dot + small label */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--wb500);
+  line-height: 1;
+}
+
+.metaDot {
+  color: var(--wb500);
+  font-size: 0.875em;
+  line-height: 1;
+}
+
+/* hairline + accent line winding on top (completion signature) */
+.rule {
+  position: relative;
+  height: 1px;
+  background-color: var(--wb100);
+}
+
+.ruleAccent {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* ---------------------------------------------------------------- */
+/*  STAGE — curtain (draw) and content (discovery) swap in the same area */
+/* ---------------------------------------------------------------- */
+.stage {
+  position: relative;
+  flex: 1;
+}
+
+.curtain {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 0.25em;
+}
+
+.instruction {
+  font-size: 1.05em;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/* drawing area: dot-grid sketch paper — whisper-level */
+.field {
+  position: relative;
+  flex: 1;
+  background-image: radial-gradient(var(--wb100) 1px, transparent 2px);
+  background-size: 16px 16px;
+  background-position: center;
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  overscroll-behavior: contain;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  cursor: crosshair;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .canvas {
+    cursor: none;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/*  CONTENT (after reveal)                                          */
+/* ---------------------------------------------------------------- */
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75em;
+  padding-top: 0.25em;
+  clip-path: inset(100% 0% 0% 0%);
+}
+
+.cardTitle {
+  font-size: 1.25em;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.cardDescription {
+  font-size: 0.95em;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--wb600);
+  flex: 1;
+}
+
+/* drawing-area cursor — same language as techstack */
+.customCursor {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 0.375em 0.5em;
+  background-color: var(--wb950);
+  border-radius: 0.25em;
+  color: var(--wb50);
+  line-height: 1em;
+  white-space: nowrap;
+  font-size: 1em;
+}
+
+/* ---------------------------------------------------------------- */
+/*  RESPONSIVE                                                          */
+/* ---------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .container {
+    gap: 10vh;
+  }
+
+  .header {
+    width: 40vw;
+  }
+
+  .cardsGrid {
+    width: 92vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    width: 75vw;
+  }
+
+  .card {
+    width: 92vw;
+  }
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+}

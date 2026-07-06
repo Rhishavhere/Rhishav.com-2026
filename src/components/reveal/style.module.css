@@ -1,0 +1,28 @@
+/* shared reveal language — derived from manifest panel motion vocabulary,
+   so variety feels native to the site, not foreign. all monochrome;
+   text stays visible as-is with reduced motion. */
+
+.text {
+  display: block;
+  line-height: 1.2;
+}
+
+/* ---- LineReveal: line mask ---- */
+.lineMask {
+  display: block;
+  overflow: hidden;
+  /* don't clip descenders (g, y, p) in the mask */
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.lineInner {
+  display: block;
+  will-change: transform;
+}
+
+/* ---- BlurReveal: focus ---- */
+.blurWord {
+  display: inline-block;
+  will-change: transform, opacity;
+}

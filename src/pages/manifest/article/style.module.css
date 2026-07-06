@@ -1,0 +1,196 @@
+/* manifest detail page — in the site's own language:
+   small quiet headings (0.875em / 200 / faint), 0.925em body,
+   hairlines, links in read_more pattern. diagonal is just blocks
+   stepping slightly right; no other visual elements. */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15vh 10vw;
+  background-color: var(--wb50);
+}
+
+/* shared rail: reading column + diagonal step offset */
+.back,
+.header,
+.body,
+.footer {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.back {
+  margin-bottom: 7vh;
+}
+
+/* ---- header area ---- */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10vh;
+}
+
+/* top row: label left, page index right; hairline below */
+.meta_row {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid var(--wb100);
+}
+
+.label {
+  font-size: 0.875em;
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  color: var(--wb950);
+  opacity: 0.5;
+}
+
+.index {
+  font-size: 0.875em;
+  font-weight: 200;
+  letter-spacing: 0.08em;
+  color: var(--wb400);
+}
+
+.title {
+  font-size: 1.25em;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--wb950);
+}
+
+.lead {
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--wb950);
+  max-width: 34em;
+  margin-top: 0.75em;
+}
+
+/* ---- body: subtle diagonal ---- */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75em;
+  max-width: 32em;
+  margin-left: min(calc(var(--i, 0) * 7%), 21%);
+}
+
+.heading_row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75em;
+}
+
+.sec_index {
+  font-size: 0.75em;
+  font-weight: 200;
+  letter-spacing: 0.08em;
+  color: var(--wb400);
+}
+
+/* annotation h4 pattern: small, light, faint */
+.heading {
+  font-size: 0.875em;
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  color: var(--wb950);
+  opacity: 0.5;
+}
+
+.text {
+  font-size: 0.925em;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--wb600);
+}
+
+/* ---- quote: hairline left rail ---- */
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 30em;
+  margin-left: min(calc(var(--i, 0) * 7%), 21%);
+  padding-left: 1.25em;
+  border-left: 1px solid var(--wb950);
+}
+
+.quote_text {
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  color: var(--wb950);
+}
+
+.cite {
+  font-size: 0.8em;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--wb400);
+}
+
+/* ---- footer navigation ---- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  margin-top: 12vh;
+  padding-top: 3vh;
+  border-top: 1px solid var(--wb100);
+}
+
+/* not found state */
+.notfound {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.nf_title {
+  font-size: 1.25em;
+  font-weight: 300;
+  color: var(--wb950);
+}
+
+/* ---- narrow screen: diagonal collapses to single column ---- */
+@media screen and (max-width: 900px) {
+  .section,
+  .quote {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 18vh 6vw 12vh;
+  }
+
+  .body {
+    gap: 6vh;
+  }
+}

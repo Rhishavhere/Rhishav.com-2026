@@ -1,0 +1,25 @@
+.skeleton_wrapper {
+  pointer-events: none;
+}
+
+.skeleton_img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(
+    90deg,
+    var(--wb200) 25%,
+    var(--wb300) 50%,
+    var(--wb200) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.5s infinite;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

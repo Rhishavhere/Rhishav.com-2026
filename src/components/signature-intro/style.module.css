@@ -1,0 +1,18 @@
+/* signature moment overlay: full screen, page background (wb50), above everything.
+   particle canvas inside; IntroSec remains below as the overlay fades. */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: var(--wb50);
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,179 @@
+/* light-table-like open ground: stays within the site language (clean, paper-white),
+   background page blurs, screens pop forward like print. */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 6vw;
+
+  background-color: rgba(248, 248, 248, 0);
+  backdrop-filter: blur(0px) saturate(100%);
+  -webkit-backdrop-filter: blur(0px) saturate(100%);
+
+  opacity: 0;
+  transition:
+    opacity 0.42s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 0.42s cubic-bezier(0.25, 0.1, 0.25, 1),
+    backdrop-filter 0.42s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.overlay.active {
+  opacity: 1;
+  background-color: rgba(248, 248, 248, 0.92);
+  backdrop-filter: blur(22px) saturate(120%);
+  -webkit-backdrop-filter: blur(22px) saturate(120%);
+}
+
+.stage {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.965);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.overlay.active .stage {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* override global img rule (width/height:100%; object-fit:cover) to show the
+   image as-is, fitted to the viewport. */
+.image {
+  width: auto;
+  height: auto;
+  max-width: min(90vw, 1400px);
+  max-height: 84vh;
+  object-fit: contain;
+  box-shadow: 0 30px 80px -28px rgba(17, 17, 17, 0.3);
+  animation: imgIn 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes imgIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close,
+.nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wb950);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.55;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.close:hover,
+.nav:hover {
+  opacity: 1;
+}
+
+.close {
+  top: 5vh;
+  right: 5vw;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.counter {
+  position: fixed;
+  top: 3vh;
+  left: 3vw;
+  font-size: 0.875em;
+  font-weight: 300;
+  opacity: 0.5;
+  color: var(--wb950);
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3em;
+  height: 3em;
+  font-size: 1.25em;
+}
+
+.prev {
+  left: 2vw;
+}
+
+.next {
+  right: 2vw;
+}
+
+.prev:hover {
+  transform: translateY(-50%) translateX(-0.15em);
+}
+
+.next:hover {
+  transform: translateY(-50%) translateX(0.15em);
+}
+
+@media screen and (max-width: 600px) {
+  .overlay {
+    padding: 8vh 4vw;
+  }
+
+  .image {
+    max-width: 92vw;
+    max-height: 76vh;
+  }
+
+  .close{
+    top: 10vh;
+    right: 5vw;
+  }
+
+  .nav {
+    bottom: 3vh;
+    top: auto;
+    transform: none;
+  }
+
+  .prev {
+    left: 4vw;
+  }
+
+  .next {
+    right: 4vw;
+  }
+
+  .prev:hover,
+  .next:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .stage,
+  .close,
+  .nav {
+    transition: none;
+  }
+
+  .image {
+    animation: none;
+  }
+}

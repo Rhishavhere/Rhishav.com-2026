@@ -1,0 +1,234 @@
+/* prisoner's dilemma: one figure — two traces. each round draws a segment where
+   traces either braid together or break apart; after five rounds history is the
+   shape itself. no box, no table; same language as other panels:
+   wb50 ground, hairline weight, hop ease, quiet text buttons. */
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 18vh 15vw 12vh;
+  background-color: var(--wb50);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ---- annotation: same pattern as other sections ---- */
+.annotation {
+  max-width: 30em;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.annotation h4 {
+  font-size: 0.875em;
+  font-weight: 200;
+  color: var(--wb950);
+  opacity: 0.5;
+}
+
+.annotation p {
+  font-size: 0.925em;
+  line-height: 1.2;
+  font-weight: 300;
+  color: var(--wb600);
+}
+
+/* strategy statement: declared, so full ink */
+.annotation .strategy {
+  color: var(--wb950);
+}
+
+/* ---- stage ---- */
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5vh;
+  text-align: center;
+}
+
+/* ---- figure: two traces ---- */
+.braid {
+  width: min(58vw, 640px);
+  height: auto;
+  overflow: visible;
+  display: block;
+}
+
+.strandYou {
+  fill: none;
+  stroke: var(--wb950);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+/* me: mirror — same line, lighter ink */
+.strandMe {
+  fill: none;
+  stroke: var(--wb400);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.strandLabelMe,
+.strandLabelYou {
+  font-size: 10px;
+  font-weight: 300;
+  fill: var(--wb400);
+}
+
+.strandLabelYou {
+  fill: var(--wb950);
+}
+
+/* ---- choices: same language as "read more" button ---- */
+.choices {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.choiceBtn {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.375em 0.5em;
+  border-radius: 0.25em;
+  line-height: 1;
+  background: none;
+  border: none;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--wb950);
+  opacity: 0.5;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.choiceBtn:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.choiceBtn[data-move="c"]:hover:not(:disabled) {
+  background-color: var(--blue400);
+  color: var(--blue50);
+}
+
+.choiceBtn[data-move="d"]:hover:not(:disabled) {
+  background-color: var(--darkblue900);
+  color: var(--darkblue50);
+}
+
+.choiceBtn:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+/* ---- mask/word: same as dichotomy ---- */
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.word {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ---- verdict ---- */
+.verdict {
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.verdictText {
+  font-size: 1.05em;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--wb950);
+}
+
+.replayBtn {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.375em 0.5em;
+  border-radius: 0.25em;
+  background: none;
+  border: none;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--wb950);
+  line-height: 1;
+  opacity: 0.5;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.replayBtn:hover {
+  opacity: 1;
+  background-color: var(--purple400);
+  color: var(--wb50);
+}
+
+/* ---- hint ---- */
+.hint {
+  font-size: 0.75em;
+  font-weight: 200;
+  color: var(--wb400);
+}
+
+/* ---- screen reader only ---- */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- narrow screen ---- */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 16vh 10vw 10vh;
+  }
+
+  .braid {
+    width: 76vw;
+  }
+
+  .annotation {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 14vh 8vw 8vh;
+  }
+
+  .stage {
+    gap: 2.5vh;
+  }
+
+  .braid {
+    width: 86vw;
+  }
+}

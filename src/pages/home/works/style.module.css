@@ -1,0 +1,53 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 10vh;
+}
+
+.main {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 0;
+  row-gap: 10vh;
+}
+
+.customCursor {
+  position: fixed;
+  pointer-events: none;
+  will-change: transform;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 9999;
+  padding: 0.375em 0.5em;
+  border-radius: 0.25em;
+  background-color: var(--blue400);
+  color: var(--blue950);
+  line-height: 1em;
+  white-space: nowrap;
+  font-size: 1em;
+}
+
+/* error: in the section's quiet tone */
+.error {
+  padding: 6em 1vw;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--wb500);
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2.5vh;
+  }
+}

@@ -1,0 +1,110 @@
+/* two narrow columns: fixed title left, project list right.
+   no border — hierarchy from spacing + typography only. */
+.container {
+  width: 100%;
+  padding: 18vh 5vw;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  justify-content: center;
+  column-gap: 6vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+.title {
+  font-size: 0.875em;
+  font-weight: 200;
+  opacity: 0.5;
+  text-align: start;
+}
+
+.subtitle {
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: start;
+  max-width: 14ch;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5em;
+}
+
+.list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.rowLink {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  column-gap: 1.25em;
+  row-gap: 0.1em;
+  padding: 0.5em 0;
+  color: var(--wb950);
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.65, 0.05, 0, 1);
+}
+
+.rowLink:hover {
+  transform: translateX(0.5em);
+}
+
+.index {
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--wb400);
+  transition: color 0.4s ease;
+}
+
+.name {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* type now below the name, light — not a right-aligned column */
+.type {
+  grid-column: 2;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--wb500);
+  transition: color 0.4s ease;
+}
+
+.rowLink:hover .index,
+.rowLink:hover .type {
+  color: var(--wb700);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 12vh 20vw;
+    column-gap: 4vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* narrow screen: single column — title on top, list below */
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 3em;
+    padding: 10vh 6vw;
+  }
+
+  .subtitle {
+    max-width: none;
+  }
+}

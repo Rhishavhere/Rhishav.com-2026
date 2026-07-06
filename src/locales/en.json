@@ -1,0 +1,555 @@
+{
+  "nav": {
+    "home": "home",
+    "about": "aboutme",
+    "manifest": "manifest",
+    "projects": "projects",
+    "contact": "get in touch",
+    "contact_btn": "contact with me",
+    "menu_label": "main menu",
+    "menu_open": "open menu",
+    "menu_close": "close menu",
+    "menu_btn": "menu",
+    "close_btn": "close",
+    "language_toggle": "change language",
+    "connect": "[connect]",
+    "contact_header": "[contact]"
+  },
+  "footer": {
+    "links_header": "[links]",
+    "connect_header": "[connect]",
+    "contact_header": "[contact]",
+    "home": "home",
+    "about": "aboutme",
+    "manifest": "manifest",
+    "projects": "projects",
+    "contact_btn": "get in touch",
+    "signature": "designed & built by yunus emre korkmaz"
+  },
+  "intro": {
+    "marqueeText": "• minimalism • obsession • perfectionism • aesthetics",
+    "clock": "local time"
+  },
+  "music": {
+    "play": "lend an ear",
+    "pause": "tune it out"
+  },
+  "welcome": {
+    "greeting": "[hey, i'm]",
+    "name": "[yunus emre korkmaz]",
+    "description": "i design, and i write code. what i care about is making the complex simple — and the simple meaningful.",
+    "cursor": "● who is this?"
+  },
+  "aboutHome": {
+    "mainText": "i don't rush. i leave every line and every empty space as if it will stay for years.",
+    "link": "my story"
+  },
+  "worksHome": {
+    "cursorWords": [
+      "see more",
+      "case view",
+      "view details",
+      "open project",
+      "quick peek",
+      "discover more"
+    ],
+    "error": "couldn't load the works right now."
+  },
+  "principles": {
+    "title": "[principles]",
+    "list": [
+      "say less, tell more",
+      "simplicity is the hardest work",
+      "every detail is an intention",
+      "consistency builds trust",
+      "haste ruins the beautiful"
+    ]
+  },
+  "manifest": {
+    "title": "[thought]",
+    "desc": "an interface is born not from pixels, but from decisions. i let go of the needless and leave only meaning behind.",
+    "topics": {
+      "aesthetic": {
+        "label": "aesthetics",
+        "text": "beauty comes not from adding, but from taking away. let only what is needed remain."
+      },
+      "entropy": {
+        "label": "entropy",
+        "text": "order doesn't hold on its own; it takes effort. the moment you let go, it scatters."
+      },
+      "rationality": {
+        "label": "rationality",
+        "text": "to choose one path is to say goodbye to the others. to decide is to grow simpler."
+      }
+    },
+    "button": "read how i think"
+  },
+  "contactHome": {
+    "header": "let’s build something meaningful.",
+    "subtext": "my door is open. if you have a good idea or a problem to solve, let's talk.",
+    "link": "get in touch",
+    "sentences": [
+      "if you want",
+      "develop",
+      "a software",
+      "this is",
+      "your place",
+      "do you have",
+      "an idea?",
+      "come",
+      "let's talk",
+      "something",
+      "meaningful",
+      "let's build"
+    ]
+  },
+  "heroAbout": {
+    "title": "i trust my eye, not my hands.",
+    "content_text_1": "i catch what most skip.",
+    "content_text_2": "and i never rush it."
+  },
+  "aboutmePage": {
+    "title": "[who am i]",
+    "bio_1": "i'm yunus emre. i was studying electrical engineering and quit in my third year. i started coding, and while coding i got hooked on design.",
+    "bio_2": "then it was time for my own thing. in 2023 i started skynotech in istanbul. since then i both design and build."
+  },
+  "whatIDo": {
+    "title": "[what i do]",
+    "desc_1": "i design the interface and write its code myself. i don't see them as two separate jobs.",
+    "desc_2": "i make product interfaces, corporate sites, mobile apps. i take an idea and turn it into something that works."
+  },
+  "discover": {
+    "title": "[discover me]",
+    "subtitle": "draw the shapes below and i'll show you how i work.",
+    "discovery": "discovery",
+    "cursor": "draw",
+    "reset": "draw again?",
+    "cards": [
+      {
+        "instruction": "draw a puzzle piece",
+        "title": "i see the whole thing",
+        "description": "i look at the whole job, not the pieces. what the user needs, what the work needs, what the tech allows... i try to keep all of it in my head."
+      },
+      {
+        "instruction": "draw a pen",
+        "title": "i do both",
+        "description": "i write code with a designer's eye. i fight to keep the thing in my head from breaking on its way to the screen."
+      },
+      {
+        "instruction": "draw a checkmark",
+        "title": "i leave it solid",
+        "description": "i don't call it done until it feels right. i keep at it until it's fast and works properly."
+      }
+    ]
+  },
+  "selectedWorks": {
+    "title": "[selected works]",
+    "subtitle": "a few of the things i've made.",
+    "viewAll": "see all"
+  },
+  "techstackAbout": {
+    "title": "[what i work with]"
+  },
+  "now": {
+    "title": "[now]",
+    "subtitle": "when i look up from work.",
+    "items": [
+      "living in istanbul",
+      "drawing now and then",
+      "reading a lot, thinking a lot",
+      "daydreaming plenty",
+      "into psychology"
+    ]
+  },
+  "projects": {
+    "header_title": "[works]",
+    "header_desc": "a selection of work i've designed and built over the past years. from municipal platforms to startup products, in all of them i was after the same thing: a simple interface and a flow that eases the user's job.",
+    "filters": {
+      "all": "all",
+      "municipal": "municipal",
+      "startup": "startup",
+      "dashboard": "dashboard / admin",
+      "uiux": "ui/ux",
+      "webapp": "web apps",
+      "mobile": "mobile apps"
+    },
+    "cursor": [
+      "see more",
+      "view details",
+      "open project",
+      "quick peek",
+      "discover more"
+    ],
+    "error": "couldn't load the works right now."
+  },
+  "workSingle": {
+    "labels": {
+      "company": "[company]",
+      "role": "[role]",
+      "type": "[type]",
+      "tech": "[tech]",
+      "overview": "[overview]",
+      "challenge": "[problem]",
+      "approach": "[decisions]",
+      "impact": "[impact]",
+      "achievements": "[achievements]",
+      "conclusion": "[conclusion]",
+      "screens": "[screens]",
+      "back": "● back to works",
+      "not_found": "project not found",
+      "back_link": "← back to works",
+      "next_project": "next project"
+    },
+    "lightbox": {
+      "open": "view screen",
+      "close": "close",
+      "prev": "previous screen",
+      "next": "next screen",
+      "counter": "{{current}} / {{total}}"
+    },
+    "defaults": {
+      "role": "ui/ux designer & developer",
+      "type": "web application",
+      "tech": "react, javascript, figma",
+      "overview": "simple, clear interfaces designed for real people to use.",
+      "conclusion": "on this project what i wanted was a simple interface and a flow that eases the user's job. i worked to make it right first, then look good."
+    }
+  },
+  "manifesto": {
+    "nav": [
+      "white",
+      "entropy",
+      "pareto",
+      "observer",
+      "dichotomy",
+      "choice",
+      "loss",
+      "dilemma",
+      "remains"
+    ],
+    "read_more": "read more",
+    "article_back": "manifesto",
+    "article_next": "next",
+    "article_not_found": "concept not found",
+    "articles": {
+      "white": {
+        "label": "white",
+        "title": "the weight of white",
+        "lead": "malevich reset painting in 1918. i sit down in front of a white screen every day with the same question: what is worth carrying?",
+        "sections": [
+          {
+            "heading": "1918: the zero point of painting",
+            "body": "in white on white, kazimir malevich threw away everything a painting could lose: the object, the color, the horizon, the story. what remained was a white square, slightly tilted, on a white ground. the two whites differ only in the texture of the brush and that small angle — the last two human marks left at the edge of absence."
+          },
+          {
+            "quote": "i have broken the blue boundary of color limits, come out into the white; beside me comrade-pilots swim in this infinity.",
+            "cite": "kazimir malevich, 1919"
+          },
+          {
+            "heading": "white is not emptiness; it is light",
+            "body": "on a screen, white is not an absence the way it is on paper; it is the highest energy state, every pixel burning at full power. if i show you a white page, it is not because i am hiding something — it is because i am harnessing the light through architecture. those who mistake minimalism for giving up are wrong: the real work happens while deciding what stays."
+          },
+          {
+            "heading": "what i want you to keep",
+            "body": "to simplify is not to impoverish. malevich's square taught me this: tear through the limit and what remains is not emptiness but infinity. remove the unnecessary from an interface, a sentence, a day; what is left is not less — it is clearer."
+          }
+        ]
+      },
+      "observer": {
+        "label": "observer",
+        "title": "to look is to touch",
+        "lead": "looking is not innocent. what is measured changes because it is measured.",
+        "sections": [
+          {
+            "heading": "a photon at the double slit",
+            "body": "the most unsettling lesson of quantum physics: a photon changes its behavior when you watch which slit it passes through. what acts like a wave becomes a particle under observation. measurement is not a glance from outside; it is a touch upon the system."
+          },
+          {
+            "heading": "the user who knows they are watched",
+            "body": "the same law operates in interfaces. a user who feels watched does not behave naturally; every behavior turned into a metric bends. whatever i choose to measure, i have tilted the product in that direction. measurement is not neutral; it is a choice — and i try to make that choice on the user's behalf, not against them."
+          },
+          {
+            "heading": "what i want you to keep",
+            "body": "assume an observer while writing code, while writing words, even while living. i write clean code because i know someone will read it; even the possibility of a gaze corrects behavior. you cannot erase the observer — but you can choose which observer you live by."
+          }
+        ]
+      },
+      "entropy": {
+        "label": "entropy",
+        "title": "order is an expenditure",
+        "lead": "order is not natural. order is effort that has been paid for.",
+        "sections": [
+          {
+            "heading": "the mind is an energy machine",
+            "body": "karl friston's free energy principle says something simple but ruthless: the mind spends energy ceaselessly to minimize surprise and uncertainty. anything unexpected is an error, and the mind works to close it. the systems i build obey the same law — staying stable demands constant energy."
+          },
+          {
+            "heading": "a temporary war against chaos",
+            "body": "a flawless code architecture or a rational decision is a temporary front opened against the universe's natural chaos. entropy always returns; keeping an interface, an idea, or an order alive means continuously injecting energy against decay. the moment you cut the energy, the system reverts to its natural — that is, scattered — state."
+          },
+          {
+            "heading": "is the cost worth paying?",
+            "body": "every order is a cost, but that cost is not meaningless. what i pay for is a clarity that reduces noise, sharpens the decision, and lightens the load on the user's mind. what we call aesthetics is often that cost made visible."
+          }
+        ]
+      },
+      "pareto": {
+        "label": "pareto",
+        "title": "the curve is not kind",
+        "lead": "in 1896 vilfredo pareto noticed that a fifth of italy held four fifths of the land. the same shape keeps coming back — in wealth, in cities, in code, in attention. value is not shared; it pools.",
+        "sections": [
+          {
+            "heading": "1896: the shape that keeps returning",
+            "body": "pareto started with land, but the curve would not stay there. word frequencies, city sizes, the magnitude of earthquakes, the wealth of nations — again and again the same long tail appears: a steep head where almost everything gathers, and a vast, flat plain where almost nothing does. it is not a coincidence to be smoothed away; it is the natural geometry of how value concentrates."
+          },
+          {
+            "quote": "the vital few and the trivial many.",
+            "cite": "joseph m. juran, 1951"
+          },
+          {
+            "heading": "the average is a fiction",
+            "body": "in a power law almost nothing sits at the mean. the average user, the average outcome, the average day — they are arithmetic ghosts that rarely walk the earth. the head towers, the tail sprawls, and the middle, where the average is supposed to live, is nearly empty. to design for the average is to design for no one."
+          },
+          {
+            "heading": "what i want you to keep",
+            "body": "most of what you make is the long tail: the screen no one opens, the feature no one touches, the day no one remembers. that is not failure — it is the shape of things, and fighting it only spreads you thin. the work is not to do more. it is to find the vital few — the one screen, the one sentence, the one decision that carries the rest — and to pour yourself there."
+          }
+        ]
+      },
+      "dichotomy": {
+        "label": "dichotomy",
+        "title": "two voices, one signature",
+        "lead": "there are two voices in my head: one makes the plan, the other burns it. my job is to keep them at the same table.",
+        "sections": [
+          {
+            "heading": "a beautiful lie",
+            "body": "the story that the left brain is rational and the right brain emotional is a neurological myth; the brain does not split that way. but the myth survives because the metaphor is true: two forces really do negotiate inside us. i use this lie knowingly — even a wrong map can describe the right territory."
+          },
+          {
+            "heading": "the voice of order, the voice of chaos",
+            "body": "one draws boundaries, makes lists, cannot leave a thing unfinished. the other carries the silence of balıkesir, the anger of lost games, morning runs without a reason. for years i waited for one to defeat the other. then i realized: good work does not come from where the war ends — it comes from the front line."
+          },
+          {
+            "heading": "what i want you to keep",
+            "body": "do not treat your inner contradiction as a bug to be fixed. the rational side gives the work its form, the emotional side gives it its reason. silence either one and you are left with a soulless machine or a scattered feeling. the signature is signed by both hands."
+          }
+        ]
+      },
+      "choice": {
+        "label": "choice",
+        "title": "the doors that close",
+        "lead": "to open one door is to turn the others into walls.",
+        "sections": [
+          {
+            "heading": "the dizziness of freedom",
+            "body": "kierkegaard defined anxiety as the dizziness of freedom. what you feel at the edge of a cliff is not the fear of falling but the knowledge that you could jump. everyone standing before five doors feels the same dizziness: what frightens is not the abundance of options — it is the irreversibility of choosing."
+          },
+          {
+            "heading": "in architecture, every decision is a farewell",
+            "body": "choosing a framework, committing to a data model, saying no to a job — all of them are closing doors. in engineering we call this a trade-off, but the word is too sterile: in truth, you are saying goodbye to futures that will never be lived. before every big decision i pause; i wait for my finger to tremble. the tremble measures the weight of the decision."
+          },
+          {
+            "heading": "what i want you to keep",
+            "body": "not choosing is also a choice — the most expensive one, because time closes every door. you can come back from the wrong door; you cannot come back from the one you never opened. choose despite the dizziness. it is enough that the light behind your door is worth the darkness of the other four."
+          }
+        ]
+      },
+      "loss": {
+        "label": "loss",
+        "title": "the gravity of loss",
+        "lead": "a gain and a loss of the same size do not pull equally. loss is always twice as heavy.",
+        "sections": [
+          {
+            "heading": "kahneman's scale",
+            "body": "kahneman and tversky measured it: the pain of a loss is roughly twice as intense as the joy of an equal gain. flip a coin: win 150, lose 100. the math says play; the gut says don't. that gut is not broken — it was simply calibrated for another age."
+          },
+          {
+            "heading": "a gain is an event, a loss is a state",
+            "body": "the joy of a gain is a spike; you celebrate and return to your baseline. loss is different: the reference point itself moves down, and your old level hangs there as a ghost line you can no longer reach. the projects i deleted, the games i lost — they are all still hanging there. time does not erase that line; it only teaches you to look at it."
+          },
+          {
+            "heading": "what i want you to keep",
+            "body": "the fear of loss decides quietly: we cling to sunk costs, stay in bad jobs, cannot delete dead code. i work by accepting the asymmetry — i design for reversibility, lose small, delete early. and i never let the user suffer an irreversible loss: the undo button is not a feature, it is an act of mercy."
+          }
+        ]
+      },
+      "dilemma": {
+        "label": "dilemma",
+        "title": "the mathematics of trust",
+        "lead": "two prisoners, two separate cells, one question: will you trust the other? game theory calls it a dilemma. i see the same question on the first day of every friendship, every bond.",
+        "sections": [
+          {
+            "heading": "1950: two cells, one table",
+            "body": "the game was built at rand by merrill flood and melvin dresher; albert tucker gave it its story. two prisoners, two separate cells: talking looks like winning. since both sides know it, both talk — and both lose. mathematics calls this an equilibrium; the mind calls it a trap. and in a single hand it is even right — why open up to someone you will never see again?"
+          },
+          {
+            "quote": "the foundation of cooperation is not really trust, but the durability of the relationship.",
+            "cite": "robert axelrod, 1984"
+          },
+          {
+            "heading": "the four-line winner",
+            "body": "in 1980 axelrod ran a tournament: which strategy wins the repeated dilemma? clever programs arrived from all over the world. the winner was anatol rapoport's four-line program: open with cooperation, then repeat the other's last move. nice, retaliatory, forgiving, readable. what won wasn't brilliance; it was consistency."
+          },
+          {
+            "heading": "trusting first",
+            "body": "whoever begins open can be hurt. knowing this, i still open every first hand with trust, because nothing that begins closed ever weaves. if it isn't returned, i become a mirror — naivety is not a virtue. but i hold no grudge: the moment you come back, so do i. that is not forgetting; it is making the game possible again."
+          },
+          {
+            "heading": "what the lines say",
+            "body": "life is not a single hand; we keep meeting the same people. every meeting either weaves or breaks, and years later what remains is not the decisions but the shape itself: who you wove with, who you broke from. i don't keep score — the shape is enough. trust is built not by words, but by repetition."
+          }
+        ]
+      }
+    },
+    "header": {
+      "title": "[manifest]",
+      "desc": "i don't see design as decoration. i strip the unnecessary from an interface, a sentence, a day. what remains isn't less, it's clearer."
+    },
+    "intro": {
+      "scroll": "the ideas begin below, scroll"
+    },
+    "closing": {
+      "line": "this is all of it. and it's enough.",
+      "door": "if any of it spoke to you"
+    },
+    "white_on_white": {
+      "title": "[white on white]",
+      "question": "what does ‘white on white’ mean?",
+      "footer": "in design, light is the father of form. hiding shadows is easy; mastering light requires craft. pure white is a screen's highest energy state. i do not hide the energy; i harness it through architecture."
+    },
+    "dichotomy": {
+      "title": "[the dichotomy of mind]",
+      "desc": "one mind, two lobes. both are me.",
+      "hint": "click a side — and where they meet",
+      "left_label": "left lobe",
+      "right_label": "right lobe",
+      "left_title": "the rational side",
+      "left_desc": "this side is my order. plans, boundaries, work i can't leave unfinished. a thing is either right or wrong; the in-between tires me. no ornament here. data in, decision out.",
+      "right_title": "the emotional side",
+      "right_desc": "this side is my chaos. the silence of balıkesir, the anger of lost games, morning runs without a reason. it won't follow a plan, it won't fit a measure. but everything that makes me, me, lives here.",
+      "center_label": "human",
+      "center_desc": "not pure logic, not pure feeling. human is where the two collide."
+    },
+    "cost_of_order": {
+      "btn_label": "apply energy",
+      "title": "[the entropy of mind]",
+      "desc": "order is not a state; it is an expense. it exists while you hold, and scatters when you let go. behind every standing system, someone is paying the cost. i pay it gladly."
+    },
+    "pareto": {
+      "title": "[the tyranny of the few]",
+      "desc": "value is not shared evenly; it pools. a vital few carry almost everything, and the rest is a long, flat, forgotten tail. the whole craft is choosing which few to become.",
+      "hint": "tap to see how value really pools",
+      "even": "we expect the world to share evenly.",
+      "real": "but the few hold almost everything.",
+      "head": "the vital few",
+      "tail": "the trivial many",
+      "toggle": "reveal the distribution"
+    },
+    "observer": {
+      "title": "[the observer's power]",
+      "eye_label": "observe",
+      "desc": "the system holds all errors and all truths simultaneously until i observe it. reality is a heap of possibilities pruned by the attention of a rational observer. i don't write code; i force probabilities into a single rational output.",
+      "lines": [
+        "i came into being the moment you looked.",
+        "look away, and i return to probability.",
+        "your attention is the lens that sharpens me.",
+        "without your gaze i am only noise."
+      ]
+    },
+    "choice": {
+      "title": "[the gravity of 'yes']",
+      "desc": "choosing is the art of subtraction. every yes i say costs a thousand ghosts. that is where the weight comes from: what i carry is not the decision, but everything i gave up for it.",
+      "stage": "five doors; you may open only one.",
+      "final": "the other four you will never read.",
+      "doors": [
+        {
+          "whisper": "another city...",
+          "full": "another city, another desk — still you, still asking the same question. the place was never going to change that."
+        },
+        {
+          "whisper": "what you never did...",
+          "full": "a word you never said, a thing you never made, a chance you never took. the world won't miss any of it — only you will feel the gap where it should be."
+        },
+        {
+          "whisper": "the yes you didn't say...",
+          "full": "the yes you didn't say would have built another you, a stranger you'd still call yourself. you won't meet him."
+        },
+        {
+          "whisper": "a quieter life...",
+          "full": "a quieter life: less screen, more morning. not a worse one — one you'd have loved just as much. that's the weight."
+        },
+        {
+          "whisper": "the one who chose otherwise...",
+          "full": "somewhere a you opened every door you closed. you can't weigh your life against his, so stop keeping score."
+        }
+      ]
+    },
+    "asymmetry": {
+      "title": "[the asymmetry of loss]",
+      "desc": "losing is not the negative of gaining; it pulls twice the weight. kahneman measured it, i live it at every delete key. if i am to tear down what i built, i wait for my finger to tremble.",
+      "gain_word": "gain",
+      "loss_word": "loss",
+      "reset_label": "reset the line",
+      "build": "+ gain",
+      "destruct": "- lose"
+    },
+    "dilemma": {
+      "title": "[the prisoner's dilemma]",
+      "desc": "trust is not a feeling; it is a strategy. in a single hand, betrayal wins — but i don't play single hands with anyone. if we're sitting at the same table again, the math changes.",
+      "strategy": "my rule is simple: i trust first. i do what you do. i hold no grudge.",
+      "you_label": "[you]",
+      "me_label": "[me]",
+      "silent_btn": "trust",
+      "betray_btn": "betray",
+      "silent_word": "trusted",
+      "betray_word": "betrayed",
+      "verdict_coop": "five hands of trust. two lines braided into each other — this is what trust looks like.",
+      "verdict_mixed": "it broke here and there, yet it wove. what matters is not never breaking, but coming back.",
+      "verdict_betray": "i did what you did. what remains is not a braid — just two lonely lines, side by side.",
+      "replay": "start over",
+      "hint": "trust or betray — both lines are drawn at once"
+    }
+  },
+  "contactPage": {
+    "header": "[let's talk]",
+    "sidebar_title": "please contact me to set up an online meeting or ask any questions you have.",
+    "footer_contact": "[contact]",
+    "footer_connect": "[connect]"
+  },
+  "contactForm": {
+    "labels": {
+      "fullname": "name, surname",
+      "company": "company",
+      "email": "email",
+      "phone": "phone",
+      "subject": "subject",
+      "message": "message"
+    },
+    "placeholders": {
+      "fullname": "yunus emre korkmaz",
+      "company": "apple computer, inc.",
+      "email": "example@example.com",
+      "phone": "+90 555 555 55 55",
+      "subject": "web app, mobile app, ui/ux design",
+      "message": "describe whatever you want."
+    },
+    "button": {
+      "idle": "● let's get started",
+      "loading": "● sending"
+    },
+    "errors": {
+      "required": "this field is required.",
+      "emailInvalid": "please enter a valid email address.",
+      "phoneIncomplete": "phone number is incomplete or invalid."
+    }
+  },
+  "successBox": {
+    "title": "● message sent",
+    "text": "thank you — i’ll get back to you as soon as possible."
+  },
+  "notFound": {
+    "title": "[404]",
+    "text": "this page doesn't exist. maybe it never did.",
+    "link": "back to home"
+  }
+}

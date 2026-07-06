@@ -1,0 +1,555 @@
+{
+  "nav": {
+    "home": "ana sayfa",
+    "about": "hakkımda",
+    "manifest": "manifesto",
+    "projects": "projeler",
+    "contact": "iletişime geç",
+    "contact_btn": "benimle iletişime geç",
+    "menu_label": "ana menu",
+    "menu_open": "menuyu ac",
+    "menu_close": "menuyu kapat",
+    "menu_btn": "menü",
+    "close_btn": "kapat",
+    "language_toggle": "dili degistir",
+    "connect": "[bağlan]",
+    "contact_header": "[iletişim]"
+  },
+  "footer": {
+    "links_header": "[bağlantılar]",
+    "connect_header": "[bağlan]",
+    "contact_header": "[iletişim]",
+    "home": "ana sayfa",
+    "about": "hakkımda",
+    "manifest": "manifesto",
+    "projects": "projeler",
+    "contact_btn": "iletişime geç",
+    "signature": "yunus emre korkmaz tarafından tasarlandı ve geliştirildi"
+  },
+  "intro": {
+    "marqueeText": "• minimalizm • takıntı • mükemmelliyetçilik • estetik ",
+    "clock": "yerel saat"
+  },
+  "music": {
+    "play": "kulak ver",
+    "pause": "duymazdan gel"
+  },
+  "welcome": {
+    "greeting": "[selam, ben]",
+    "name": "[yunus emre korkmaz]",
+    "description": "tasarlarım, kod yazarım. derdim; karmaşık olanı sade, sade olanı anlamlı kılmak.",
+    "cursor": "● bu da kim?"
+  },
+  "aboutHome": {
+    "mainText": "acele etmem. her satırı, her boşluğu, yıllarca kalacakmış gibi bırakırım.",
+    "link": "benim hikayem"
+  },
+  "worksHome": {
+    "cursorWords": [
+      "daha fazla",
+      "incele",
+      "detayları gör",
+      "projeyi aç",
+      "göz at",
+      "keşfet"
+    ],
+    "error": "işler şu an yüklenemedi."
+  },
+  "principles": {
+    "title": "[ilkeler]",
+    "list": [
+      "az söyle, çok anlat",
+      "sadelik, en zor iştir",
+      "her detay bir niyettir",
+      "tutarlılık güven verir",
+      "acele, güzeli bozar"
+    ]
+  },
+  "manifest": {
+    "title": "[düşünce]",
+    "desc": "arayüz, piksellerden değil, verilen kararlardan doğar. gereksizi bırakır, geriye yalnız anlamı koyarım.",
+    "topics": {
+      "aesthetic": {
+        "label": "estetik",
+        "text": "güzellik eklemekle değil, eksiltmekle gelir. geriye yalnız gereken kalsın."
+      },
+      "entropy": {
+        "label": "entropi",
+        "text": "düzen kendiliğinden durmaz, emek ister. elini çektiğin an dağılır."
+      },
+      "rationality": {
+        "label": "rasyonalite",
+        "text": "bir yolu seçmek, ötekilere veda etmektir. karar vermek, sadeleşmektir."
+      }
+    },
+    "button": "nasıl düşündüğümü oku"
+  },
+  "contactHome": {
+    "header": "birlikte anlamlı bir şeyler inşa edelim.",
+    "subtext": "kapım açık. iyi bir fikrin ya da çözülecek bir derdin varsa, konuşalım.",
+    "link": "iletişime geç",
+    "sentences": [
+      "eğer istersen",
+      "geliştirebiliriz",
+      "bir yazılım",
+      "burası",
+      "senin yerin",
+      "bir fikrin",
+      "mi var?",
+      "gel",
+      "konuşalım",
+      "anlamlı",
+      "bir şey",
+      "kuralım"
+    ]
+  },
+  "heroAbout": {
+    "title": "elime değil, gözüme güvenirim.",
+    "content_text_1": "çoğunun atladığını fark ederim.",
+    "content_text_2": "ve asla acele etmem."
+  },
+  "aboutmePage": {
+    "title": "[ben kimim]",
+    "bio_1": "adım yunus emre. elektrik mühendisliği okuyordum, üçüncü sınıfta bıraktım. kod yazmaya başladım, yazarken de tasarıma kafayı taktım.",
+    "bio_2": "derken sıra kendi işime geldi. 2023'te istanbul'da skynotech'i kurdum. o zamandan beri hem tasarlıyorum hem yazıyorum."
+  },
+  "whatIDo": {
+    "title": "[ne yapıyorum]",
+    "desc_1": "arayüz tasarlıyorum, kodunu da ben yazıyorum. ikisini ayrı işler gibi görmüyorum.",
+    "desc_2": "ürün arayüzü, kurumsal site, mobil uygulama yapıyorum. bir fikri alıp çalışan bir şeye çeviriyorum."
+  },
+  "discover": {
+    "title": "[beni keşfet]",
+    "subtitle": "aşağıdaki şekilleri çiz, nasıl çalıştığımı anlatayım.",
+    "discovery": "keşif",
+    "cursor": "çiz",
+    "reset": "tekrar çizelim mi?",
+    "cards": [
+      {
+        "instruction": "bir yapboz parçası çiz",
+        "title": "bütünü görürüm",
+        "description": "tek tek parçalara değil, işin bütününe bakarım. kullanıcının derdi, işin hedefi, teknik gerçek... hepsini aynı kafada tutmaya çalışırım."
+      },
+      {
+        "instruction": "bir kalem çiz",
+        "title": "ikisini birden yaparım",
+        "description": "tasarımcı gözüyle kod yazarım. kafamdaki şey ekrana geçerken bozulmasın diye uğraşırım."
+      },
+      {
+        "instruction": "bir onay işareti çiz",
+        "title": "sağlam bırakırım",
+        "description": "doğru hissettirmeden işi bitmiş saymam. hızlı ve düzgün çalışana kadar uğraşırım."
+      }
+    ]
+  },
+  "selectedWorks": {
+    "title": "[seçili işler]",
+    "subtitle": "yaptıklarımdan birkaçı.",
+    "viewAll": "hepsini gör"
+  },
+  "techstackAbout": {
+    "title": "[ne ile çalışırım]"
+  },
+  "now": {
+    "title": "[şu an]",
+    "subtitle": "işten kafamı kaldırınca.",
+    "items": [
+      "istanbul'da yaşıyorum",
+      "arada resim çiziyorum",
+      "çok kitap okuyup çok düşünüyorum",
+      "bol bol hayal kuruyorum",
+      "psikolojiye meraklıyım"
+    ]
+  },
+  "projects": {
+    "header_title": "[işler]",
+    "header_desc": "son yıllarda tasarlayıp geliştirdiğim işlerden bir seçki. belediye platformlarından girişim ürünlerine kadar hepsinde aynı derde düştüm: sade bir arayüz, kullananın işini kolaylaştıran bir akış.",
+    "filters": {
+      "all": "hepsi",
+      "municipal": "belediye",
+      "startup": "girişim",
+      "dashboard": "panel / admin",
+      "uiux": "ui/ux",
+      "webapp": "web uygulamaları",
+      "mobile": "mobil uygulamalar"
+    },
+    "cursor": [
+      "incele",
+      "detaylara bak",
+      "projeyi aç",
+      "hızlıca göz at",
+      "daha fazlası"
+    ],
+    "error": "işler şu an yüklenemedi."
+  },
+  "workSingle": {
+    "labels": {
+      "company": "[şirket]",
+      "role": "[rol]",
+      "type": "[tür]",
+      "tech": "[teknoloji]",
+      "overview": "[genel bakış]",
+      "challenge": "[problem]",
+      "approach": "[kararlar]",
+      "impact": "[etki]",
+      "achievements": "[başarılar]",
+      "conclusion": "[sonuç]",
+      "screens": "[ekranlar]",
+      "back": "● işlere geri dön",
+      "not_found": "proje bulunamadı",
+      "back_link": "← işlere geri dön",
+      "next_project": "sıradaki proje"
+    },
+    "lightbox": {
+      "open": "ekranı incele",
+      "close": "kapat",
+      "prev": "önceki ekran",
+      "next": "sonraki ekran",
+      "counter": "{{current}} / {{total}}"
+    },
+    "defaults": {
+      "role": "ui/ux tasarımcısı & geliştirici",
+      "type": "web uygulaması",
+      "tech": "react, javascript, figma",
+      "overview": "gerçek insanların kullanması için tasarlanmış, sade ve anlaşılır arayüzler.",
+      "conclusion": "bu projede derdim sade bir arayüz ve kullananın işini kolaylaştıran bir akıştı. önce doğru çalışsın, sonra iyi görünsün diye uğraştım."
+    }
+  },
+  "manifesto": {
+    "nav": [
+      "beyaz",
+      "entropi",
+      "pareto",
+      "gözlemci",
+      "ikilik",
+      "seçim",
+      "kayıp",
+      "ikilem",
+      "kalan"
+    ],
+    "read_more": "devamını oku",
+    "article_back": "manifesto",
+    "article_next": "sıradaki",
+    "article_not_found": "kavram bulunamadı",
+    "articles": {
+      "white": {
+        "label": "beyaz",
+        "title": "beyazın ağırlığı",
+        "lead": "malevich 1918'de resmi sıfırladı. ben her gün beyaz bir ekranın karşısına aynı soruyla oturuyorum: ne taşımaya değer?",
+        "sections": [
+          {
+            "heading": "1918: resmin sıfır noktası",
+            "body": "kazimir malevich, beyaz üstüne beyaz'da resimden atılabilecek her şeyi attı: nesneyi, rengi, ufku, hikâyeyi. geriye beyaz bir zeminde hafifçe dönmüş beyaz bir kare kaldı. iki beyaz birbirinden yalnızca fırçanın dokusuyla ve o küçük açıyla ayrılır — yokluğun sınırına bırakılmış son iki insan izi."
+          },
+          {
+            "quote": "renk sınırlarının mavi bendini yıkıp beyaza ulaştım; yoldaş pilotlar, yüzün benimle bu sonsuzlukta.",
+            "cite": "kazimir malevich, 1919"
+          },
+          {
+            "heading": "beyaz boşluk değil, ışıktır",
+            "body": "ekranda beyaz, kâğıttaki gibi bir yokluk değildir; her pikselin tam güçte yandığı en yüksek enerji halidir. size beyaz bir sayfa gösteriyorsam bir şey gizlediğimden değil — ışığı mimariyle dizginlediğimden. minimalizmi vazgeçmek sananlar yanılıyor: asıl iş, neyin kalacağına karar verirken yapılır."
+          },
+          {
+            "heading": "size kalsın istediğim",
+            "body": "sadeleştirmek, fakirleştirmek değildir. malevich'in karesi bana şunu öğretti: sınırı yırtarsan geriye boşluk değil, sonsuzluk kalır. bir arayüzden, bir cümleden, bir günden gereksizi çıkarın; kalan şey daha az değil, daha net bir şeydir."
+          }
+        ]
+      },
+      "observer": {
+        "label": "gözlemci",
+        "title": "bakmak dokunmaktır",
+        "lead": "bakmak masum değildir. ölçülen şey, ölçüldüğü için değişir.",
+        "sections": [
+          {
+            "heading": "çift yarıkta bir foton",
+            "body": "kuantum fiziğinin en huzursuz edici dersi: foton, hangi yarıktan geçtiğine bakıldığında davranışını değiştirir. dalga gibi davranan şey, gözlem altında parçacığa döner. ölçüm dışarıdan bir bakış değildir; sisteme yapılan bir dokunuştur."
+          },
+          {
+            "heading": "izlendiğini bilen kullanıcı",
+            "body": "aynı yasa arayüzlerde de işler. izlendiğini hisseden kullanıcı doğal davranmaz; metrik haline getirilen her davranış bükülür. neyi ölçmeyi seçtiysem, ürünü o yöne eğmişim demektir. ölçüm tarafsız değildir; bir tercihtir ve ben bu tercihi kullanıcıya karşı değil, onun adına yapmaya çalışıyorum."
+          },
+          {
+            "heading": "size kalsın istediğim",
+            "body": "kod yazarken, yazı yazarken, hatta yaşarken bir gözlemci varsayın. ben kodu birinin okuyacağını bildiğim için temiz yazıyorum; bakış ihtimali bile davranışı düzeltiyor. gözlemciyi silemezsiniz — ama hangi gözlemciye göre yaşayacağınızı seçebilirsiniz."
+          }
+        ]
+      },
+      "entropy": {
+        "label": "entropi",
+        "title": "düzen bir harcamadır",
+        "lead": "düzen doğal değildir. düzen, bedeli ödenmiş bir eforttur.",
+        "sections": [
+          {
+            "heading": "zihin bir enerji makinesidir",
+            "body": "karl friston'ın serbest enerji ilkesi basit ama acımasız bir şey söyler: zihin, sürprizi ve belirsizliği en aza indirmek için durmaksızın enerji harcar. beklenmedik her şey bir hatadır ve zihin bu hatayı kapatmak için çalışır. yazdığım sistemler de aynı yasaya tabidir — kararlı kalmak sürekli enerji ister."
+          },
+          {
+            "heading": "kaosa karşı geçici bir savaş",
+            "body": "kusursuz bir kod mimarisi ya da rasyonel bir karar, evrenin doğal kaosuna açılmış geçici bir cephedir. entropi her zaman geri döner; bir arayüzü, bir fikri ya da bir düzeni ayakta tutmak, bozulmaya karşı durmadan enerji enjekte etmek demektir. enerjiyi kestiğin an, sistem doğal —yani dağınık— haline döner."
+          },
+          {
+            "heading": "bedel ödemeye değer mi?",
+            "body": "her düzen bir maliyettir, ama bu maliyet anlamsız değildir. ödediğim bedel; gürültüyü azaltan, kararı netleştiren ve kullanıcının zihnindeki yükü hafifleten bir berraklıktır. estetik dediğimiz şey, çoğu zaman bu bedelin görünür hale gelmiş halidir."
+          }
+        ]
+      },
+      "pareto": {
+        "label": "pareto",
+        "title": "eğri merhametsizdir",
+        "lead": "1896'da vilfredo pareto, italya'nın beşte birinin toprağın beşte dördünü elinde tuttuğunu fark etti. aynı şekil sürekli geri geliyor — servette, şehirlerde, kodda, dikkatte. değer paylaşılmaz; birikir.",
+        "sections": [
+          {
+            "heading": "1896: sürekli geri dönen şekil",
+            "body": "pareto toprakla başladı ama eğri orada durmadı. kelimelerin sıklığı, şehirlerin büyüklüğü, depremlerin şiddeti, ulusların serveti — defalarca aynı uzun kuyruk: neredeyse her şeyin toplandığı dik bir baş ve neredeyse hiçbir şeyin olmadığı geniş, düz bir ova. düzeltilip atılacak bir tesadüf değil; değerin nasıl yoğunlaştığının doğal geometrisi bu."
+          },
+          {
+            "quote": "hayati azınlık ve önemsiz çoğunluk.",
+            "cite": "joseph m. juran, 1951"
+          },
+          {
+            "heading": "ortalama bir kurgudur",
+            "body": "bir güç yasasında neredeyse hiçbir şey ortalamada durmaz. ortalama kullanıcı, ortalama sonuç, ortalama gün — yeryüzünde nadiren yürüyen aritmetik hayaletlerdir. baş yükselir, kuyruk yayılır, ortalamanın yaşaması gereken orta ise neredeyse boştur. ortalamaya tasarlamak, hiç kimseye tasarlamaktır."
+          },
+          {
+            "heading": "aklında kalsın istediğim",
+            "body": "yaptığın şeyin çoğu uzun kuyruktur: kimsenin açmadığı ekran, kimsenin dokunmadığı özellik, kimsenin hatırlamadığı gün. bu bir başarısızlık değil — işlerin şekli bu ve onunla savaşmak yalnızca seni inceltir. mesele daha fazlasını yapmak değil. hayati azınlığı bulmak — gerisini taşıyan o tek ekranı, o tek cümleyi, o tek kararı — ve kendini oraya dökmek."
+          }
+        ]
+      },
+      "dichotomy": {
+        "label": "ikilik",
+        "title": "iki ses, tek imza",
+        "lead": "kafamın içinde iki ses var: biri plan yapar, öteki planı yakar. işim, ikisini aynı masada tutmak.",
+        "sections": [
+          {
+            "heading": "güzel bir yalan",
+            "body": "sol beyin rasyonel, sağ beyin duygusaldır hikâyesi nörolojik olarak bir efsane; beyin böyle ikiye bölünmüyor. ama efsane yaşıyor, çünkü metafor doğru: içimizde gerçekten iki kuvvet pazarlık ediyor. ben de bu yalanı bilerek kullanıyorum — yanlış bir harita bile doğru bölgeyi anlatabilir."
+          },
+          {
+            "heading": "düzenin sesi, kaosun sesi",
+            "body": "biri sınır çizer, listeler yapar, bitmeden bırakmaz. öteki balıkesir'in sessizliğini, kaybedilen oyunların öfkesini, sebepsiz sabah koşularını taşır. yıllarca birinin diğerini yenmesini bekledim. sonra fark ettim: iyi iş, savaşın bittiği yerde değil, tam cephe hattında çıkıyor."
+          },
+          {
+            "heading": "size kalsın istediğim",
+            "body": "içinizdeki çelişkiyi çözülecek bir hata gibi görmeyin. rasyonel taraf işe formunu verir, duygusal taraf nedenini. birini susturursanız elinizde ya ruhsuz bir makine ya da dağılmış bir his kalır. imza, ikisinin ortak elidir."
+          }
+        ]
+      },
+      "choice": {
+        "label": "seçim",
+        "title": "kapanan kapılar",
+        "lead": "bir kapıyı açmak, diğerlerini duvara çevirmektir.",
+        "sections": [
+          {
+            "heading": "özgürlüğün baş dönmesi",
+            "body": "kierkegaard kaygıyı özgürlüğün baş dönmesi diye tanımlar. uçurumun kenarında hissettiğin şey düşme korkusu değil, atlayabilecek olmanın bilgisidir. beş kapının önünde duran herkes aynı baş dönmesini yaşar: korkutan, seçeneklerin çokluğu değil; seçmenin geri alınamazlığıdır."
+          },
+          {
+            "heading": "mimaride her karar bir vedadır",
+            "body": "bir framework seçmek, bir veri modeli kurmak, bir işe hayır demek — hepsi kapanan kapılardır. mühendislikte buna trade-off diyoruz ama kelime fazla steril: gerçekte, yaşanmayacak geleceklere veda ediyorsun. ben her büyük kararda biraz dururum; parmağımın titremesini beklerim. titreme, kararın ağırlığını ölçer."
+          },
+          {
+            "heading": "size kalsın istediğim",
+            "body": "seçmemek de bir seçimdir — üstelik en pahalısı, çünkü bütün kapıları zaman kapatır. yanlış kapıdan dönülür; açılmamış kapıdan dönülmez. baş dönmesine rağmen seçin. seçtiğiniz kapının ışığı, kalan dördünün karanlığını taşımaya değsin, yeter."
+          }
+        ]
+      },
+      "loss": {
+        "label": "kayıp",
+        "title": "kaybın yerçekimi",
+        "lead": "aynı büyüklükteki kazanç ve kayıp eşit çekmez. kayıp, her zaman iki kat ağırdır.",
+        "sections": [
+          {
+            "heading": "kahneman'ın terazisi",
+            "body": "kahneman ve tversky ölçtü: bir kaybın acısı, aynı büyüklükteki kazancın sevincinden yaklaşık iki kat şiddetlidir. yazı tura atalım: kazanırsan +150, kaybedersen -100. matematik oyna der, içgüdü oynama. o içgüdü bozuk değil; sadece başka bir çağa göre kalibre edilmiş."
+          },
+          {
+            "heading": "kazanç olaydır, kayıp durumdur",
+            "body": "kazancın sevinci bir sıçramadır; kutlarsın ve taban çizgine geri dönersin. kayıp öyle değil: referans noktanın kendisi aşağı taşınır ve eski seviyen, ulaşamadığın bir hayalet çizgi olarak asılı kalır. sildiğim projelerin, kaybettiğim oyunların hepsi orada duruyor. zaman o çizgiyi silmiyor; sadece bakmaya alıştırıyor."
+          },
+          {
+            "heading": "size kalsın istediğim",
+            "body": "kayıp korkusu sessizce karar veriyor: batık maliyete sarılıyoruz, kötü işte kalıyoruz, ölü kodu silemiyoruz. ben asimetriyi kabul ederek çalışıyorum — geri alınabilir tasarlıyorum, küçük kaybediyorum, erken siliyorum. ve kullanıcıya asla telafisiz bir kayıp yaşatmıyorum: geri al düğmesi bir özellik değil, bir merhamettir."
+          }
+        ]
+      },
+      "dilemma": {
+        "label": "ikilem",
+        "title": "güvenin matematiği",
+        "lead": "iki mahkum, iki ayrı hücre, tek soru: ötekine güvenecek misin? oyun teorisi buna ikilem diyor. bense aynı soruyu her dostluğun, her bağın ilk gününde görüyorum.",
+        "sections": [
+          {
+            "heading": "1950: iki hücre, bir tablo",
+            "body": "oyunu rand'da merrill flood ile melvin dresher kurdu; albert tucker ona hikâyesini verdi. iki mahkum, iki ayrı hücre: konuşan kazanır gibi görünür. iki taraf da bunu bildiği için ikisi de konuşur ve ikisi de kaybeder. matematik buna denge diyor; akıl, tuzak. tek elde haklıdır da — bir daha görmeyeceğin birine neden açılasın?"
+          },
+          {
+            "quote": "işbirliğinin temeli güven değil, ilişkinin sürmesidir.",
+            "cite": "robert axelrod, 1984"
+          },
+          {
+            "heading": "dört satırlık kazanan",
+            "body": "1980'de axelrod bir turnuva düzenledi: yinelenen ikilemde hangi strateji kazanır? dünyanın dört yanından kurnaz programlar gönderildi. kazanan, anatol rapoport'un dört satırlık programı oldu: işbirliğiyle başla, sonra karşındakinin son hamlesini tekrarla. kibar, misillemeci, affedici, okunaklı. kazandıran zekâ değildi; tutarlılıktı."
+          },
+          {
+            "heading": "önce güvenmek",
+            "body": "açık başlayan incinebilir. bunu bile bile ilk eli hep güvenle açarım, çünkü kapalı başlayan hiçbir şey örülmez. karşılığını bulamazsam aynaya dönerim — saflık erdem değildir. ama kin tutmam: sen dönersen ben de dönerim. unutmak değil bu; oyunu yeniden mümkün kılmak."
+          },
+          {
+            "heading": "izlerin söylediği",
+            "body": "hayat tek el değil; aynı insanlarla tekrar tekrar karşılaşıyoruz. her karşılaşma ya örüyor ya koparıyor ve yıllar sonra geriye kararlar değil, şeklin kendisi kalıyor: kiminle örülmüşsün, kimden kopmuşsun. skor tutmuyorum — şekil yetiyor. güven sözle değil, tekrarla kurulur."
+          }
+        ]
+      }
+    },
+    "header": {
+      "title": "[manifesto]",
+      "desc": "tasarımı süsleme sanmıyorum. bir arayüzden, bir cümleden, bir günden gereksizi çıkarıyorum. geriye kalan daha az değil, daha net oluyor."
+    },
+    "intro": {
+      "scroll": "kavramlar aşağıda, kaydır"
+    },
+    "closing": {
+      "line": "hepsi bu. ve yetiyor.",
+      "door": "sana da tanıdık geldiyse"
+    },
+    "white_on_white": {
+      "title": "[beyaz üstüne beyaz]",
+      "question": "‘beyaz üstüne beyaz’ ne anlama gelir?",
+      "footer": "tasarımda ışık, formun babasıdır. gölgeleri saklamak kolaydır, ışığı yönetmek ise ustalık ister. saf beyaz, bir ekranın en yüksek enerji seviyesidir. ben enerjiyi saklamıyorum, onu mimariyle dizginliyorum."
+    },
+    "dichotomy": {
+      "title": "[zihnin ikiliği]",
+      "desc": "tek zihin, iki lob. ikisi de benim.",
+      "hint": "iki tarafa, bir de kesişime tıkla",
+      "left_label": "sol lob",
+      "right_label": "sağ lob",
+      "left_title": "rasyonel taraf",
+      "left_desc": "bu taraf benim düzenim. planlar, sınırlar, bitmeden bırakamadığım işler. bir şey ya doğrudur ya yanlıştır; arası beni yorar. burada süs yok. veri girer, karar çıkar.",
+      "right_title": "duygusal taraf",
+      "right_desc": "bu taraf benim kaosum. balıkesir'in sessizliği, kaybettiğim oyunların öfkesi, sebepsiz sabah koşuları. plana gelmez, ölçüye sığmaz. ama beni ben yapan ne varsa burada duruyor.",
+      "center_label": "insan",
+      "center_desc": "ne salt mantık, ne salt his. insan, ikisinin çakıştığı yer."
+    },
+    "cost_of_order": {
+      "btn_label": "enerji uygula",
+      "title": "[zihnin entropisi]",
+      "desc": "düzen bir durum değil, bir harcamadır. bastığın sürece var, bıraktığın an dağılır. ayakta duran her sistemin arkasında bedeli ödeyen biri vardır. ben o bedeli severek öderim."
+    },
+    "pareto": {
+      "title": "[azınlığın tiranlığı]",
+      "desc": "değer eşit paylaşılmaz; birikir. hayati bir azınlık neredeyse her şeyi taşır, gerisi uzun, düz, unutulmuş bir kuyruktur. bütün zanaat, hangi azınlık olacağını seçmektir.",
+      "hint": "değerin nasıl biriktiğini görmek için dokun",
+      "even": "dünyanın eşit paylaşmasını bekleriz.",
+      "real": "ama azınlık neredeyse her şeyi tutar.",
+      "head": "hayati azınlık",
+      "tail": "önemsiz çoğunluk",
+      "toggle": "dağılımı göster"
+    },
+    "observer": {
+      "title": "[gözlemcinin gücü]",
+      "eye_label": "gözlemle",
+      "desc": "sistem, ben ona bakmadığım sürece tüm hataları ve tüm doğruları aynı anda barındırır. gerçeklik, rasyonel bir gözlemcinin dikkatiyle budanmış bir olasılıklar yığınıdır. ben kod yazmıyorum; ben ihtimalleri tek bir rasyonel çıktıya zorluyorum.",
+      "lines": [
+        "bana baktığın an var oldum.",
+        "gözünü ayırdığında olasılığa dönerim.",
+        "dikkatin, beni nete çeken mercek.",
+        "bakışın yoksa ben sadece gürültüyüm."
+      ]
+    },
+    "choice": {
+      "title": "[evet'in yerçekimi]",
+      "desc": "seçmek, eksiltme sanatıdır. evet dediğim her şey, binlerce hayalete mal olur. ağırlığı buradan gelir: taşıdığım şey karar değil, uğruna vazgeçtiklerimdir.",
+      "stage": "beş kapı; yalnız birini açabilirsin.",
+      "final": "kalan dördünü hiç okumayacaksın.",
+      "doors": [
+        {
+          "whisper": "başka bir şehir...",
+          "full": "başka bir şehir, başka bir masa — yine sen, yine aynı soruyu soruyorsun. kapı seni değiştirecek şey hiç değildi."
+        },
+        {
+          "whisper": "hiç yapmadığın şey...",
+          "full": "söylemediğin bir söz, yapmadığın bir şey, denemediğin bir şans. dünya hiçbirini özlemez — eksikliğini yalnız sen hissedersin."
+        },
+        {
+          "whisper": "demediğin o 'evet'...",
+          "full": "demediğin o evet başka bir seni kurardı; yine kendin diyeceğin bir yabancıyı. onunla tanışmayacaksın."
+        },
+        {
+          "whisper": "daha sessiz bir hayat...",
+          "full": "daha sessiz bir hayat: az ekran, çok sabah. daha kötüsü değil — onu da en az bu kadar severdin. ağırlık tam burada."
+        },
+        {
+          "whisper": "tersini seçen o kişi...",
+          "full": "bir yerlerde, kapadığın her kapıyı açan bir sen var. hayatını onunkiyle tartamazsın, bırak hesap tutmayı."
+        }
+      ]
+    },
+    "asymmetry": {
+      "title": "[kayıp asimetrisi]",
+      "desc": "kaybetmek, kazanmanın negatifi değildir; ağırlığı iki kat çeker. kahneman bunu ölçtü, ben her silme tuşunda yaşıyorum. kurduğum şeyi yıkacaksam, parmağımın titremesini beklerim.",
+      "build": "+ kazan",
+      "destruct": "- kaybet",
+      "gain_word": "kazanç",
+      "loss_word": "kayıp",
+      "reset_label": "çizgiyi sıfırla"
+    },
+    "dilemma": {
+      "title": "[mahkumun ikilemi]",
+      "desc": "güven bir his değil, bir stratejidir. tek elde kazanan ihanettir; ama ben kimseyle tek el oynamam. aynı masaya yeniden oturulacaksa, hesap değişir.",
+      "strategy": "kuralım basit: önce güvenirim. ne yaparsan onu yaparım. kin tutmam.",
+      "you_label": "[sen]",
+      "me_label": "[ben]",
+      "silent_btn": "güven",
+      "betray_btn": "ihanet et",
+      "silent_word": "güvendi",
+      "betray_word": "ihanet etti",
+      "verdict_coop": "beş el boyunca güvendik. iki iz birbirine örüldü — güven böyle görünür.",
+      "verdict_mixed": "yer yer koptu, yine de örüldü. önemli olan kopmamak değil, geri dönmek.",
+      "verdict_betray": "bana yaptığını yaptım. geriye örgü değil, yan yana iki yalnız çizgi kaldı.",
+      "replay": "baştan al",
+      "hint": "güven ya da ihanet et — iki iz aynı anda çizilir"
+    }
+  },
+  "contactPage": {
+    "header": "[hadi konuşalım]",
+    "sidebar_title": "online bir görüşme ayarlamak veya sorularınızı sormak için lütfen benimle iletişime geçin.",
+    "footer_contact": "[iletişim]",
+    "footer_connect": "[bağlan]"
+  },
+  "contactForm": {
+    "labels": {
+      "fullname": "ad, soyad",
+      "company": "şirket",
+      "email": "e-posta",
+      "phone": "telefon",
+      "subject": "konu",
+      "message": "mesaj"
+    },
+    "placeholders": {
+      "fullname": "yunus emre korkmaz",
+      "company": "apple computer, inc.",
+      "email": "ornek@mail.com",
+      "phone": "+90 555 555 55 55",
+      "subject": "web uygulaması, mobil uygulama, ui/ux tasarım",
+      "message": "istediğiniz her şeyi yazın."
+    },
+    "button": {
+      "idle": "● haydi başlayalım",
+      "loading": "● gönderiliyor"
+    },
+    "errors": {
+      "required": "bu alan zorunludur.",
+      "emailInvalid": "geçerli bir e-posta adresi giriniz.",
+      "phoneIncomplete": "telefon numarası eksik veya hatalı."
+    }
+  },
+  "successBox": {
+    "title": "● mesaj gönderildi",
+    "text": "teşekkürler — en kısa sürede size geri dönüş yapacağım."
+  },
+  "notFound": {
+    "title": "[404]",
+    "text": "böyle bir sayfa yok. belki hiç olmadı.",
+    "link": "ana sayfaya dön"
+  }
+}

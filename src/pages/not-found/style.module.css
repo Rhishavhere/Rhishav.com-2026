@@ -1,0 +1,34 @@
+.container {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  text-align: center;
+  padding: 10vh 5vw;
+}
+
+.title {
+  font-size: clamp(4rem, 16vw, 14rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--wb950);
+}
+
+.text {
+  font-weight: 300;
+  color: var(--wb500);
+}
+
+.link {
+  font-weight: 400;
+  color: var(--wb950);
+  transition: color 0.3s ease-out;
+}
+
+.link:hover {
+  color: var(--wb500);
+}

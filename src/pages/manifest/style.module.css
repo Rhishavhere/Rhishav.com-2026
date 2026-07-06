@@ -1,0 +1,6 @@
+/* note: do not use flex — a flex parent breaks the ScrollTrigger pin spacer */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}

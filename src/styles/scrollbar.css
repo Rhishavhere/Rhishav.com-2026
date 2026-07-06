@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  display: none;
+  width: 0.5em;
+  background-color: var(--wb150);
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+  background-color: var(--wb150);
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+  background-color: var(--wb950);
+}

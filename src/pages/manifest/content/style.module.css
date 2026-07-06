@@ -1,0 +1,63 @@
+.manifest {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+  will-change: transform;
+  contain: layout style paint;
+}
+
+.panel[data-active="false"] {
+  pointer-events: none;
+}
+
+.panelInner {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid var(--wb100);
+  display: grid;
+  place-items: center;
+  background-color: var(--wb50);
+}
+
+/* reduced motion: no pin or scrub, panels stack normally in document flow */
+@media (prefers-reduced-motion: reduce) {
+  .manifest {
+    height: auto;
+    overflow: visible;
+  }
+
+  .stage {
+    height: auto;
+    overflow: visible;
+  }
+
+  .panel {
+    position: relative;
+    inset: auto;
+    height: auto;
+    min-height: 100svh;
+    will-change: auto;
+  }
+}

@@ -1,0 +1,141 @@
+/* style.module.css */
+
+.container {
+  position: relative;
+  width: 100vw;
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wb50);
+}
+
+.context {
+  padding: 30vh 20vw 30vh 20vw;
+  width: 98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.context_div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10vh;
+}
+
+.context_text {
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+.contact_me {
+  font-size: 1em;
+  font-weight: 200;
+  opacity: 0.5;
+}
+
+.sentences {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sentence {
+  position: absolute;
+  white-space: nowrap;
+  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.style1,
+.style2,
+.style3,
+.style4,
+.style5,
+.style6,
+.style7,
+.style8 {
+  padding: 0.5em 0.75em;
+  border-radius: 0.375em;
+  display: flex;
+  align-items: center;
+  font-size: 0.825em;
+  gap: 1em;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.style1 {
+  background-color: var(--red500);
+  color: var(--wb50);
+}
+
+.style2 {
+  background-color: var(--pink300);
+  color: var(--wb50);
+}
+
+.style3 {
+  background-color: var(--purple400);
+  color: var(--wb50);
+}
+
+.style4 {
+  background-color: var(--darkblue600);
+  color: var(--wb50);
+}
+
+.style5 {
+  background-color: var(--blue300);
+  color: var(--wb50);
+}
+
+.style6 {
+  background-color: var(--green300);
+  color: var(--wb50);
+}
+
+.style7 {
+  background-color: var(--main-color500);
+  color: var(--wb50);
+}
+
+.style8 {
+  background-color: var(--orange600);
+  color: var(--wb50);
+}
+
+@media screen and (max-width: 1024px) {
+  .context {
+    gap: 0.5em;
+    padding: 30vh 1vw;
+  }
+
+  .context_text {
+    font-size: 1.5em;
+  }
+
+  .contact_me {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .context_text {
+    font-size: 1.25em;
+  }
+
+  .contact_me {
+    font-size: 1.15em;
+  }
+}

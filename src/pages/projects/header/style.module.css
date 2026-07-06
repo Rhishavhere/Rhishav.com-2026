@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 5vw;
+  padding-inline: 1vw;
+  width: min(86vw, 1180px);
+}
+
+.header_title {
+  font-size: 1em;
+  font-weight: 200;
+  overflow: visible;
+  color: var(--wb600);
+}
+
+.header_desc {
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.45;
+  overflow: visible;
+  width: min(68ch, 100%);
+  display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 95vw;
+    flex-direction: column;
+    font-size: 1em;
+    gap: 1.5em;
+  }
+  .header_title {
+    font-size: 1.05em;
+  }
+  .header_desc {
+    font-size: 1.15em;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    width: 95vw;
+    flex-direction: column;
+    font-size: 1em;
+  }
+  .header_title {
+    font-size: 1em;
+  }
+  .header_desc {
+    font-size: 1.15em;
+  }
+}

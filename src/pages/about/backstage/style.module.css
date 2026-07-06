@@ -1,0 +1,52 @@
+.container {
+  width: 100vw;
+  padding: 10vh 1vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.header {
+  width: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.title {
+  font-size: 0.875em;
+  font-weight: 200;
+  opacity: 0.5;
+}
+
+.subtitle {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  font-weight: 300;
+  letter-spacing: -2.5%;
+}
+
+.dot {
+  font-size: 0.5em;
+  line-height: 1;
+  color: var(--wb400);
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    width: 20vw;
+  }
+}

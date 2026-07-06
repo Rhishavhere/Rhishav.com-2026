@@ -1,0 +1,41 @@
+.container {
+  height: auto;
+  width: 100%; /* fixed: end of horizontal scroll bug */
+  padding: 10vh 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5vh;
+}
+
+.header {
+  width: 30vw;
+  font-weight: 200;
+  font-size: 0.875em;
+  opacity: 0.5;
+}
+
+.context {
+  width: 30vw;
+  font-size: 1em;
+  display: flex;
+}
+
+.desc {
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1024px) {
+  .header,
+  .context {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header,
+  .context {
+    width: 75vw;
+  }
+}

@@ -1,0 +1,116 @@
+/* return to white: manifesto closing. 7 ideas bleach to white, one line and
+   [yeqq] signature remain. same language as other panels: wb50 ground, hairline,
+   hop ease, text rising from mask. initial states set in css so first paint
+   doesn't flash; gsap takes over afterward. */
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5vh;
+  padding: 18vh 12vw;
+  text-align: center;
+  background-color: var(--wb50);
+  user-select: none;
+}
+
+/* ---- 7 traces: everything said, before bleaching to white ---- */
+.threads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em 1.1em;
+  max-width: 34em;
+}
+
+.thread {
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--wb950);
+  opacity: 0.18; /* gsap takes over */
+}
+
+/* ---- what remains: final line, focus of the closing ---- */
+.line {
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--wb950);
+  max-width: 16em;
+  text-wrap: balance;
+}
+
+/* ---- signature: wordmark assembled from chaos in entropy panel, seal at the end ---- */
+.signature {
+  font-size: 1.05em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--wb950);
+  opacity: 0; /* gsap takes over */
+}
+
+/* ---- single whisper door: ReadMore language ---- */
+.door {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--wb500);
+  text-decoration: none;
+  opacity: 0; /* gsap takes over */
+  transition: color 0.35s ease;
+}
+
+.doorRule {
+  display: inline-block;
+  width: 1.6em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+  transition: width 0.35s cubic-bezier(0.65, 0.05, 0, 1);
+}
+
+.door:hover,
+.door:focus-visible {
+  color: var(--wb950);
+}
+
+.door:hover .doorRule,
+.door:focus-visible .doorRule {
+  width: 2.4em;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 16vh 10vw;
+    gap: 3vh;
+  }
+
+  .line {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 14vh 8vw;
+    gap: 2.5vh;
+  }
+
+  .threads {
+    gap: 0.35em 0.8em;
+    max-width: 22em;
+  }
+
+  .line {
+    font-size: 1.35em;
+    max-width: 14em;
+  }
+}

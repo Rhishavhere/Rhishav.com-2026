@@ -1,0 +1,128 @@
+.container {
+  width: 100vw;
+  padding: 16vh 1vw 10vh 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10vh;
+}
+
+.header {
+  width: 55vw;
+  font-size: 0.875em;
+  font-weight: 200;
+  opacity: 0.5;
+  line-height: 1.35;
+}
+
+.main {
+  width: 98vw;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10vw;
+}
+
+.sidebar_title {
+  width: 33vw;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.18;
+}
+
+.content {
+  width: 55vw;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.footer {
+  margin-top: 10vh;
+  width: 98vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10em;
+}
+
+.footer_content_title {
+  width: 10vw;
+  font-size: 0.875em;
+  opacity: 0.5;
+  font-weight: 200;
+}
+
+.footer_content {
+  display: flex;
+  align-items: center;
+  gap: 3.5em;
+}
+
+.footer_content_content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.contact_link {
+  display: inline;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+/* space after comma in connect strip: "instagram, github" */
+.comma {
+  margin-right: 0.3em;
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar_title {
+    flex: 3.5;
+    font-size: 1.25em;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 10vh;
+  }
+
+  .footer_content_title {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 11vh 4vw 5vh 4vw;
+    align-items: flex-start;
+    gap: 7vh;
+  }
+
+  .header,
+  .main,
+  .sidebar_title,
+  .content,
+  .footer,
+  .footer_content_title {
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 6vh;
+  }
+
+  .sidebar_title {
+    font-size: 1.7em;
+    line-height: 1.2;
+  }
+
+  .footer_content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+}

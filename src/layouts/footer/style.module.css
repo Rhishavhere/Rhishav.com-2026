@@ -1,0 +1,119 @@
+/* Sticky reveal: footer waits behind the page, main lifts off it to reveal.
+   z-index: 0 → below main (z-index: 1). */
+.container {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  background-color: var(--wb50);
+  color: var(--wb950);
+  overflow: hidden; /* clip content that overflows upward during parallax */
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+  padding: 12vh 10vw 4vh;
+  will-change: transform;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6vh 5vw;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25em;
+}
+
+.contact_link {
+  font-size: clamp(1.75rem, 3vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--wb950);
+  transition: color 0.3s ease-out;
+}
+
+.contact_link:hover {
+  color: var(--wb500);
+}
+
+.columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 6vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5em;
+}
+
+.label {
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--wb300);
+}
+
+.link {
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: var(--wb600);
+  transition: color 0.3s ease-out;
+}
+
+.link:hover {
+  color: var(--wb500);
+}
+
+/* Decorative wordmark: enlarged version of the nav logo [ yeqq ] motif.
+   Also capped by height so it does not exceed 100svh. */
+.wordmark {
+  font-size: min(16vw, 24vh);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  user-select: none;
+  color: var(--wb950);
+}
+
+.bottom {
+  width: 100%;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--wb200);
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--wb400);
+}
+
+@media screen and (max-width: 1024px) {
+  .inner {
+    gap: 7vh;
+    padding: 8vh 5vw 3vh;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .columns {
+    flex-wrap: wrap;
+    gap: 4vh 12vw;
+  }
+
+  .wordmark {
+    font-size: min(22vw, 18vh);
+  }
+}

@@ -1,0 +1,278 @@
+/* ======================================================================== */
+/*  OUTSIDE THE NOTCH — contact left, language right (our own button components) */
+/*  each end pinned separately; no need for space-between.                  */
+/* ======================================================================== */
+
+.barLeft,
+.barRight {
+  position: fixed;
+  top: 0.9em;
+  height: 2.6em;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.barLeft {
+  left: 1.4em;
+}
+
+.barRight {
+  right: 1.4em;
+}
+
+/* ======================================================================== */
+/*  NOTCH / PANEL — pill when closed, card that grows downward when open    */
+/*  width/height/border-radius animated with GSAP; initial sizes in em.     */
+/* ======================================================================== */
+.island {
+  position: fixed;
+  top: 0.9em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16em;
+  height: 2.6em;
+  border-radius: 1.3em;
+  background: var(--wb950);
+  color: var(--wb50);
+  overflow: hidden;
+  z-index: 1002;
+  will-change: width, height;
+}
+
+/* --- brand pinned to bottom-left corner: [ ] -> [ yeqq ] --- */
+.brand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.4em;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+  color: inherit;
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  user-select: none;
+  transition: bottom 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.island[data-open="true"] .brand {
+  bottom: 0.5em;
+}
+
+.bracket {
+  opacity: 0.85;
+}
+
+/* letters clipped horizontally (width); each letter separate for vertical roll. */
+.brandName {
+  display: inline-flex;
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  margin: 0 0.14em;
+}
+
+.brandChar {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* --- open/close pinned to top-right corner: menu -> close (roll) --- */
+.toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.4em;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1), right 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+  overflow: hidden;
+  appearance: none;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.island[data-open="true"] .toggle {
+  top: 0.5em;
+}
+
+.toggleLabel {
+  display: inline-block;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  will-change: transform;
+}
+
+.toggle:hover .toggleLabel {
+  opacity: 1;
+}
+
+/* --- top-left corner: music control; hidden when closed, appears when open --- */
+.music {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0 1.5em;
+  appearance: none;
+  border: 0;
+  background: none;
+  color: var(--wb500);
+  font-family: inherit;
+  font-size: 0.9em;
+  line-height: 1;
+  text-transform: lowercase;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    top 0.5s cubic-bezier(0.76, 0, 0.24, 1),
+    color 0.3s ease,
+    opacity 0.35s ease;
+}
+
+.island[data-open="true"] .music {
+  top: 0.5em;
+  opacity: 1;
+  visibility: visible;
+}
+
+.music:hover,
+.music:focus-visible {
+  color: var(--wb50);
+}
+
+.musicDot {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  flex: none;
+  transition: background-color 0.3s ease;
+}
+
+.musicDot[data-on="true"] {
+  background-color: currentColor;
+}
+
+/* --- links: vertically centered in middle band; hidden + clipped when closed --- */
+.links {
+  position: absolute;
+  top: 2.4em;
+  bottom: 2.4em;
+  left: 0;
+  right: 0;
+  padding: 0 1.6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 2em;
+  line-height: 1;
+  letter-spacing: -3.75%;
+  color: var(--wb400);
+  text-transform: lowercase;
+  width: fit-content;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.link::before {
+  content: "●";
+  font-size: 0em;
+  line-height: 1;
+  transition: 0.35s;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--wb50);
+  transform: translateX(0.3em);
+  transition: 0.35s;
+}
+
+.link:hover::before {
+  font-size: 0.5em;
+}
+
+/* --- socials: bottom-right corner; hidden when closed --- */
+.social {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2.6em;
+  transition: bottom 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0 1.5em;
+  font-size: 0.9em;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.island[data-open="true"] .social {
+  bottom: 0.5em;
+}
+
+.socialLink {
+  color: var(--wb500);
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  color: var(--wb50);
+}
+
+/* ======================================================================== */
+/*  BACKDROP — darkens and blurs the page when open                         */
+/* ======================================================================== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.25);
+  backdrop-filter: blur(0.4em);
+  -webkit-backdrop-filter: blur(0.4em);
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* ======================================================================== */
+/*  RESPONSIVE                                                              */
+/* ======================================================================== */
+@media screen and (max-width: 600px) {
+  .barLeft {
+    display: none;
+  }
+
+  .island {
+    width: 13em;
+  }
+
+  .link {
+    font-size: 2.4em;
+  }
+}

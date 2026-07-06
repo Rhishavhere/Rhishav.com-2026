@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.formWrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.successWrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/* .shake {
+} */

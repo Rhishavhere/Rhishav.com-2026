@@ -1,0 +1,239 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 18vh 15vw 12vh;
+  background-color: var(--wb50);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.annotation {
+  max-width: 30em;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.annotation h4 {
+  font-size: 0.875em;
+  font-weight: 200;
+  color: var(--wb950);
+  opacity: 0.5;
+}
+
+.annotation p {
+  font-size: 0.925em;
+  line-height: 1.2;
+  font-weight: 300;
+  color: var(--wb600);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4vh;
+  text-align: center;
+}
+
+/* two overlapping circles; intersection naturally darkens */
+.venn {
+  width: clamp(180px, 20vw, 270px);
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.circle {
+  fill: var(--wb950);
+  fill-opacity: 0.05;
+  stroke: var(--wb950);
+  stroke-opacity: 0.28;
+  stroke-width: 0.6;
+  cursor: pointer;
+  pointer-events: all;
+  transition:
+    fill-opacity 0.5s ease,
+    stroke-opacity 0.5s ease;
+}
+
+.container[data-mode="rational"] .circleLeft,
+.container[data-mode="emotional"] .circleRight {
+  fill-opacity: 0.12;
+  stroke-opacity: 0.85;
+}
+
+/* intersection lens: fills dark in human mode — striking emphasis */
+.lens {
+  fill: var(--wb950);
+  fill-opacity: 0;
+  cursor: pointer;
+  pointer-events: all;
+  transition: fill-opacity 0.55s ease;
+}
+
+.container[data-mode="human"] .lens {
+  fill-opacity: 0.92;
+}
+
+.container[data-mode="human"] .circle {
+  stroke-opacity: 0.55;
+}
+
+.sides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.side {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.875em;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--wb950);
+  opacity: 0.3;
+  transition: opacity 0.45s ease;
+}
+
+.side[aria-pressed="true"] {
+  opacity: 1;
+}
+
+.side:hover {
+  opacity: 0.6;
+}
+
+.side[aria-pressed="true"]:hover {
+  opacity: 1;
+}
+
+.sideCenter {
+  font-weight: 400;
+}
+
+.sep {
+  width: 1px;
+  height: 0.85em;
+  background: var(--wb300);
+}
+
+/* readout: content changes with mode, height stays fixed */
+.readoutSlot {
+  width: min(36vw, 34em);
+  min-height: 9.5em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.readout {
+  width: 100%;
+  font-size: 0.95em;
+  line-height: 1.55;
+  font-weight: 300;
+  color: var(--wb950);
+}
+
+/* rational — text decoded from math */
+.decodeReadout {
+  letter-spacing: 0.01em;
+}
+
+.glyph {
+  transition: color 0.25s ease;
+  color: var(--wb400);
+}
+
+.glyph[data-locked] {
+  color: var(--wb950);
+}
+
+/* emotional — sharpening from blur, light */
+.bloomReadout {
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+.bloomWord {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* human — striking, large, rising from mask */
+.humanReadout {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 14em;
+  margin: 0 auto;
+}
+
+.humanMask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.humanWord {
+  display: inline-block;
+  will-change: transform;
+}
+
+.hint {
+  font-size: 0.75em;
+  font-weight: 200;
+  color: var(--wb400);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 16vh 10vw 10vh;
+  }
+
+  .annotation {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 14vh 8vw 8vh;
+  }
+
+  .stage {
+    gap: 2vh;
+  }
+
+  .venn {
+    width: clamp(150px, 52vw, 220px);
+  }
+
+  .readoutSlot {
+    width: 76vw;
+    min-height: 11em;
+  }
+
+  .humanReadout {
+    font-size: 1.3em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circle,
+  .lens,
+  .side {
+    transition-duration: 0.001s;
+  }
+}
