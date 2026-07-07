@@ -112,7 +112,7 @@ const WelcomeSec = () => {
           ref={imgRef}
           className={`${styles.img} h-full w-full object-cover`}
           src="/assets/yunus-emre-korkmaz/6.webp"
-          alt="Yunus Emre Korkmaz"
+          alt="Rhishav Dhali"
           loading="lazy"
           decoding="async"
         />

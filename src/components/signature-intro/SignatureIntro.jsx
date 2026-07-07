@@ -4,13 +4,13 @@ import styles from "./style.module.css";
 import { prefersReducedMotion } from "@/utils/motion";
 
 /* signature moment — the site opening states its thesis: simplify complexity.
-   beats: (1) particles arrange from chaos into the [yeqq] mark (identity),
+   beats: (1) particles arrange from chaos into the [rshv] mark (identity),
    (2) scatter and settle row-by-row into a regular grid filling the square,
    (3) dots grow into a real square without overflowing, then the overlay fades
    and the clean hero (IntroSec) underneath remains — same square, handed off to
    the video frame. same engine as the entropy panel: Outfit text drawn on a
    hidden canvas and sampled on a grid. monochrome, hairline dots — no glow. the
-   same [yeqq] mark arranged from chaos in the entropy panel, signed at manifest
+   same [rshv] mark arranged from chaos in the entropy panel, signed at manifest
    close — the site is bracketed by it at both ends. plays once on first visit
    (sessionStorage), never with reduced motion.
 
@@ -20,9 +20,9 @@ import { prefersReducedMotion } from "@/utils/motion";
    in the draw loop. ease (butter) and timing preserved exactly; main-thread tween
    count drops from ~970 to 2. opening flows smoothly as a result. */
 
-const NAME = "[rhish]";
+const NAME = "[rshv]";
 
-// [yeqq] density naturally caps at ~398 points at g=5; ~400 is the sweet spot
+// [rshv] density naturally caps at ~398 points at g=5; ~400 is the sweet spot
 // (no waste), fewer looks sparse. minimum for mobile readability.
 const particleCount = () => {
   if (typeof window === "undefined") return 324;
@@ -193,7 +193,7 @@ export default function SignatureIntro({ onAnimationComplete }) {
     }
 
     // beat timing (s) — identical to old timeline:
-    // B1: chaos→[yeqq]  B2: [yeqq]→square-grid  B3: dots grow  → overlay fades
+    // B1: chaos→[rshv]  B2: [rshv]→square-grid  B3: dots grow  → overlay fades
     const s1 = 0.2;
     const d1dur = 0.66;
     const A1 = 0.66; // B1 ends: 0.2 + 0.66 + 0.66 = 1.52

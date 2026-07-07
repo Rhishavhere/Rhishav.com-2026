@@ -66,7 +66,7 @@ export default function WhatIDo() {
       <div className={styles.image_container}>
         <img
           src="/assets/yunus-emre-korkmaz/12.webp"
-          alt="yunus emre korkmaz"
+          alt="Rhishav Dhali"
           className={styles.image_1}
           ref={(el) => (imageRefs.current[0] = el)}
           aria-hidden="true"
@@ -75,7 +75,7 @@ export default function WhatIDo() {
         />
         <img
           src="/assets/yunus-emre-korkmaz/5.webp"
-          alt="yunus emre korkmaz"
+          alt="Rhishav Dhali"
           className={styles.image_2}
           ref={(el) => (imageRefs.current[1] = el)}
           aria-hidden="true"
@@ -115,7 +115,7 @@ export default function WhatIDo() {
       <div className={styles.image_container}>
         <img
           src="/assets/yunus-emre-korkmaz/3.webp"
-          alt="yunus emre korkmaz"
+          alt="Rhishav Dhali"
           className={styles.image_3}
           ref={(el) => (imageRefs.current[2] = el)}
           aria-hidden="true"
@@ -124,7 +124,7 @@ export default function WhatIDo() {
         />
         <img
           src="/assets/yunus-emre-korkmaz/11.webp"
-          alt="yunus emre korkmaz"
+          alt="Rhishav Dhali"
           className={styles.image_4}
           ref={(el) => (imageRefs.current[3] = el)}
           aria-hidden="true"

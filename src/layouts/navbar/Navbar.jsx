@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const LANGUAGES = ["tr", "en"];
 
-const BRAND = "rhish".split("");
+const BRAND = "rshv".split("");
 
 const SOCIALS = [
   { label: "instagram", href: "https://www.instagram.com/rhish.xd" },
@@ -291,7 +291,7 @@ export default function Navbar() {
           to="/"
           className={styles.brand}
           onClick={close}
-          aria-label="yeqq, ana sayfa"
+          aria-label="rshv, home"
         >
           <span className={styles.bracket} aria-hidden="true">
             [

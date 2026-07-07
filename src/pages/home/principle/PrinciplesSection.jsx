@@ -6,7 +6,7 @@ export default function PrinciplesSection() {
   const principles = t("principles.list", { returnObjects: true });
 
   return (
-    <section className="flex min-h-[50vh] w-screen items-center justify-center">
+    <section className="flex min-h-[55vh] w-screen items-center justify-center px-[2vw] py-[10vh]">
       <div className="flex w-[30vw] justify-center gap-[5vw] max-[1024px]:w-[50vw] max-[600px]:w-[98vw]">
         <AnimatedSplit
           key={t("principles.title")}

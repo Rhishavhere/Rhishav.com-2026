@@ -9,7 +9,7 @@ const reduceMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const DESKTOP_TOTAL = 300;
-const WORDMARK = "[yeqq]";
+const WORDMARK = "[rshv]";
 
 const getParticleTotal = () => {
   if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
@@ -112,7 +112,7 @@ export default function CostOfOrder({ isActive = true }) {
     });
   };
 
-  // press: dots settle into [ yeqq ] via a wave radiating from the word center;
+  // press: dots settle into [ rshv ] via a wave radiating from the word center;
   // size and opacity equalize
   const applyOrder = () => {
     if (!activeRef.current) return;

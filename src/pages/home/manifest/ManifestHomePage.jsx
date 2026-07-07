@@ -44,7 +44,7 @@ const ManifestHomePage = () => {
 
   return (
     <section
-      className="flex w-[98vw] items-center justify-center bg-[var(--wb50)] px-[2.5vw] py-[12vh] max-[600px]:px-[15vw] max-[600px]:py-[12vh]"
+      className="flex w-[98vw] items-center justify-center bg-[var(--wb50)] px-[2.5vw] py-[16vh] max-[600px]:px-[15vw] max-[600px]:py-[14vh]"
       key={i18n.language}
     >
       <div className="flex w-[30vw] flex-col gap-[6vh] pt-[3vh] max-[1024px]:w-[50vw] max-[600px]:w-full max-[600px]:gap-[5vh]">

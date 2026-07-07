@@ -79,7 +79,7 @@ const Footer = () => {
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/1yunusewre"
+                href="https://www.instagram.com/rhish.xd"
               >
                 instagram
               </a>
@@ -87,7 +87,7 @@ const Footer = () => {
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/yeqqv2"
+                href="https://github.com/Rhishavhere"
               >
                 github
               </a>
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.wordmark} aria-hidden="true">
-          <span className={styles.bracket}>[</span>yeqq
+          <span className={styles.bracket}>[</span>rshv
           <span className={styles.bracket}>]</span>
         </div>
 

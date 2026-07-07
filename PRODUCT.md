@@ -1,6 +1,6 @@
 # Rhishav.com — Product Document
 
-> **Version:** 0.3 · July 2026  
+> **Version:** 0.5 · July 2026  
 > **Status:** Active transformation (yeqq → rhshv)  
 > **Domain:** [rhishav.com](https://rhishav.com)  
 > **Handle:** `[rhshv]` (also acceptable: `[rhish]`, `[rhishav]`)  
@@ -19,6 +19,17 @@ This is the **single source of truth** for the Rhishav.com portfolio transformat
 - A phased roadmap with explicit migration debt
 
 Refer back to this document before every major change. Update it when decisions are made.
+
+---
+
+## 0.1 Development Conventions
+
+| Convention | Rule |
+|------------|------|
+| **CSS** | **Tailwind strictly** for all new work. Existing CSS Modules stay as-is — convert gradually only when touching a component. |
+| **Images** | Keep Yunus's assets as placeholders until Rhishav replaces them manually. Do not remove `/assets/yunus-emre-korkmaz/*` yet. Update `alt` text to Rhishav. |
+| **Copy** | Placeholders OK — Rhishav iterates on text in collaboration. |
+| **Handle** | `[rshv]` sitewide for brand/wordmark. Full name `[Rhishav Dhali]` OK in welcome/greeting. |
 
 ---
 
@@ -46,8 +57,10 @@ Success metrics (qualitative, not analytics-driven):
 - A startup founder or early engineer thinks: *this is exactly who I'd want on the team*
 - Someone reaches out because the site made them *feel* something — not because of a keyword match
 - A peer bookmarks the manifesto section
-- A recruiter remembers `[rshv]` after one scroll
+- A recruiter remembers `[rshv]` after one scroll **without clicking a single link**
 - Rhishav is proud to share the URL without caveats
+
+**Home page rule:** A visitor who never leaves `/` should still experience the site's beauty — identity, work, thinking, and craft. Full pages (`/manifest`, `/projects`, `/about-me`) are the deep cuts, not prerequisites.
 
 ### 1.3 What We Are NOT Building
 
@@ -158,21 +171,71 @@ Rhishav and Yunus share more than the table below might suggest. Both are design
 *                    → 404
 ```
 
-### 4.2 Home Scroll Narrative (Current → Target)
+### 4.2 Home Page Philosophy — The Complete First Impression
 
-| # | Section | Component | Current State | Target |
-|---|---------|-----------|---------------|--------|
-| 0 | Opening signature | `SignatureIntro` | `[rhish]` particles | Keep — finalize gate (sessionStorage) |
-| 1 | Hero | `IntroSec` | Marquee + portrait + uptime clock | Rhishav marquee keywords, portrait, personal clock origin |
-| 2 | Greeting | `WelcomeSec` | Partially updated name | Full Rhishav bio line + portrait asset |
-| 3 | Philosophy blurb | `AboutmeHome` | yeqq copy | Rhishav's builder voice — design-first, founder energy |
-| 4 | Selected works | `Works` | 6 yeqq municipal projects | Top 6 Rhishav projects (incl. Meikai/Frescava if featured) |
-| 5 | Principles | `PrinciplesSection` | Generic design principles | Rhishav's principles *(placeholders OK)* |
-| 6 | Thought teaser | `ManifestHomePage` | Design-focused topics | Rhishav's manifesto teasers *(TBD)* |
-| 7 | Contact invitation | `ContactHomePage` | Generic | Rhishav's open door |
-| 8 | **Art** *(optional finale)* | `ArtShowcase` *(new)* | Does not exist | Quiet showcase — **no art references anywhere before this** |
+The home page (`/`) is **not a landing strip** that points elsewhere. It is the primary experience. Visitors should not have to hunt through nav, buttons, or routes to discover what makes this site special.
 
-**Gap between sections:** `10vh` (desktop), `0vh` (≤1024px) — preserve.
+**Problem with a sparse home:** Large whitespace is part of the design — but emptiness between *thin* sections makes the page feel hollow. The fix is not less space; it is **more breathing room between richer sections**, each giving a real taste of something bigger.
+
+**Principle: home = tasting menu, routes = full meal**
+
+| Full page | Home gives (mini version) |
+|-----------|---------------------------|
+| `/about-me` | Welcome greeting, philosophy blurb, `[now]` snapshot, link to full story |
+| `/projects` | Featured works grid (6) with header, one-liner context, "see all" |
+| `/manifest` | Interactive thought section — multiple topics, expandable copy, CTA to full manifesto |
+| `/manifest/:slug` | Topic teasers preview the essay themes; full prose lives on route |
+| `/contact-me` | Contact invitation + interactive word cloud |
+| `/art` | Quiet finale gateway *(planned)* |
+
+**What a single scroll through `/` must deliver:**
+1. **Who** — `[rshv]`, name, one-line identity
+2. **How they think** — philosophy blurb + principles + manifest topics (not just a button to `/manifest`)
+3. **What they build** — project cards with visual proof
+4. **Who they are right now** — `[now]` backstage snapshot
+5. **How to reach them** — contact section
+6. **The craft itself** — motion, typography, whitespace, interactions — the site demonstrates skill while you scroll
+
+**Anti-pattern:** A hero + one sentence + "view projects" + footer. That forces exploration. We do the opposite — **show first, link second**. CTAs go to *deeper* versions, not *first* versions.
+
+### 4.2.1 Home Scroll Narrative (Current → Target)
+
+| # | Section | Component | Status | Target depth on home |
+|---|---------|-----------|--------|----------------------|
+| 0 | Opening signature | `SignatureIntro` | Done | Particle `[rshv]` → hero handoff |
+| 1 | Hero | `IntroSec` | Done | Marquee, portrait, uptime, music |
+| 2 | Greeting | `WelcomeSec` | Done | Name, one-liner, portrait |
+| 3 | Philosophy blurb | `AboutmeHome` | Done | Scroll-scrubbed thesis + story link |
+| 4 | **`[now]` snapshot** | `HomeNowStrip` *(new)* | **WIP** | 5 backstage items — taste of about page |
+| 5 | Selected works | `Works` | **WIP** | 6 projects + header/subtitle + see all |
+| 6 | Principles | `PrinciplesSection` | Done | Full principles list visible |
+| 7 | Thought / manifesto | `ManifestHomePage` | **WIP** | 5 topics, interactive accordion — manifesto taste on home |
+| 8 | Contact invitation | `ContactHomePage` | Done | Word cloud + CTA |
+| 9 | **Art finale** | `ArtShowcase` *(planned)* | Pending | Quiet gateway at end |
+
+**Section spacing (rhythm):**
+
+| Breakpoint | Gap between sections | Rationale |
+|------------|---------------------|-----------|
+| Desktop (>1024px) | `22vh` | Generous pause — each section lands before the next |
+| Tablet (≤1024px) | `14vh` | Was `0vh` — sections were stacking without breath |
+| Mobile (≤600px) | `10vh` | Tighter but still separated |
+
+Spacing is set on `HomePage` container. Individual sections keep their internal `py` for content breathing room.
+
+### 4.2.2 Home Enrichment Backlog (In Progress)
+
+Priority order for making home self-contained:
+
+- [x] Increase inter-section whitespace (`22vh` / `14vh` / `10vh`)
+- [x] Works section header + subtitle + "see all" link
+- [x] `[now]` strip on home (`HomeNowStrip`)
+- [x] Expand manifest home topics (5 from manifesto themes)
+- [ ] Manifest home: optional mini visual — e.g. white square motif, topic count, or single-line panel preview
+- [ ] Founder one-liner under welcome (Meikai / Frescava mention inline)
+- [ ] Project cards → Rhishav projects (Phase 2)
+- [ ] Art showcase finale (Phase 4)
+- [ ] Optional: inline manifest panel preview (one interactive beat from `/manifest` without full pin sequence)
 
 ### 4.3 About Page Sections
 
@@ -626,21 +689,32 @@ Rhishav to provide: email, social URLs, final description.
 
 ## 12. Phased Roadmap
 
-### Phase 0 — Foundation (Current)
+### Phase 0 — Foundation
 - [x] Fork/adapt yeqq codebase
 - [x] Initial identity surfaces (title, navbar brand, signature intro, partial EN)
 - [x] Geist font integration for marquee
 - [x] Hero image path (`/assets/me/back.webp`)
 - [x] This PRODUCT.md document
-- [ ] Align on handle: `[rhshv]` vs `[rhish]` vs `[rhishav]` sitewide
+- [x] Align on handle: `[rshv]` sitewide
 
 ### Phase 1 — Identity Sweep
-- [ ] Replace all yeqq/Yunus references (§9.1)
-- [ ] Update SEO/meta/JSON-LD (§11)
-- [ ] Rhishav portrait + about photos
-- [ ] Rewrite EN locale: welcome, bio, whatIDo, now, principles
-- [ ] Update uptime clock origin
-- [ ] Package rename
+- [x] Replace all yeqq/Yunus references (§9.1)
+- [x] Update SEO/meta/JSON-LD (§11)
+- [x] Portrait + about photos — Yunus assets as placeholder, Rhishav alt text
+- [x] Rewrite EN locale: welcome, bio, whatIDo, now, principles
+- [x] Rewrite TR locale: same identity keys
+- [ ] Update uptime clock origin — mechanical date placeholder; Rhishav to set `ORIGIN` in `IntroTopBar.jsx`
+- [x] Package rename → `rhishav-portfolio`
+- [x] Contact email placeholder → `hello@rhishav.com` (Rhishav to confirm)
+
+### Phase 1.5 — Home Page Enrichment *(active)*
+- [x] Home page philosophy documented (§4.2)
+- [x] Inter-section spacing increase
+- [x] Works section header + see all
+- [x] `[now]` strip on home
+- [ ] Expand manifest home topics + visual preview
+- [ ] Founder inline mention in welcome area
+- [ ] Per-section content depth pass (ongoing with Rhishav)
 
 ### Phase 2 — Projects
 - [ ] Define project data model entries (§6.1)
@@ -713,7 +787,11 @@ Record major decisions here as they're made:
 | 2026-07-07 | Art informs silently until finale | Not an art portfolio; art shapes software as creative freedom |
 | 2026-07-07 | No forced physics/CS metaphor remapping | Manifesto topics must be honest, not translated yeqq→physics |
 | 2026-07-07 | Gen Z / internet-native voice | Fun, humour, modern — startup hire energy |
-| 2026-07-07 | Primary handle `[rshv]` | User-specified; confirm sitewide consistency |
+| 2026-07-07 | `[rshv]` handle sitewide | Brand wordmark, navbar, signature intro, manifest panels |
+| 2026-07-07 | Tailwind for new work only | Existing CSS Modules converted gradually |
+| 2026-07-07 | Yunus assets as image placeholders | Rhishav replaces manually when ready |
+| 2026-07-07 | Home = complete first impression | Show manifest, works, now on `/` — routes are deeper cuts, not gates |
+| 2026-07-07 | More inter-section whitespace | `22vh` desktop, `14vh` tablet — breath between richer sections |
 | TBD | Keep or drop Turkish locale | Rhishav to decide |
 | TBD | Final manifesto topic list & essays | Rhishav to write — placeholders OK until then |
 | TBD | Uptime clock origin date | Rhishav to provide personal moment |
@@ -786,16 +864,17 @@ Quick reference for where copy lives in `src/locales/en.json`:
 HomePage
 ├── SignatureIntro          → particle [rshv] → onComplete
 ├── IntroSec                → hero: marquee, portrait, clock, music
-└── (after intro)
-    ├── WelcomeSec          → greeting + portrait
-    ├── AboutmeHome         → philosophy + "my story" link
-    ├── Works               → 6 project cards
-    ├── PrinciplesSection   → [principles] list
-    ├── ManifestHomePage    → 3 topic teasers → /manifest
+└── (after intro)           → gap: 22vh / 14vh / 10vh between sections
+    ├── WelcomeSec          → greeting + portrait + one-liner
+    ├── AboutmeHome         → philosophy blurb + story link
+    ├── HomeNowStrip        → [now] backstage snapshot (mini about)
+    ├── Works               → header + 6 project cards + see all
+    ├── PrinciplesSection   → [principles] full list
+    ├── ManifestHomePage    → thought topics accordion + manifest CTA
     ├── ContactHomePage     → floating words + CTA
-    └── ArtShowcase         → (NEW) quiet art finale — no refs before this
+    └── ArtShowcase         → (planned) quiet art finale
 ```
 
 ---
 
-*Last updated: July 7, 2026 (v0.3) · Maintained by Rhishav + Agent*
+*Last updated: July 7, 2026 (v0.5) · Maintained by Rhishav + Agent*

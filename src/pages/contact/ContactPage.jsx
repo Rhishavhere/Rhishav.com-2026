@@ -4,6 +4,10 @@ import styles from "./style.module.css";
 import FormContainer from "./form/FormContainer";
 import { useTranslation } from "react-i18next";
 
+const CONTACT_EMAIL = "hello@rhishav.com";
+const INSTAGRAM_URL = "https://www.instagram.com/rhish.xd";
+const GITHUB_URL = "https://github.com/Rhishavhere";
+
 const ContactPage = () => {
   const { t, i18n } = useTranslation();
 
@@ -46,10 +50,10 @@ const ContactPage = () => {
           />
           <a
             className={styles.contact_link}
-            href="mailto:ynsmrkrkmzz@gmail.com"
+            href={`mailto:${CONTACT_EMAIL}`}
           >
             <AnimatedSplit
-              text="ynsmrkrkmzz@gmail.com"
+              text={CONTACT_EMAIL}
               tagName="span"
               stagger={0.03}
               duration={1.5}
@@ -74,7 +78,7 @@ const ContactPage = () => {
               className={styles.contact_link}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/1yunusewre"
+              href={INSTAGRAM_URL}
             >
               <AnimatedSplit
                 text="instagram"
@@ -96,7 +100,7 @@ const ContactPage = () => {
               className={styles.contact_link}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/yeqqv2"
+              href={GITHUB_URL}
             >
               <AnimatedSplit
                 text="github"

@@ -24,11 +24,11 @@
     "manifest": "manifesto",
     "projects": "projeler",
     "contact_btn": "iletişime geç",
-    "signature": "yunus emre korkmaz tarafından tasarlandı ve geliştirildi"
+    "signature": "rhishav dhali tarafından tasarlandı ve geliştirildi"
   },
   "intro": {
-    "marqueeText": "• minimalizm • takıntı • mükemmelliyetçilik • estetik ",
-    "clock": "17 Mayıs 2004, 14:30'dan bu yana geçen süre"
+    "marqueeText": "• building • agents • meikai • design • software • founder • open source • the internet • ships",
+    "clock": "başlangıçtan bu yana geçen süre"
   },
   "music": {
     "play": "kulak ver",
@@ -36,15 +36,18 @@
   },
   "welcome": {
     "greeting": "[selam, ben]",
-    "name": "[yunus emre korkmaz]",
-    "description": "tasarlarım, kod yazarım. derdim; karmaşık olanı sade, sade olanı anlamlı kılmak.",
+    "name": "[Rhishav Dhali]",
+    "description": "ajanlar ve yazılımlar yapıyorum — insanların gerçekten gördüğü ve kullandığı şeyler. meikai ve frescava'yı kurdum. her zaman design-first.",
     "cursor": "● bu da kim?"
   },
   "aboutHome": {
-    "mainText": "acele etmem. her satırı, her boşluğu, yıllarca kalacakmış gibi bırakırım.",
+    "mainText": "arkada saklanan şeyleri ship etmem. insanlar göremiyorsa, olmamış sayarım.",
     "link": "benim hikayem"
   },
   "worksHome": {
+    "title": "[işler]",
+    "subtitle": "ajanlar, tarayıcılar, ürünler — yaptıklarımdan birkaçı.",
+    "viewAll": "hepsini gör",
     "cursorWords": [
       "daha fazla",
       "incele",
@@ -59,15 +62,15 @@
     "title": "[ilkeler]",
     "list": [
       "az söyle, çok anlat",
+      "insanlar göremiyorsa, ship olmamıştır",
       "sadelik, en zor iştir",
       "her detay bir niyettir",
-      "tutarlılık güven verir",
-      "acele, güzeli bozar"
+      "kaçınılmaz hissettiren şeyler inşa et"
     ]
   },
   "manifest": {
     "title": "[düşünce]",
-    "desc": "arayüz, piksellerden değil, verilen kararlardan doğar. gereksizi bırakır, geriye yalnız anlamı koyarım.",
+    "desc": "yazılım, görünür kılınan kararlar bütünüdür. bunlar benimkilerden bazıları — inşa etmek, düşünmek ve geriye kalan üzerine.",
     "topics": {
       "aesthetic": {
         "label": "estetik",
@@ -80,13 +83,21 @@
       "rationality": {
         "label": "rasyonalite",
         "text": "bir yolu seçmek, ötekilere veda etmektir. karar vermek, sadeleşmektir."
+      },
+      "observer": {
+        "label": "gözlemci",
+        "text": "bakmak masum değildir. neyi ölçersen, onu değiştirirsin."
+      },
+      "choice": {
+        "label": "seçim",
+        "text": "hangi kapıdan geçersen, ötekiler kapanır. bu ağırlık gerçek."
       }
     },
     "button": "nasıl düşündüğümü oku"
   },
   "contactHome": {
-    "header": "birlikte anlamlı bir şeyler inşa edelim.",
-    "subtext": "kapım açık. iyi bir fikrin ya da çözülecek bir derdin varsa, konuşalım.",
+    "header": "inşa etmeye değer bir şey mi var?",
+    "subtext": "kapım açık. iyi fikir, zor problem ya da sadece konuşmak — yaz.",
     "link": "iletişime geç",
     "sentences": [
       "eğer istersen",
@@ -104,19 +115,19 @@
     ]
   },
   "heroAbout": {
-    "title": "elime değil, gözüme güvenirim.",
-    "content_text_1": "çoğunun atladığını fark ederim.",
-    "content_text_2": "ve asla acele etmem."
+    "title": "insanların gördüğünü yaparım.",
+    "content_text_1": "perde arkasındaki mühendis değil.",
+    "content_text_2": "bütününü ship eden."
   },
   "aboutmePage": {
     "title": "[ben kimim]",
-    "bio_1": "adım yunus emre. elektrik mühendisliği okuyordum, üçüncü sınıfta bıraktım. kod yazmaya başladım, yazarken de tasarıma kafayı taktım.",
-    "bio_2": "derken sıra kendi işime geldi. 2023'te istanbul'da skynotech'i kurdum. o zamandan beri hem tasarlıyorum hem yazıyorum."
+    "bio_1": "ben rhishav. yazılım mühendisi, kurucu, design-first builder. meikai — bir tarayıcı — ve frescava, bir fotoğraf düzenleme stüdyosu kurdum. bol bol open source da ship ediyorum.",
+    "bio_2": "ai ajanları ve uygulamalar yapıyorum — görsellerin ve sunumun üstünde duran şeyler, arkasında değil. cs ve fizik meraklısı. iş ne istiyorsa ona uyum sağlarım."
   },
   "whatIDo": {
     "title": "[ne yapıyorum]",
-    "desc_1": "arayüz tasarlıyorum, kodunu da ben yazıyorum. ikisini ayrı işler gibi görmüyorum.",
-    "desc_2": "ürün arayüzü, kurumsal site, mobil uygulama yapıyorum. bir fikri alıp çalışan bir şeye çeviriyorum."
+    "desc_1": "tasarlarım ve kodlarım — aynı beyin, aynı eller. ajanlar, tarayıcılar, ürünler. arayüz ve arkasındaki sistem.",
+    "desc_2": "bir fikri sıfırdan insanların açıp tıklayabileceği bir şeye çeviriyorum. kurucu zihniyeti: bütünü sahiplenmek."
   },
   "discover": {
     "title": "[beni keşfet]",
@@ -128,17 +139,17 @@
       {
         "instruction": "bir yapboz parçası çiz",
         "title": "bütünü görürüm",
-        "description": "tek tek parçalara değil, işin bütününe bakarım. kullanıcının derdi, işin hedefi, teknik gerçek... hepsini aynı kafada tutmaya çalışırım."
+        "description": "ajanlar, ui, infra, kullanıcı — tam resmi kafamda tutarım. sadece kendi köşemi değil."
       },
       {
         "instruction": "bir kalem çiz",
         "title": "ikisini birden yaparım",
-        "description": "tasarımcı gözüyle kod yazarım. kafamdaki şey ekrana geçerken bozulmasın diye uğraşırım."
+        "description": "tasarım ve kod, aynı oturumda. hayal ettiğim şeyin ekrana geçerken ölmesine izin vermem."
       },
       {
         "instruction": "bir onay işareti çiz",
-        "title": "sağlam bırakırım",
-        "description": "doğru hissettirmeden işi bitmiş saymam. hızlı ve düzgün çalışana kadar uğraşırım."
+        "title": "ship ederim",
+        "description": "çalışıp doğru hissettirmeden bitmiş saymam. hızlı, sağlam, iki kez açmak isteyeceğin bir şey."
       }
     ]
   },
@@ -154,11 +165,11 @@
     "title": "[şu an]",
     "subtitle": "işten kafamı kaldırınca.",
     "items": [
-      "istanbul'da yaşıyorum",
-      "arada resim çiziyorum",
-      "çok kitap okuyup çok düşünüyorum",
-      "bol bol hayal kuruyorum",
-      "psikolojiye meraklıyım"
+      "ajanlar ve tarayıcılar yapıyorum",
+      "meikai + open source işletiyorum",
+      "okuyorum, düşünüyorum, rabbit hole'lara düşüyorum",
+      "uyumam gerekirken cs & fizik",
+      "muhtemelen fazla online'ım"
     ]
   },
   "projects": {
@@ -526,11 +537,11 @@
       "message": "mesaj"
     },
     "placeholders": {
-      "fullname": "yunus emre korkmaz",
+      "fullname": "rhishav dhali",
       "company": "apple computer, inc.",
       "email": "ornek@mail.com",
       "phone": "+90 555 555 55 55",
-      "subject": "web uygulaması, mobil uygulama, ui/ux tasarım",
+      "subject": "ajanlar, ürün, iş birliği",
       "message": "istediğiniz her şeyi yazın."
     },
     "button": {

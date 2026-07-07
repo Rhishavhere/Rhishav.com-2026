@@ -77,7 +77,7 @@
   color: var(--wb500);
 }
 
-/* Decorative wordmark: enlarged version of the nav logo [ yeqq ] motif.
+/* Decorative wordmark: enlarged version of the nav logo [ rshv ] motif.
    Also capped by height so it does not exceed 100svh. */
 .wordmark {
   font-size: min(16vw, 24vh);

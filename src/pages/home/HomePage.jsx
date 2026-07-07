@@ -4,6 +4,7 @@ import IntroSec from "./intro/IntroSec";
 
 const WelcomeSec = lazy(() => import("./welcome/WelcomeSec"));
 const AboutmeHome = lazy(() => import("./aboutme/AboutmeHome"));
+const HomeNowStrip = lazy(() => import("./now/HomeNowStrip"));
 const Works = lazy(() => import("./works/Works"));
 const PrinciplesSection = lazy(() => import("./principle/PrinciplesSection"));
 const ManifestHomePage = lazy(() => import("./manifest/ManifestHomePage"));
@@ -21,6 +22,7 @@ const HomePage = () => {
     const warmHomeSections = () => {
       import("./welcome/WelcomeSec");
       import("./aboutme/AboutmeHome");
+      import("./now/HomeNowStrip");
       import("./works/Works");
       import("./principle/PrinciplesSection");
       import("./manifest/ManifestHomePage");
@@ -46,7 +48,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex w-full flex-col items-center gap-[10vh] max-[1024px]:gap-[0vh]">
+    <div className="flex w-full flex-col items-center gap-[22vh] max-[1024px]:gap-[14vh] max-[600px]:gap-[10vh]">
       {!isAnimationPlayed && (
         <SignatureIntro onAnimationComplete={handleAnimationComplete} />
       )}
@@ -55,6 +57,7 @@ const HomePage = () => {
         <Suspense fallback={null}>
           <WelcomeSec />
           <AboutmeHome />
+          <HomeNowStrip />
           <Works />
           <PrinciplesSection />
           <ManifestHomePage />

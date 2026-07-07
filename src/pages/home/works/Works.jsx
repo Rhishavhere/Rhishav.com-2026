@@ -6,6 +6,8 @@ import { useProjects } from "@/hooks/useProjects";
 import { useProjectCursor } from "@/hooks/useProjectCursor";
 import ProjectCard from "@/components/project-card/ProjectCard";
 import ProjectSkeleton from "@/components/project-skeleton/ProjectSkeleton";
+import AnimatedSplit from "@/components/animated-split/AnimatedSplit";
+import PrimerLink from "@/ui/link/PrimerLink";
 import styles from "./style.module.css";
 
 const WorksHomePage = () => {
@@ -52,7 +54,26 @@ const WorksHomePage = () => {
     );
 
   return (
-    <div className="relative flex w-screen flex-col items-start gap-[10vh]">
+    <section className="relative flex w-screen flex-col items-center gap-[8vh] px-[2vw] py-[6vh]">
+      <div className="flex w-[30vw] flex-col items-center gap-[2vh] text-center max-[1024px]:w-[60vw] max-[600px]:w-[90vw]">
+        <AnimatedSplit
+          text={t("worksHome.title")}
+          className="!text-[0.875em] !font-[200] opacity-50"
+          tagName="h2"
+          stagger={0.03}
+          duration={1.5}
+          start="top 85%"
+        />
+        <AnimatedSplit
+          text={t("worksHome.subtitle")}
+          className="!text-[1em] !font-[200] text-[var(--wb950)] opacity-80"
+          tagName="p"
+          stagger={0.02}
+          duration={1.5}
+          start="top 85%"
+        />
+      </div>
+
       <div className="grid w-screen grid-cols-4 gap-x-0 gap-y-[10vh] max-[1024px]:grid-cols-2 max-[1024px]:gap-y-[5vh] max-[600px]:grid-cols-1 max-[600px]:gap-y-[2.5vh]">
         {lastThreeWorks.map((work, index) => (
           <ProjectCard
@@ -65,6 +86,10 @@ const WorksHomePage = () => {
             onTouchStart={handleTouchStart}
           />
         ))}
+      </div>
+
+      <div className="self-center">
+        <PrimerLink href="/projects" buttonText={t("worksHome.viewAll")} random />
       </div>
 
       <span
@@ -83,7 +108,7 @@ const WorksHomePage = () => {
       >
         ● {cursorTextRef.current}
       </span>
-    </div>
+    </section>
   );
 };
 

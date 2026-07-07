@@ -7,7 +7,7 @@ import useMusic from "@/hooks/useMusic";
    identity label: live elapsed time left, music button right. separate
    component — per-second re-renders must not affect the marquee (IntroSec). */
 
-const ORIGIN = new Date(2004, 5 - 1, 17, 14, 30, 0); // May (5) 17, 2004 — 2:30 PM local
+const ORIGIN = new Date(2004, 5 - 1, 17, 14, 30, 0); // TODO: Rhishav — set your personal origin datetime
 
 const fmtElapsed = () => {
   let diff = Math.max(0, Date.now() - ORIGIN.getTime());

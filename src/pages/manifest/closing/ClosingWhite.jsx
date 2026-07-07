@@ -8,7 +8,7 @@ import LineReveal from "@/components/reveal/LineReveal";
 
 /* return to white — manifesto closing. the page opened with "the weight of white";
    closes the loop with code where 7 ideas bleach to white, leaving one line
-   and the [yeqq] signature. same language as other panels: wb50 ground, hairline,
+   and the [rshv] signature. same language as other panels: wb50 ground, hairline,
    hop ease, text rising from mask. final line belongs to LineReveal
    (its own ScrollTrigger + safety net); traces and signature play when panel settles. */
 export default function ClosingWhite({ isActive = true }) {
@@ -88,7 +88,7 @@ export default function ClosingWhite({ isActive = true }) {
       />
 
       <span ref={signatureRef} className={styles.signature}>
-        [yeqq]
+        [rshv]
       </span>
       <PrimerLink
         href="/contact-me"

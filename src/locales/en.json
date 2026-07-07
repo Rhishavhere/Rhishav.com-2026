@@ -24,11 +24,11 @@
     "manifest": "manifest",
     "projects": "projects",
     "contact_btn": "get in touch",
-    "signature": "designed & built by yunus emre korkmaz"
+    "signature": "designed & built by rhishav dhali"
   },
   "intro": {
-    "marqueeText": "• building software • obsession • engineering • agents • beauty o' maths • ai harness • aesthetics",
-    "clock": "elapsed time since May 17, 2004 at 2:30 PM"
+    "marqueeText": "• building • agents • meikai • design • software • founder • open source • the internet • ships",
+    "clock": "elapsed time since the beginning"
   },
   "music": {
     "play": "hit the disc",
@@ -37,14 +37,17 @@
   "welcome": {
     "greeting": "[hey, i'm]",
     "name": "[Rhishav Dhali]",
-    "description": "i design, and i write code. what i care about is making the complex simple — and the simple meaningful.",
+    "description": "i build agents and software — things people actually see and use. founded meikai and frescava. design-first, always.",
     "cursor": "● who is this?"
   },
   "aboutHome": {
-    "mainText": "i don't rush. i leave every line and every empty space as if it will stay for years.",
+    "mainText": "i don't ship what hides behind the stack. if people can't see it, it didn't happen.",
     "link": "my story"
   },
   "worksHome": {
+    "title": "[works]",
+    "subtitle": "agents, browsers, products — a few things i've built.",
+    "viewAll": "see all",
     "cursorWords": [
       "see more",
       "case view",
@@ -59,15 +62,15 @@
     "title": "[principles]",
     "list": [
       "say less, tell more",
+      "if people can't see it, it didn't ship",
       "simplicity is the hardest work",
       "every detail is an intention",
-      "consistency builds trust",
-      "haste ruins the beautiful"
+      "build things that feel inevitable"
     ]
   },
   "manifest": {
     "title": "[thought]",
-    "desc": "an interface is born not from pixels, but from decisions. i let go of the needless and leave only meaning behind.",
+    "desc": "software is a set of decisions made visible. these are some of mine — on building, thinking, and what survives.",
     "topics": {
       "aesthetic": {
         "label": "aesthetics",
@@ -80,13 +83,21 @@
       "rationality": {
         "label": "rationality",
         "text": "to choose one path is to say goodbye to the others. to decide is to grow simpler."
+      },
+      "observer": {
+        "label": "observer",
+        "text": "looking is not innocent. what you measure, you change."
+      },
+      "choice": {
+        "label": "choice",
+        "text": "every door you walk through closes the others. that weight is real."
       }
     },
     "button": "read how i think"
   },
   "contactHome": {
-    "header": "let’s build something meaningful.",
-    "subtext": "my door is open. if you have a good idea or a problem to solve, let's talk.",
+    "header": "got something worth building?",
+    "subtext": "my door's open. good idea, hard problem, or just want to talk — say hi.",
     "link": "get in touch",
     "sentences": [
       "if you want",
@@ -104,19 +115,19 @@
     ]
   },
   "heroAbout": {
-    "title": "i trust my eye, not my hands.",
-    "content_text_1": "i catch what most skip.",
-    "content_text_2": "and i never rush it."
+    "title": "i build what people see.",
+    "content_text_1": "not the engineer behind the curtain.",
+    "content_text_2": "the one who ships the whole thing."
   },
   "aboutmePage": {
     "title": "[who am i]",
-    "bio_1": "i'm yunus emre. i was studying electrical engineering and quit in my third year. i started coding, and while coding i got hooked on design.",
-    "bio_2": "then it was time for my own thing. in 2023 i started skynotech in istanbul. since then i both design and build."
+    "bio_1": "i'm rhishav. software engineer, founder, design-first builder. i started meikai — a browser — and frescava, a photo editing studio. i also ship a lot of open source.",
+    "bio_2": "i build ai agents and applications — things that sit on top of visuals and presentation, not behind them. cs and physics nerd. i adapt to whatever the work needs."
   },
   "whatIDo": {
     "title": "[what i do]",
-    "desc_1": "i design the interface and write its code myself. i don't see them as two separate jobs.",
-    "desc_2": "i make product interfaces, corporate sites, mobile apps. i take an idea and turn it into something that works."
+    "desc_1": "i design and i code — same brain, same hands. agents, browsers, products. the interface and the system behind it.",
+    "desc_2": "i take an idea from zero to something people can open, click, and use. founder mindset: own the whole thing."
   },
   "discover": {
     "title": "[discover me]",
@@ -128,17 +139,17 @@
       {
         "instruction": "draw a puzzle piece",
         "title": "i see the whole thing",
-        "description": "i look at the whole job, not the pieces. what the user needs, what the work needs, what the tech allows... i try to keep all of it in my head."
+        "description": "agents, ui, infra, the user — i keep the full picture in my head. not just my corner of the stack."
       },
       {
         "instruction": "draw a pen",
         "title": "i do both",
-        "description": "i write code with a designer's eye. i fight to keep the thing in my head from breaking on its way to the screen."
+        "description": "design and code, same session. i fight to keep what i imagined from dying on the way to the screen."
       },
       {
         "instruction": "draw a checkmark",
-        "title": "i leave it solid",
-        "description": "i don't call it done until it feels right. i keep at it until it's fast and works properly."
+        "title": "i ship it",
+        "description": "doesn't count until it works and feels right. fast, solid, something you'd actually open twice."
       }
     ]
   },
@@ -154,11 +165,11 @@
     "title": "[now]",
     "subtitle": "when i look up from work.",
     "items": [
-      "living in istanbul",
-      "drawing now and then",
-      "reading a lot, thinking a lot",
-      "daydreaming plenty",
-      "into psychology"
+      "building agents and browsers",
+      "running meikai + open source",
+      "reading, thinking, rabbit holes",
+      "cs & physics when i should be sleeping",
+      "probably online too much"
     ]
   },
   "projects": {
@@ -526,11 +537,11 @@
       "message": "message"
     },
     "placeholders": {
-      "fullname": "yunus emre korkmaz",
-      "company": "apple computer, inc.",
+      "fullname": "rhishav dhali",
+      "company": "your startup, inc.",
       "email": "example@example.com",
-      "phone": "+90 555 555 55 55",
-      "subject": "web app, mobile app, ui/ux design",
+      "phone": "+1 555 555 5555",
+      "subject": "agents, product, collaboration",
       "message": "describe whatever you want."
     },
     "button": {
