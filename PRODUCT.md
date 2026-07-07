@@ -637,7 +637,7 @@ Explicit checklist of what still belongs to the original portfolio. Track comple
 | `/assets/me/back.webp` | Confirm final hero image |
 | `/assets/projects/*` | Replace all with Rhishav project screenshots |
 | `/og-image.png` | New OG image for Rhishav |
-| `/logo.svg`, favicons | Rebrand to `[rshv]` if desired |
+| `/logo.ico`, `/logo.png`, `/logo.webp` | Rebranded — favicon + PWA manifest |
 | Ambient audio | Keep or replace — Rhishav's choice |
 
 ### 9.4 Code Hygiene
@@ -750,7 +750,8 @@ Rhishav to provide: email, social URLs, final description.
 ### Phase 5 — Polish & Launch
 - [ ] Restore SignatureIntro sessionStorage gate
 - [ ] Performance pass (lazy images, chunk sizes)
-- [ ] OG image + favicon rebrand
+- [x] Favicon + PWA manifest rebrand (`logo.ico`, `logo.png`, `logo.webp`)
+- [ ] OG image rebrand (`og-image.png`)
 - [ ] Remove Turkish (`tr.json`) + wire alt locales (Shakespearean EN, lolcat) — pre-launch only
 - [ ] Final copy review
 - [ ] Deploy rhishav.com
