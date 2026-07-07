@@ -174,15 +174,14 @@
   },
   "projects": {
     "header_title": "[works]",
-    "header_desc": "a selection of work i've designed and built over the past years. from municipal platforms to startup products, in all of them i was after the same thing: a simple interface and a flow that eases the user's job.",
+    "header_desc": "agents, browsers, systems — things i've built and shipped. founder projects, open source, and infrastructure experiments.",
     "filters": {
       "all": "all",
-      "municipal": "municipal",
-      "startup": "startup",
-      "dashboard": "dashboard / admin",
-      "uiux": "ui/ux",
-      "webapp": "web apps",
-      "mobile": "mobile apps"
+      "founder": "founded",
+      "agent": "agents",
+      "browser": "browser",
+      "systems": "systems",
+      "openSource": "open source"
     },
     "cursor": [
       "see more",
@@ -195,16 +194,20 @@
   },
   "workSingle": {
     "labels": {
-      "company": "[company]",
+      "context": "[context]",
+      "company": "[context]",
       "role": "[role]",
       "type": "[type]",
       "tech": "[tech]",
+      "year": "[year]",
       "overview": "[overview]",
       "challenge": "[problem]",
-      "approach": "[decisions]",
-      "impact": "[impact]",
-      "achievements": "[achievements]",
-      "conclusion": "[conclusion]",
+      "approach": "[built]",
+      "impact": "[outcome]",
+      "highlights": "[highlights]",
+      "features": "[features]",
+      "achievements": "[highlights]",
+      "conclusion": "[note]",
       "screens": "[screens]",
       "back": "● back to works",
       "not_found": "project not found",
@@ -219,11 +222,11 @@
       "counter": "{{current}} / {{total}}"
     },
     "defaults": {
-      "role": "ui/ux designer & developer",
-      "type": "web application",
-      "tech": "react, javascript, figma",
-      "overview": "simple, clear interfaces designed for real people to use.",
-      "conclusion": "on this project what i wanted was a simple interface and a flow that eases the user's job. i worked to make it right first, then look good."
+      "role": "founder & engineer",
+      "type": "software",
+      "tech": "typescript, react",
+      "overview": "a project worth opening twice.",
+      "conclusion": "built to be seen and used."
     }
   },
   "manifesto": {

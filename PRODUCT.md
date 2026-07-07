@@ -207,7 +207,7 @@ The home page (`/`) is **not a landing strip** that points elsewhere. It is the 
 | 2 | Greeting | `WelcomeSec` | Done | Name, one-liner, portrait |
 | 3 | Philosophy blurb | `AboutmeHome` | Done | Scroll-scrubbed thesis + story link |
 | 4 | **`[now]` snapshot** | `HomeNowStrip` *(new)* | **WIP** | 5 backstage items — taste of about page |
-| 5 | Selected works | `Works` | **WIP** | 6 projects + header/subtitle + see all |
+| 5 | Selected works | `Works` | **done** | 6 projects + layout picker + see all |
 | 6 | Principles | `PrinciplesSection` | Done | Full principles list visible |
 | 7 | Thought / manifesto | `ManifestHomePage` | **WIP** | 5 topics, interactive accordion — manifesto taste on home |
 | 8 | Contact invitation | `ContactHomePage` | Done | Word cloud + CTA |
@@ -233,7 +233,7 @@ Priority order for making home self-contained:
 - [x] Expand manifest home topics (5 from manifesto themes)
 - [ ] Manifest home: optional mini visual — e.g. white square motif, topic count, or single-line panel preview
 - [ ] Founder one-liner under welcome (Meikai / Frescava mention inline)
-- [ ] Project cards → Rhishav projects (Phase 2)
+- [x] Project cards → Rhishav projects (Phase 2) — story layout
 - [ ] Art showcase finale (Phase 4)
 - [ ] Optional: inline manifest panel preview (one interactive beat from `/manifest` without full pin sequence)
 
@@ -442,34 +442,40 @@ Rhishav may add/remove tags as the portfolio grows.
 
 ### 6.3 Case Study Structure
 
-Keep existing `WorkPage` structure from `src/utils/projects.js`:
+`WorkPage` (`src/pages/project/WorkPage.jsx`) — Tailwind, editorial layout:
 
 ```
-company / context
-role
-type
-tech stack
+context / role / type / tech / year
 overview → challenge → approach → impact
-achievements (metrics)
-screenshots (lightbox)
-conclusion
+highlights[] (title + desc — no metric numbers)
+features[] (bullet list)
+screenshots (lightbox gallery)
+github + live links
 next project link
 ```
 
-**Default role (replace):** ~~"ui/ux designer & developer"~~ → `"founder & software engineer"` or project-specific.
+**Removed:** yeqq-style `achievements` with bold client metrics. Rhishav projects use `highlights[]` instead.
 
-**Screenshot assets:** Rhishav to provide `/public/assets/projects/{slug}/*.webp`.
+**Default role:** `"founder & engineer"` (project-specific overrides in `projects.js`).
 
-### 6.4 Home Works Grid
+**Screenshot assets:** Rhishav to provide `/public/assets/projects/{slug}/*.webp`. Until then, yeqq placeholder banners/assets are mapped per project.
 
-Shows **6 projects** (currently hardcoded slice in `Works.jsx`). Recommended featured six *(Rhishav to confirm)*:
+### 6.4 Projects Showcase Layout
 
-1. Meikai *(or Blueberry if Meikai case study isn't ready)*
+**Story layout** (`StoryCard`) — editorial collage inspired by magazine spreads: overlapping images, asymmetric placement, strong typographic hierarchy. Used on `/projects` and home `Works`.
+
+### 6.5 Home Works Grid
+
+Shows **6 projects** (slice in `Works.jsx` via `ProjectsShowcase`). All 8 in `projects.js`:
+
+1. Meikai
 2. Frescava
-3. Blueberry / Surfex SDK
-4. Twigs.ai
-5. Ozen
-6. Zingx
+3. Blueberry
+4. Surfex SDK
+5. Twigs
+6. Ozen
+7. Zingx
+8. OneCloud
 
 ---
 
@@ -486,7 +492,7 @@ Shows **6 projects** (currently hardcoded slice in `Works.jsx`). Recommended fea
 | Marquee keywords | Rhishav | Already partially updated in EN |
 | Art titles/captions | Rhishav | Layout + lightbox |
 | SEO meta descriptions | Collaborate | Implement in `index.html` |
-| Turkish locale | Rhishav (if keeping TR) | i18n plumbing |
+| Turkish locale | — | **Dropped.** EN-only until pre-launch alt locales |
 
 ### 7.2 Voice Guidelines
 
@@ -575,7 +581,7 @@ Direction — builder, founder, modern, fun. **No art keywords** (art is end-onl
 | Intro hero | `src/pages/home/intro/IntroSec.jsx` |
 | Manifest arc | `src/pages/manifest/content/ManifestContent.jsx` |
 | Projects data | `src/utils/projects.js` |
-| i18n copy | `src/locales/en.json`, `src/locales/tr.json` |
+| i18n copy | `src/locales/en.json` only — **ignore `tr.json`** until pre-launch locale swap |
 | Design tokens | `src/styles/variables.css` |
 | SEO | `index.html` |
 | Navbar | `src/layouts/navbar/Navbar.jsx` |
@@ -597,7 +603,7 @@ Explicit checklist of what still belongs to the original portfolio. Track comple
 | Item | File(s) | Current | Target |
 |------|---------|---------|--------|
 | Footer wordmark | `Footer.jsx` | `[yeqq]` | `[rshv]` |
-| Footer signature | `en.json`, `tr.json` | "designed & built by yunus emre korkmaz" | "designed & built by rhishav dhali" |
+| Footer signature | `en.json` | "designed & built by yunus emre korkmaz" | "designed & built by rhishav dhali" |
 | Entropy wordmark | `CostOfOrder.jsx` | `[yeqq]` | `[rshv]` |
 | Meta description | `index.html` | Yunus bio | Rhishav bio |
 | JSON-LD Person | `index.html` | Yunus Emre Korkmaz | Rhishav Dhali |
@@ -610,14 +616,14 @@ Explicit checklist of what still belongs to the original portfolio. Track comple
 
 | Item | File(s) | Action |
 |------|---------|--------|
-| Bio / story | `en.json`, `tr.json` `aboutmePage` | Rewrite for Rhishav |
+| Bio / story | `en.json` `aboutmePage` | Rewrite for Rhishav |
 | What I do | `whatIDo` keys | Design-first founder — agents, products, interfaces |
 | `[now]` section | `now` keys | Rhishav's current life |
 | Welcome portrait | `WelcomeSec.jsx` | `/assets/rhishav/*` |
 | About photos | `HeroAbout.jsx`, `WhatIDo.jsx` | Rhishav assets |
 | All 9 projects | `projects.js` | Replace with Rhishav projects |
 | Projects header | `projects.header_desc` | Agent/AI/systems framing |
-| Turkish locale | `tr.json` | Full Rhishav pass (or drop TR if not needed) |
+| Turkish locale | `tr.json` | **Frozen — do not maintain.** Remove before launch; replace with Shakespearean EN + lolcat (pre-launch) |
 | Form placeholder | `en.json` | Rhishav name |
 | DiscoverMe cards | `discover.cards` | Rhishav workflow copy |
 | Manifesto articles | `manifesto.articles.*` | Rhishav essays (9 articles) |
@@ -650,7 +656,7 @@ Explicit checklist of what still belongs to the original portfolio. Track comple
 - **WCAG AA minimum** — contrast, focus states, skip link (already present)
 - **Reduced motion** — implemented; maintain for all new sections including Art showcase
 - **Keyboard navigation** — island navbar ESC/Tab trap; extend to new interactives
-- **i18n** — EN required; TR optional (Rhishav to decide if Turkish stays)
+- **i18n** — EN only during development. **Do not edit `tr.json`** — Turkish is yeqq legacy and will be removed. Pre-launch alt languages (TBD): Shakespearean English + lolcat.
 - **Alt text** — Rhishav to provide for all new imagery
 - **Screen reader** — decorative elements use `aria-hidden`; interactive panels need labels
 
@@ -702,7 +708,7 @@ Rhishav to provide: email, social URLs, final description.
 - [x] Update SEO/meta/JSON-LD (§11)
 - [x] Portrait + about photos — Yunus assets as placeholder, Rhishav alt text
 - [x] Rewrite EN locale: welcome, bio, whatIDo, now, principles
-- [x] Rewrite TR locale: same identity keys
+- [x] ~~Rewrite TR locale~~ — skipped; `tr.json` frozen (remove pre-launch)
 - [ ] Update uptime clock origin — mechanical date placeholder; Rhishav to set `ORIGIN` in `IntroTopBar.jsx`
 - [x] Package rename → `rhishav-portfolio`
 - [x] Contact email placeholder → `hello@rhishav.com` (Rhishav to confirm)
@@ -717,11 +723,16 @@ Rhishav to provide: email, social URLs, final description.
 - [ ] Per-section content depth pass (ongoing with Rhishav)
 
 ### Phase 2 — Projects
-- [ ] Define project data model entries (§6.1)
-- [ ] New filter tags
-- [ ] Rhishav provides screenshots per project
-- [ ] Write case study copy (prioritize Blueberry, Surfex, Twigs)
-- [ ] Update home Works grid (6 featured)
+- [x] Define project data model entries (§6.1) — 8 projects in `projects.js`
+- [x] New filter tags (founder, agent, browser, systems, open-source)
+- [x] Story layout for projects showcase (`StoryCard`)
+- [x] Revamp `ProjectsPage`, home `Works`, `WorkPage` slug pages
+- [x] Remove yeqq achievement metrics → `highlights[]` + `features[]`
+- [x] Update `SelectedWorks` featured links (meikai, frescava, blueberry)
+- [x] Locale labels (`workSingle.labels`) — EN only; `tr.json` frozen
+- [ ] Rhishav provides screenshots per project (yeqq placeholders still mapped)
+- [ ] Rhishav copy pass / manual tweaks
+- [ ] Pick default layout; remove picker if desired — **done: story only**
 
 ### Phase 3 — Manifesto Transformation
 - [ ] Rhishav decides which panels keep yeqq topics vs new names (§4.4)
@@ -740,7 +751,7 @@ Rhishav to provide: email, social URLs, final description.
 - [ ] Restore SignatureIntro sessionStorage gate
 - [ ] Performance pass (lazy images, chunk sizes)
 - [ ] OG image + favicon rebrand
-- [ ] Turkish locale decision + pass (if keeping)
+- [ ] Remove Turkish (`tr.json`) + wire alt locales (Shakespearean EN, lolcat) — pre-launch only
 - [ ] Final copy review
 - [ ] Deploy rhishav.com
 
@@ -792,7 +803,7 @@ Record major decisions here as they're made:
 | 2026-07-07 | Yunus assets as image placeholders | Rhishav replaces manually when ready |
 | 2026-07-07 | Home = complete first impression | Show manifest, works, now on `/` — routes are deeper cuts, not gates |
 | 2026-07-07 | More inter-section whitespace | `22vh` desktop, `14vh` tablet — breath between richer sections |
-| TBD | Keep or drop Turkish locale | Rhishav to decide |
+| 2026-07-07 | No Turkish — EN only for now | Do not edit `tr.json`; pre-launch: Shakespearean EN + lolcat |
 | TBD | Final manifesto topic list & essays | Rhishav to write — placeholders OK until then |
 | TBD | Uptime clock origin date | Rhishav to provide personal moment |
 | TBD | Art finale: home section vs `/art` route | Rhishav to decide placement |
@@ -807,7 +818,7 @@ These block or inform upcoming work. Answer when ready — no rush on all at onc
 2. **Meikai & Frescava:** GitHub URLs, founding dates, screenshots, one-liner descriptions?
 3. **Location & `[now]`:** Where are you based? What goes in the backstage snapshot?
 4. **Uptime clock origin:** What datetime should the elapsed-time clock count from?
-5. **Turkish locale:** Keep bilingual EN/TR, or English-only for launch?
+5. **Alt locales (pre-launch):** Shakespearean English + lolcat — details TBD at the end.
 6. **Contact:** Email, social links (GitHub, X, LinkedIn, etc.)?
 7. **Art finale:** Home section gateway, separate `/art` page, or both? How many pieces for v1?
 8. **Manifesto essays:** Which yeqq panels keep their name vs get replaced? (Interactives mostly stay)

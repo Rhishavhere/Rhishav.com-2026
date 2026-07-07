@@ -10,12 +10,11 @@ import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Featured work: own startup + one public web platform + one social mobile
-// app. matched by link so projects.js stays the single source of truth.
+// Featured: founder products + flagship open-source
 const FEATURED = [
-  "/projects/skynotech-smart-site-systems",
-  "/projects/balikesir-istihdam-ofisi",
-  "/projects/yakin-kart",
+  "/projects/meikai",
+  "/projects/frescava",
+  "/projects/blueberry",
 ];
 
 export default function SelectedWorks() {
@@ -84,7 +83,7 @@ export default function SelectedWorks() {
                 <span className={styles.index} aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className={styles.name}>{work.name}</span>
+                <span className={styles.name}>{work.project_name}</span>
                 <span className={styles.type}>{work.type}</span>
               </Link>
             </li>

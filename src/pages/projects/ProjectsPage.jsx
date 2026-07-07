@@ -1,17 +1,16 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import gsap from "gsap";
 
-// Components
 import ProjectsHeader from "@/pages/projects/header/ProjectsHeader";
 import ProjectsFilter from "@/pages/projects/filter/ProjectsFilter";
-import ProjectCard from "@/components/project-card/ProjectCard";
+import ProjectsShowcase from "@/components/projects/ProjectsShowcase";
 import ProjectSkeleton from "@/components/project-skeleton/ProjectSkeleton";
 import ContactHomePage from "@/pages/home/contact/ContactHomePage";
 
-// Context, Hooks & Styles
-import styles from "./style.module.css";
 import { useProjectCursor } from "@/hooks/useProjectCursor";
 import { useProjects } from "@/hooks/useProjects";
+import styles from "./style.module.css";
 
 const ProjectsPage = () => {
   const { t } = useTranslation();
@@ -30,6 +29,11 @@ const ProjectsPage = () => {
     handleMouseLeave,
   } = useProjectCursor(cursorWords);
 
+  const handleTouchStart = (e) => {
+    const el = e.currentTarget;
+    gsap.fromTo(el, { scale: 0.98 }, { scale: 1, duration: 0.3, ease: "hop" });
+  };
+
   const filteredProjects = useMemo(() => {
     const safeProjects = projects || [];
     return activeFilter === "all"
@@ -37,40 +41,42 @@ const ProjectsPage = () => {
       : safeProjects.filter((project) => project.tags?.includes(activeFilter));
   }, [projects, activeFilter]);
 
-  if (isError)
+  if (isError) {
     return (
-      <div className={styles.container}>
-        <p className={styles.error}>● {t("projects.error")}</p>
+      <div className="flex min-h-[60vh] w-full items-center justify-center px-[4vw]">
+        <p className="text-[0.95em] font-[300] text-[var(--wb500)]">
+          ● {t("projects.error")}
+        </p>
       </div>
     );
+  }
 
   return (
-    <div className={styles.container}>
+    <div className="flex w-full flex-col items-center gap-[8vh] pb-[12vh] pt-[14vh]">
       <ProjectsHeader />
 
-      <ProjectsFilter
-        activeFilter={activeFilter}
-        onFilterChange={setActiveFilter}
-      />
-
-      <div className={styles.main}>
-        {isLoading
-          ? // show skeletons while data is loading
-            Array.from({ length: 6 }).map((_, index) => (
-              <ProjectSkeleton key={`skeleton-${index}`} />
-            ))
-          : // render real projects once data arrives
-            filteredProjects.map((work, index) => (
-              <ProjectCard
-                key={work.link}
-                work={work}
-                index={index}
-                onMouseMove={handleMouseMove}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              />
-            ))}
+      <div className="flex w-full flex-col items-center gap-[4vh]">
+        <ProjectsFilter
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
       </div>
+
+      {isLoading ? (
+        <div className="grid w-full grid-cols-2 gap-[5vh] px-[2vw] max-[600px]:grid-cols-1">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <ProjectSkeleton key={`skeleton-${index}`} />
+          ))}
+        </div>
+      ) : (
+        <ProjectsShowcase
+          projects={filteredProjects}
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onTouchStart={handleTouchStart}
+        />
+      )}
 
       <ContactHomePage />
 

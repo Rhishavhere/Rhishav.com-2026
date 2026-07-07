@@ -7,12 +7,11 @@ const ProjectsFilter = ({ activeFilter, onFilterChange }) => {
 
   const filters = [
     { id: "all", label: t("projects.filters.all") },
-    { id: "municipal", label: t("projects.filters.municipal") },
-    { id: "startup", label: t("projects.filters.startup") },
-    { id: "dashboard", label: t("projects.filters.dashboard") },
-    { id: "uiux", label: t("projects.filters.uiux") },
-    { id: "webapp", label: t("projects.filters.webapp") },
-    { id: "mobile", label: t("projects.filters.mobile") },
+    { id: "founder", label: t("projects.filters.founder") },
+    { id: "agent", label: t("projects.filters.agent") },
+    { id: "browser", label: t("projects.filters.browser") },
+    { id: "systems", label: t("projects.filters.systems") },
+    { id: "open-source", label: t("projects.filters.openSource") },
   ];
 
   return (

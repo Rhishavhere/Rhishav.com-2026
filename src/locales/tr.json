@@ -174,15 +174,14 @@
   },
   "projects": {
     "header_title": "[işler]",
-    "header_desc": "son yıllarda tasarlayıp geliştirdiğim işlerden bir seçki. belediye platformlarından girişim ürünlerine kadar hepsinde aynı derde düştüm: sade bir arayüz, kullananın işini kolaylaştıran bir akış.",
+    "header_desc": "ajanlar, tarayıcılar, sistemler — ship ettiğim şeyler. kurucu projeler, open source ve altyapı deneyleri.",
     "filters": {
       "all": "hepsi",
-      "municipal": "belediye",
-      "startup": "girişim",
-      "dashboard": "panel / admin",
-      "uiux": "ui/ux",
-      "webapp": "web uygulamaları",
-      "mobile": "mobil uygulamalar"
+      "founder": "kurulan",
+      "agent": "ajanlar",
+      "browser": "tarayıcı",
+      "systems": "sistemler",
+      "openSource": "open source"
     },
     "cursor": [
       "incele",
@@ -195,16 +194,20 @@
   },
   "workSingle": {
     "labels": {
-      "company": "[şirket]",
+      "context": "[bağlam]",
+      "company": "[bağlam]",
       "role": "[rol]",
       "type": "[tür]",
       "tech": "[teknoloji]",
+      "year": "[yıl]",
       "overview": "[genel bakış]",
       "challenge": "[problem]",
-      "approach": "[kararlar]",
-      "impact": "[etki]",
-      "achievements": "[başarılar]",
-      "conclusion": "[sonuç]",
+      "approach": "[nasıl yapıldı]",
+      "impact": "[sonuç]",
+      "highlights": "[öne çıkanlar]",
+      "features": "[özellikler]",
+      "achievements": "[öne çıkanlar]",
+      "conclusion": "[not]",
       "screens": "[ekranlar]",
       "back": "● işlere geri dön",
       "not_found": "proje bulunamadı",
@@ -219,11 +222,11 @@
       "counter": "{{current}} / {{total}}"
     },
     "defaults": {
-      "role": "ui/ux tasarımcısı & geliştirici",
-      "type": "web uygulaması",
-      "tech": "react, javascript, figma",
-      "overview": "gerçek insanların kullanması için tasarlanmış, sade ve anlaşılır arayüzler.",
-      "conclusion": "bu projede derdim sade bir arayüz ve kullananın işini kolaylaştıran bir akıştı. önce doğru çalışsın, sonra iyi görünsün diye uğraştım."
+      "role": "kurucu & mühendis",
+      "type": "yazılım",
+      "tech": "typescript, react",
+      "overview": "iki kez açmaya değer bir proje.",
+      "conclusion": "görülmek ve kullanılmak için yapıldı."
     }
   },
   "manifesto": {

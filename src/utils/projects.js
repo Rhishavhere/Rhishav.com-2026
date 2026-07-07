@@ -1,155 +1,159 @@
+/** @typedef {{ title: string, desc: string }} ProjectHighlight */
+/** @typedef {{ file: string, isWide?: boolean }} ProjectImage */
+
+/**
+ * Rhishav project data.
+ * Images/banners reuse yeqq placeholder assets until Rhishav replaces them.
+ * No client-metric "achievement numbers" — use highlights[] instead.
+ */
+
 const works = [
-  // -------------------------------
-  // 1 — Skynotech Smart Site Systems
-  // -------------------------------
   {
     id: 1,
-    project_name: "skynotech | iot smart site management platform",
-    company_name: "skynotech",
-    role: "frontend developer & ui/ux designer",
-    name: "skynotech | iot smart site management platform",
-    // Fixed desc: added 'waste' and made it more outcome-focused.
-    desc: "an iot-based, full-scope site management platform. it minimized waste, labor, and lack of control by providing real-time monitoring and control capabilities for critical residential infrastructure, including garden irrigation, lighting, and pool systems, all from a single hub.",
+    index: "01",
+    slug: "meikai",
+    project_name: "meikai",
+    tagline: "the web, reimagined — a minimal native browser",
+    context: "founder project",
+    role: "founder & engineer",
+    type: "desktop browser",
+    tech: "tauri, rust, react, typescript, webview2",
+    tags: ["founder", "browser", "open-source"],
+    github: "https://github.com/Rhishavhere/Meikai-Tauri-v1-opensourced",
+    website: "https://meikai.rhishav.com",
+    year: "2024",
+    desc: "meikai is a browser i founded — minimal, native, built on tauri. panel, dock, and minipanel modes explore a different interaction model than chrome tabs. the open-source tauri v1 is a reference build; the full agentic browser lives at meikai.rhishav.com.",
     challenge:
-      "residential site teams needed a single interface for physical infrastructure that was normally fragmented across manual controls, separate devices, and delayed field checks.",
+      "browsers are heavy. i wanted something native to the os — frameless, fast, transformable — that still felt like a real browsing surface, not a demo shell.",
     approach:
-      "i designed and built a dashboard-first workflow around real-time status, quick remote actions, and clear device grouping so technical teams could understand and control the system without extra training.",
+      "tauri 2 + system webview2 for rendering. three window modes (panel launcher, floating dock, expanded minipanel) with rust-backed window orchestration and a react ui layer. bookmarks, multi-window, smart url bar.",
     impact:
-      "the mvp connected 80+ iot devices and turned routine operational checks into a faster remote-control workflow with measurable efficiency gains.",
-    achievements: [
+      "shipped a working native browser experiment and open-sourced the tauri foundation. evolved into a proprietary agentic browser — same vision, deeper product.",
+    highlights: [
       {
-        number: "2",
-        title: "months to full mvp",
-        desc: "delivered a fully functional mvp in 2 months. leveraged the speed of firebase and react/next.js to establish real-time communication between physical iot boards and the web application.",
+        title: "transformable window modes",
+        desc: "panel, dock, and minipanel — one app, three interaction paradigms.",
       },
       {
-        number: "80+", // Combined 30+ and 50+ into '80+'.
-        title: "iot devices managed",
-        desc: "enabled the integration and centralized control of 30+ iot irrigation units and 50+ smart lighting devices across two major residential complexes.",
+        title: "native webview stack",
+        desc: "no bundled chromium. system webview2 on windows, webkit on linux, near-instant startup.",
       },
       {
-        // Used a numeric value in the number field (estimated efficiency increase).
-        number: "25%",
-        title: "operational efficiency increase",
-        desc: "implemented instant remote control via mqtt/firebase. this rapid response capability reduced dependency on manual labor, prevented waste, and boosted overall operational efficiency by 25%.",
+        title: "tauri 2 + rust backend",
+        desc: "window management, navigation, and ipc commands in rust; react 19 + vite on the frontend.",
       },
     ],
-    link: "/projects/skynotech-smart-site-systems",
-    asset: "/assets/projects/skynotech",
-    banner: "skynotech",
-    type: "web application",
-    tech: "react, next.js, firebase, mqtt, figma",
-    tags: ["startup", "webapp", "uiux", "dashboard", "iot"],
-    images: [
-      { file: "1.webp", isWide: true },
-      { file: "2.webp", isWide: false },
-      { file: "3.webp", isWide: false },
-      { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
-      { file: "6.webp", isWide: false },
-      { file: "7.webp", isWide: false },
+    features: [
+      "panel / dock / minipanel modes",
+      "multi-window browsing",
+      "bookmarks tray",
+      "smart url bar",
+      "frameless custom chrome",
     ],
-  },
-
-  // ----------------------------------------------------
-  // 2 — Skynotech | Corporate Brand & Web Presence
-  // ----------------------------------------------------
-  {
-    id: 2,
-    project_name: "skynotech | corporate brand & web presence",
-    company_name: "skynotech",
-    role: "frontend developer & ui/ux designer",
-    name: "skynotech | corporate brand & web presence",
-    desc: "designed and developed the official corporate website, establishing a new brand image to reflect skynotech's technological leadership. the site registered the visual language (logo, icons, design system) which i created.",
-    challenge:
-      "skynotech needed a corporate presence that could explain a technical iot product clearly while also making the new brand feel credible and scalable.",
-    approach:
-      "i created the visual identity, interface system, and front-end implementation together so the website, product ui, icons, and brand language could feel like one ecosystem.",
-    impact:
-      "the result became the public face of the company and established a consistent design system for both the corporate site and the main platform.",
-    achievements: [
-      {
-        number: "96",
-        title: "lighthouse performance score",
-        // Highlighted Next.js usage and optimization.
-        desc: "achieved a 96+ lighthouse score for performance by optimizing frontend assets and leveraging next.js for a fast user experience.",
-      },
-      {
-        number: "100%",
-        title: "design system implementation",
-        // Highlighted consistency between the app and website.
-        desc: "created and implemented a scalable component library and design system, ensuring a 100% consistent and responsive visual language across both the corporate site and the main iot platform.",
-      },
-      {
-        number: "1",
-        title: "brand identity creation",
-        // Highlighted brand identity creation.
-        desc: "spearheaded the complete visual identity, including logo design, iconography, and establishing the unified design principles for the new market image.",
-      },
-    ],
-    link: "/projects/skynotech-smart-site-systems-website",
+    link: "/projects/meikai",
     banner: "skynotech-website",
     asset: "/assets/projects/skynotech-website",
-    type: "corporate website",
-    tech: "next.js, figma",
-    tags: ["startup", "webapp", "uiux", "brand-identity", "design-system"],
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
       { file: "3.webp", isWide: false },
       { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
-      { file: "6.webp", isWide: false },
     ],
   },
-
-  // -------------------------------------------------------------------------
-  // 3 — Balıkesir | High-Performance Digital Employment Platform
-  // -------------------------------------------------------------------------
   {
-    project_name: "balıkesir digital employment platform",
-    company_name: "balıkesir metropolitan municipality",
-    role: "frontend developer & ui/ux designer",
-    name: "balıkesir digital employment platform",
-    desc: "a high-performance municipal employment platform designed for speed and accessibility. the project’s hyper-optimized ui/ux ensures citizens can quickly access job listings and employers can post vacancies efficiently.",
+    id: 2,
+    index: "02",
+    slug: "frescava",
+    project_name: "frescava",
+    tagline: "a photo editing studio — design-first creative tooling",
+    context: "founder project",
+    role: "founder & engineer",
+    type: "creative application",
+    tech: "react, typescript, canvas, electron",
+    tags: ["founder", "design"],
+    github: null,
+    website: null,
+    year: "2024",
+    desc: "frescava is a photo editing studio i founded — built for people who care about how editing feels, not just what filters exist. design and implementation from the same hands.",
     challenge:
-      "citizens and employers were moving through a slow, paper-heavy employment process where application tracking and candidate matching were hard to follow.",
+      "most editing tools are either pro-grade and intimidating or mobile-simple and limiting. i wanted a studio that respected visual craft without enterprise bloat.",
     approach:
-      "i focused the interface on speed, accessible flows, clear job discovery, employer posting, application tracking, and pdf cv generation for public-service use at scale.",
+      "design-first product architecture: fast canvas interactions, intentional ui density, and a workflow that keeps the image central — not the toolbar.",
     impact:
-      "the platform collected 12,291 resumes, supported 428 businesses, and helped the municipality move a critical public workflow into a faster digital channel.",
-    achievements: [
+      "a founder product that proves the same eye behind this portfolio builds creative tools, not just dev infrastructure.",
+    highlights: [
       {
-        number: "30%",
-        title: "process speed increase",
-        // Highlighted the paper-to-digital transition.
-        desc: "digitalization of the paper-based application process resulted in a 30% increase in overall hiring and application process speed, benefiting both citizens and employers.",
+        title: "studio-grade ux",
+        desc: "editing flows designed around how creatives actually move — not feature checklists.",
       },
       {
-        number: "12,291",
-        title: "resumes & applications",
-        // Incorporated quantitative results.
-        desc: "enabled the digital collection of 12,291 resumes, 428 registered businesses, and facilitated 5,324 candidate referrals, proving the system's high adoption rate.",
-      },
-      {
-        number: "94",
-        title: "lighthouse accessibility score",
-        // Highlighted accessibility and social impact.
-        desc: "achieved a 94+ accessibility score, ensuring that critical public services—such as self-tracking application status and generating pdf cvs—are fully accessible to all citizens.",
-      },
-      {
-        number: "0.8s",
-        title: "core web vitals optimized",
-        // Consolidated technical metrics under a single heading.
-        desc: "optimized core web vitals, achieving 0.8s fcp, 210ms tbt, and an extremely stable 0.002 cls score, making job searching seamless and fast.",
+        title: "founder-built end to end",
+        desc: "product vision, interface, and implementation from one person.",
       },
     ],
-    link: "/projects/balikesir-istihdam-ofisi",
-    asset: "/assets/projects/balikesir-istihdam-ofisi",
+    features: [
+      "photo editing workspace",
+      "non-destructive workflow",
+      "design-first ui",
+    ],
+    link: "/projects/frescava",
+    banner: "skynotech",
+    asset: "/assets/projects/skynotech",
+    images: [
+      { file: "1.webp", isWide: true },
+      { file: "2.webp", isWide: false },
+      { file: "3.webp", isWide: false },
+    ],
+  },
+  {
+    id: 3,
+    index: "03",
+    slug: "blueberry",
+    project_name: "blueberry",
+    tagline: "agentic browser — vision-first control, routines, research",
+    context: "open source",
+    role: "creator",
+    type: "electron browser",
+    tech: "electron, typescript, react, playwright, llm apis",
+    tags: ["agent", "browser", "open-source"],
+    github: "https://github.com/Rhishavhere/blueberry",
+    website: null,
+    year: "2025",
+    desc: "blueberry is an electron browser where you give an agent a goal in plain english and it takes over — screenshots, clicks, reads pages, writes research reports. routines let you save and schedule agent tasks. mini dock mode runs agents from a floating hud.",
+    challenge:
+      "browser agents break on dom changes, verbose llm output, and the gap between 'demo' and something you'd open daily. i needed vision-first control that survives real sites.",
+    approach:
+      "dual prompt modes (blind → vision on demand), json repair for malformed agent steps, real input events (not dom-simulated clicks), react-aware typing injection, and a full report pipeline after research runs.",
+    impact:
+      "extracted into surfex sdk — same agent core, packaged for any app. blueberry is the full browser product surface.",
+    highlights: [
+      {
+        title: "vision-first agent loop",
+        desc: "blind planning until the agent calls see — then pixel-coordinate clicks on screenshots.",
+      },
+      {
+        title: "routines + scheduler",
+        desc: "save successful agent runs, schedule hourly/daily/weekly, headless execution in background.",
+      },
+      {
+        title: "research report pipeline",
+        desc: "agent saves pages → dedicated llm writes structured markdown → in-browser report viewer with toc.",
+      },
+      {
+        title: "mini dock mode",
+        desc: "compact floating pill for search or agent runs without the full browser window.",
+      },
+    ],
+    features: [
+      "browser control agent",
+      "redesign agent (live dom mutation)",
+      "scheduled routines",
+      "report generation",
+      "mini dock + headless agent",
+    ],
+    link: "/projects/blueberry",
     banner: "balikesir-istihdam-ofisi",
-    type: "web application",
-    tech: "react, javascript, figma",
-    tags: ["municipal", "webapp", "uiux", "high-performance", "accessibility"],
+    asset: "/assets/projects/balikesir-istihdam-ofisi",
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
@@ -158,321 +162,257 @@ const works = [
       { file: "5.webp", isWide: false },
     ],
   },
-
-  // ----------------------------------------------------
-  // 4 — Balıkesir | Modern Youth Event Mobile Hub
-  // ----------------------------------------------------
   {
     id: 4,
-    project_name: "balıkesir | event app",
-    company_name: "balıkesir metropolitan municipality",
-    role: "frontend developer & ui/ux designer",
-    name: "balıkesir | event app",
-    desc: "a dedicated react native mobile application providing instant notifications and real-time listings for youth-focused events (concerts, theatre, cinema). it transitioned the municipality's image from institutional to a modern, accessible, and cool brand for young users.",
+    index: "04",
+    slug: "surfex-sdk",
+    project_name: "surfex sdk",
+    tagline: "agentic browser automation — vision-first, self-healing, byom",
+    context: "open source",
+    role: "creator",
+    type: "typescript sdk",
+    tech: "typescript, vercel ai sdk, playwright",
+    tags: ["agent", "browser", "open-source"],
+    github: "https://github.com/Rhishavhere/surfex-sdk",
+    website: "https://www.npmjs.com/package/@surfex-ai/sdk",
+    year: "2025",
+    desc: "surfex is an npm sdk — give it a goal and a model, it navigates, clicks, reads, and reports. vision-first clicks survive dom redesigns. bring your own model via vercel ai sdk. driver-agnostic: playwright included, puppeteer or custom chromium forks supported.",
     challenge:
-      "youth events were scattered across social media and institutional announcements, making discovery unreliable for the audience that needed fast mobile updates.",
+      "browser automation is brittle — selectors break, llms hallucinate actions, and research agents need citation without the main loop getting distracted.",
     approach:
-      "i designed a mobile-first event hub with a more energetic visual language, simple categories, and notification-ready flows for concerts, theatre, cinema, and local activities.",
+      "native vision mode with auto-screenshots, json repair + coercion pass on bad llm output, separate report-writer llm for markdown synthesis, and a six-method BrowserDriver interface.",
     impact:
-      "the app created a central event touchpoint for a 100k+ youth audience and helped the municipality speak with a more modern digital voice.",
-    achievements: [
+      "published as @surfex-ai/sdk on npm. powers e2e testing, autonomous research, and dynamic spa scraping with one plain-english goal string.",
+    highlights: [
       {
-        number: "40+",
-        title: "screens & ui/ux design",
-        desc: "designed over 40 distinct screens in figma, developing a unique, modern, and engaging visual language that successfully moved away from the municipality’s traditional corporate aesthetic.",
+        title: "bring your own model",
+        desc: "claude, gpt-4o, gemini — any vercel ai sdk provider. you own keys and costs.",
       },
       {
-        number: "100k+",
-        title: "targeted user reach",
-        desc: "targeted an audience of 100,000+ young citizens, creating a centralized digital space for social events that was previously unavailable outside of decentralized social media channels.",
+        title: "self-healing output",
+        desc: "malformed json triggers a coercion pass, not a crash.",
       },
       {
-        number: "100%",
-        title: "real-time system implementation",
-        desc: "achieved 100% implementation of the instant notification system via react native, providing real-time updates (concerts, movies, etc.) and addressing the challenge of poor social event communication.",
+        title: "auto research reports",
+        desc: "secondary llm compiles saved pages into cited markdown documents.",
       },
     ],
-    link: "/projects/balikesir-etkinlik",
-    asset: "/assets/projects/balikesir-etkinlik",
+    features: [
+      "goal-driven agent.run()",
+      "playwright driver included",
+      "custom driver interface",
+      "onEvent streaming",
+      "mid-run stop()",
+    ],
+    link: "/projects/surfex-sdk",
     banner: "balikesir-etkinlik",
-    type: "mobile application",
-    tech: "react native, figma",
-    tags: ["municipal", "mobile", "uiux", "react-native", "youth-focus"],
+    asset: "/assets/projects/balikesir-etkinlik",
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
       { file: "3.webp", isWide: false },
-      { file: "4.webp", isWide: true },
-      { file: "5.webp", isWide: false },
-      { file: "6.webp", isWide: false },
-      { file: "7.webp", isWide: true },
-      { file: "8.webp", isWide: false },
-      { file: "9.webp", isWide: false },
-      { file: "10.webp", isWide: true },
-      { file: "11.webp", isWide: false },
-      { file: "12.webp", isWide: false },
-      { file: "13.webp", isWide: true },
-      { file: "14.webp", isWide: false },
-      { file: "15.webp", isWide: false },
     ],
   },
-
-  // ----------------------------------------------------
-  // 5 — Yakın Kart | Social Financial Assistance App
-  // ----------------------------------------------------
-
   {
     id: 5,
-    project_name: "yakın kart | social financial assistance app",
-    company_name: "balıkesir metropolitan municipality",
-    role: "frontend developer & ui/ux designer",
-    name: "yakın kart | social financial assistance app",
-    // Updated description: focus on financial support and management.
-    desc: "a social municipal platform that digitizes financial support management for citizens in need. it provides users with a reliable, transparent hub to track their monthly assistance funds and manage their usage.",
+    index: "05",
+    slug: "twigs",
+    project_name: "twigs",
+    tagline: "one memory. every ai. — cross-ai memory sync layer",
+    context: "open source",
+    role: "creator",
+    type: "memory infrastructure",
+    tech: "typescript, fastify, postgres, pgvector, mcp",
+    tags: ["agent", "infra", "open-source"],
+    github: "https://github.com/Rhishavhere/twigs.ai",
+    website: null,
+    year: "2025",
+    desc: "twigs is a hosted memory graph plus open mcp server so claude, cursor, and other mcp clients share the same persistent context. one memory layer across every ai tool you use.",
     challenge:
-      "citizens receiving financial assistance needed a transparent way to understand balance, usage, and support status without depending on unclear offline communication.",
+      "every ai client has its own memory silo. context you build in cursor doesn't follow you to claude desktop — and vice versa.",
     approach:
-      "i shaped the ux around trust: balance visibility, expense review, simple inquiry, and calm mobile flows that make sensitive financial support feel understandable.",
+      "fastify api with postgres + pgvector embeddings, mcp server with twigs_inject / twigs_add / twigs_update tools, next.js dashboard for api keys and memory management.",
     impact:
-      "the product supported 12,101 citizens and made monthly assistance easier to track through a clearer self-service mobile experience.",
-    achievements: [
+      "connective tissue across ai tools — memory that persists and syncs instead of resetting per session.",
+    highlights: [
       {
-        number: "12,101",
-        title: "citizens supported",
-        // Direct social impact and quantitative data.
-        desc: "provided direct financial support to 12,101 citizens via monthly 1000₺ cash assistance, establishing a critical digital lifeline for the community.",
+        title: "mcp-native",
+        desc: "stdio mcp server — drop into cursor or claude desktop config.",
       },
       {
-        number: "100%",
-        title: "real-time balance & tracking",
-        // Transparency and ease of management through UI/UX design.
-        desc: "developed pages for citizens to instantly check their current balance and review expenses. this feature allowed users 100% transparency, empowering them to categorize and manage their budget easily.",
+        title: "vector memory graph",
+        desc: "postgres + pgvector + openai embeddings for semantic recall.",
       },
       {
-        number: "1",
-        title: "single-click query system",
-        // Ease of use and reliability.
-        desc: "implemented a simplified 'single-click query' function within the app, significantly improving the trust and usability of the platform for all financial and social assistance inquiries.",
+        title: "dashboard + api keys",
+        desc: "signup, key management, memory list, custom system prompt export.",
       },
     ],
-    link: "/projects/yakin-kart",
-    asset: "/assets/projects/yakin-kart",
+    features: [
+      "memory graph api",
+      "twigs-mcp server",
+      "next.js dashboard",
+      "pgvector search",
+    ],
+    link: "/projects/twigs",
     banner: "yakin-kart",
-    type: "mobile application",
-    tech: "react native, figma",
-    tags: [
-      "municipal",
-      "mobile",
-      "uiux",
-      "financial-management",
-      "social-impact",
-    ],
+    asset: "/assets/projects/yakin-kart",
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
       { file: "3.webp", isWide: false },
-      { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
     ],
   },
-
-  // -------------------------------
-  // 6 — BAPKA Official Website
-  // -------------------------------
   {
     id: 6,
-    project_name: "bapka corporate website & information hub",
-    company_name: "balıkesir planning and development agency",
-    role: "frontend developer & ui/ux designer",
-    // Updated name: highlighted success and corporate image.
-    name: "bapka corporate website & information hub",
-    // Updated desc: combined design and growth goals.
-    desc: "a completely redesigned corporate website aimed at establishing a strong online presence and driving organic traffic. the project involved creating the entire design language and optimizing the platform for search engines.",
+    index: "06",
+    slug: "ozen",
+    project_name: "ozen",
+    tagline: "near-invisible os layer for local ai — @ozen anywhere",
+    context: "open source",
+    role: "creator",
+    type: "desktop overlay",
+    tech: "electron, react, tailwind, ollama, groq",
+    tags: ["agent", "systems"],
+    github: "https://github.com/Rhishavhere/ozen",
+    website: null,
+    year: "2025",
+    desc: "ozen is not an app you go to — it's a fluid layer at your cursor. type @ozen in any text field, the panel spawns right there. local-first via ollama, semantic memory via membrain, esc to vanish without breaking flow.",
     challenge:
-      "bapka needed a more useful public information hub that could surface reports, announcements, and institutional content without feeling slow or buried.",
+      "using ai means leaving your app, opening a browser, switching context. the cognitive gap between action and knowledge is too wide.",
     approach:
-      "i redesigned the information architecture, homepage hierarchy, and visual system with seo, readability, and content discovery as the main constraints.",
+      "electron multi-window orchestration: the orb (ambient cursor tracker), the panel (floating overlay at cursor), the hub (settings + memory graph). @ozen global trigger, shift+enter on selection.",
     impact:
-      "the redesign helped drive 43% monthly seo growth and brought 600+ organic visitors in the first 28 days.",
-    achievements: [
+      "ai that appears where you are and disappears without friction — private, local, and context-aware.",
+    highlights: [
       {
-        number: "43%",
-        title: "monthly seo growth",
-        desc: "achieved a 43% monthly increase in seo traffic via speed optimization, structured data implementation, and targeted social media management for announcements.",
+        title: "contextual @ozen trigger",
+        desc: "global detection spawns the input bar under your cursor in any app.",
       },
       {
-        number: "600+",
-        title: "organic visitors in 28 days",
-        desc: "gained over 600 organic visitors in the first 28 days by focusing on technical seo and strategic use of high-value keywords within the content architecture.",
+        title: "membrain semantic memory",
+        desc: "persistent spatial knowledge graph across sessions.",
       },
       {
-        number: "1.618",
-        title: "major redesign & architecture",
-        desc: "led the complete site redesign, improving citizen engagement by redesigning the homepage according to the golden ratio principle and strategically highlighting key reports and announcements.",
+        title: "local-first",
+        desc: "ollama gemma3:1b default — data stays on your machine.",
       },
     ],
-    link: "/projects/bapka-website",
+    features: [
+      "global @ozen hotkey",
+      "selection + shift+enter",
+      "upward panel expansion",
+      "semantic memory graph",
+      "orb ambient indicator",
+    ],
+    link: "/projects/ozen",
+    banner: "bapka-website",
     asset: "/assets/projects/bapka-website",
-    banner: "bapka",
-    type: "corporate website",
-    tech: "react, javascript, figma",
-    tags: ["municipal", "webapp", "uiux", "seo", "content-strategy"],
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
-      { file: "3.webp", isWide: false },
       { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
-      { file: "6.webp", isWide: false },
-      { file: "7.webp", isWide: false },
     ],
   },
-
-  // ----------------------------------------------------
-  // 7 — Askıda Fatura | Social Solidarity Platform
-  // ----------------------------------------------------
-
   {
     id: 7,
-    project_name: "askıda fatura | social solidarity platform",
-    company_name: "balıkesir metropolitan municipality",
-    role: "frontend developer & ui/ux designer",
-    name: "askıda fatura | social solidarity platform",
-    desc: "a mobile platform developed with react native that facilitates anonymous social solidarity by enabling citizens to pay essential utility bills (electricity, water, gas) for those in financial need.",
+    index: "07",
+    slug: "zingx",
+    project_name: "zingx",
+    tagline: "homelab-in-a-pocket os — boots usb, runs in ram",
+    context: "systems experiment",
+    role: "creator",
+    type: "portable os",
+    tech: "buildroot, tauri, svelte, ollama, linux",
+    tags: ["systems", "infra"],
+    github: "https://github.com/Rhishavhere/Zingx",
+    website: null,
+    year: "2025",
+    desc: "zingx is a personal homelab that fits in your pocket — boots from usb, runs entirely in ram, terminal + internet by default. tauri + svelte ui for daily dev; buildroot for the actual os image.",
     challenge:
-      "a solidarity product has to make giving feel safe while protecting the dignity and privacy of people who need help.",
+      "homelab setups are tied to hardware at home. i wanted something portable — plug in, boot, have a full linux environment with ai and a ui shell.",
     approach:
-      "i simplified the flow around three essential bill categories and designed anonymity into the interface by showing only the information needed to complete a donation.",
+      "buildroot external tree for boot chain (initramfs → squashfs), tauri shell with terminal/browser/dock modes, ollama integration for on-device inference, luks vault partition roadmap.",
     impact:
-      "the application turned a sensitive assistance flow into a clear mobile experience built around trust, privacy, and fast action.",
-    achievements: [
+      "personal computing infrastructure you carry — part of the same stack as ozen, amber desktop, and onecloud.",
+    highlights: [
       {
-        number: "100%",
-        title: "anonymous & trustworthy design",
-        desc: "ensured 100% anonymity for both donors and recipients by displaying only the bill amount and category (electricity, water, gas), fostering trust and participation in the solidarity system.",
+        title: "usb boot chain",
+        desc: "buildroot image flashes to usb — boot anywhere, run in ram.",
       },
       {
-        number: "3",
-        title: "simplified bill categories",
-        desc: "simplified the donor experience by limiting the display of bills to three essential categories (electricity, water, gas), making the payment process clear and fast.",
+        title: "tauri daily ui",
+        desc: "terminal, browser, dock modes — develop on windows, deploy to os.",
       },
       {
-        number: "3+",
-        title: "intuitive ux flows",
-        desc: "designed intuitive user flows for key operations (leaving a bill, querying a bill, payment), minimizing friction and ensuring ease of use for citizens needing assistance.",
+        title: "local ai in the image",
+        desc: "ollama + gemma3:1b baked into the homelab pocket vision.",
       },
     ],
-    link: "/projects/askida-fatura",
-    asset: "/assets/projects/askida-fatura",
+    features: [
+      "buildroot boot",
+      "tauri + svelte shell",
+      "usb flash scripts",
+      "ollama integration",
+    ],
+    link: "/projects/zingx",
     banner: "askida-fatura",
-    type: "mobile application",
-    tech: "react native, figma",
-    tags: ["municipal", "mobile", "uiux", "social-impact", "react-native"],
+    asset: "/assets/projects/askida-fatura",
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
       { file: "3.webp", isWide: false },
-      { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
     ],
   },
-
-  // ----------------------------------------------------
-  // 8 — Can Dostlar | Safe Animal Adoption Platform
-  // ----------------------------------------------------
   {
     id: 8,
-    project_name: "can dostlar | safe animal adoption platform",
-    company_name: "balıkesir metropolitan municipality",
-    role: "frontend developer & ui/ux designer",
-    name: "can dostlar | safe animal adoption platform",
-    desc: "a react native mobile application designed to ensure the safe and transparent rehoming of stray animals. the platform focuses on human-centered adoption processes to create lasting bonds between citizens and animals.",
+    index: "08",
+    slug: "onecloud",
+    project_name: "onecloud",
+    tagline: "personal cloud server — monitor, control, and chat with your devices",
+    context: "infrastructure",
+    role: "creator",
+    type: "backend api",
+    tech: "python, flask, cloudflare tunnel, gemini",
+    tags: ["systems", "infra"],
+    github: "https://github.com/Rhishavhere/onecloud",
+    website: null,
+    year: "2024",
+    desc: "onecloud is the backend for a personal cloud — real-time system metrics, remote screenshots, live desktop streaming, shutdown/reboot control, and an ai chat endpoint that knows your machine state. exposed via cloudflare tunnel, no open ports.",
     challenge:
-      "adoption flows needed to feel warm and simple without losing the structure required for safe, responsible animal rehoming.",
+      "monitoring and controlling your own devices remotely usually means vpn complexity, open ports, or trusting a third-party rmm tool.",
     approach:
-      "i designed profile details, application steps, and approval flow around transparency so citizens could make informed decisions before visiting the shelter.",
+      "flask api per platform (windows + fedora linux), token auth, cloudflare tunnel for secure outbound-only access, gemini ai chat with optional screenshot context, pairs with mydesk.app frontend dashboard.",
     impact:
-      "the app created a reusable social-welfare pattern inside the municipality's mobile ecosystem while making adoption information easier to understand.",
-    achievements: [
+      "personal infrastructure you own — homelab visibility and control from anywhere.",
+    highlights: [
       {
-        number: "3",
-        title: "structured vetting process",
-        // Achievement: 3-step critical flow for safe and ethical adoption.
-        desc: "designed a 3-step critical adoption flow (online application → shelter visit/bonding → final approval) to ensure safe rehoming and facilitate the human-animal bond.",
+        title: "cloudflare tunnel",
+        desc: "no open ports, tls by default, accessible behind nat.",
       },
       {
-        number: "5+",
-        title: "transparent animal profiles",
-        // Achievement: Display of key data points (age, weight, gender, etc.) from the detail page.
-        desc: "developed a ui/ux that transparently presents 5+ vital data points for each animal, including age, weight, and personality, supporting responsible and informed adoption decisions.",
+        title: "full system api",
+        desc: "cpu, memory, disk, processes, battery, temperature, screenshots, livestream.",
       },
       {
-        number: "1",
-        title: "unified mobile ecosystem",
-        // Achievement: The contribution to the scalable, municipal app ecosystem.
-        desc: "contributed to the development of the municipality's unified mobile ecosystem (5+ apps), showcasing the ability to deliver consistent, scalable, and reusable social welfare solutions across multiple react native applications.",
+        title: "ai device chat",
+        desc: "gemini endpoint with optional screenshot for contextual machine queries.",
       },
     ],
-    link: "/projects/can-dostlar",
-    asset: "/assets/projects/can-dostlar",
+    features: [
+      "system metrics api",
+      "remote screenshot",
+      "mjpeg livestream",
+      "remote mouse/keyboard",
+      "gemini ai chat",
+    ],
+    link: "/projects/onecloud",
     banner: "can-dostlar",
-    type: "mobile application",
-    tech: "react native, figma",
-    tags: ["municipal", "mobile", "uiux", "social-impact", "animal-welfare"],
+    asset: "/assets/projects/can-dostlar",
     images: [
       { file: "1.webp", isWide: true },
       { file: "2.webp", isWide: false },
       { file: "3.webp", isWide: false },
-      { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
-    ],
-  },
-
-  // -------------------------------
-  // 9 — Balıkesir Eczane App
-  // -------------------------------
-  {
-    id: 9,
-    project_name: "balıkesir | pharmacy finder",
-    company_name: "balıkesir metropolitan municipality",
-    role: "frontend developer & ui/ux designer",
-    name: "balıkesir | pharmacy finder",
-    desc: "a critical mobile application providing real-time, location-based guidance to on-duty pharmacies. the ux prioritizes speed and clarity for citizens seeking urgent medical access.",
-    challenge:
-      "people looking for an on-duty pharmacy are often stressed, mobile, and time-constrained, so the interface had to remove every nonessential step.",
-    approach:
-      "i designed the flow around emergency ux: nearby pharmacy, distance, and navigation access within as few taps as possible.",
-    impact:
-      "the application made urgent pharmacy discovery faster and more reliable through location-based, real-time information.",
-    achievements: [
-      {
-        number: "2",
-        title: "quick-access navigation flow",
-        desc: "designed the 'emergency ux' to enable citizens to find the nearest on-duty pharmacy and initiate navigation (yol tarifi al) within a maximum of 2 taps from opening the app.",
-      },
-      {
-        number: "100%",
-        title: "real-time location & distance",
-        desc: "implemented a real-time system that calculates and displays the precise distance (e.g., 88m) between the user and the pharmacy, ensuring 100% location accuracy for time-critical services.",
-      },
-      {
-        number: "24/7",
-        title: "high-availability api integration",
-        desc: "established a 24/7 high-availability system by integrating a central api for real-time updating of on-duty pharmacy schedules, providing reliable information during emergency hours.",
-      },
-    ],
-    link: "/projects/balikesir-eczane",
-    asset: "/assets/projects/balikesir-eczane",
-    banner: "balikesir-eczane",
-    type: "mobile application",
-    tech: "react native, figma",
-    tags: ["municipal", "mobile", "uiux", "emergency-service", "maps"],
-    images: [
-      { file: "1.webp", isWide: true },
-      { file: "2.webp", isWide: false },
-      { file: "3.webp", isWide: false },
-      { file: "4.webp", isWide: false },
-      { file: "5.webp", isWide: false },
     ],
   },
 ];

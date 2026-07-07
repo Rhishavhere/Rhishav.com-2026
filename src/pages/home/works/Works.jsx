@@ -1,16 +1,15 @@
 import { useTranslation } from "react-i18next";
-import { useMemo } from "react";
 import gsap from "gsap";
 
 import { useProjects } from "@/hooks/useProjects";
 import { useProjectCursor } from "@/hooks/useProjectCursor";
-import ProjectCard from "@/components/project-card/ProjectCard";
-import ProjectSkeleton from "@/components/project-skeleton/ProjectSkeleton";
+import ProjectsShowcase from "@/components/projects/ProjectsShowcase";
 import AnimatedSplit from "@/components/animated-split/AnimatedSplit";
 import PrimerLink from "@/ui/link/PrimerLink";
+import ProjectSkeleton from "@/components/project-skeleton/ProjectSkeleton";
 import styles from "./style.module.css";
 
-const WorksHomePage = () => {
+const Works = () => {
   const { t } = useTranslation();
   const { data: projects, isLoading, isError } = useProjects();
 
@@ -30,32 +29,27 @@ const WorksHomePage = () => {
     gsap.fromTo(el, { scale: 0.97 }, { scale: 1, duration: 0.3, ease: "hop" });
   };
 
-  const lastThreeWorks = useMemo(() => projects?.slice(0, 6) || [], [projects]);
-
   if (isLoading) {
     return (
-      <div className="relative flex w-screen flex-col items-start gap-[10vh]">
-        <div className="grid w-screen grid-cols-4 gap-x-0 gap-y-[10vh] max-[1024px]:grid-cols-2 max-[1024px]:gap-y-[5vh] max-[600px]:grid-cols-1 max-[600px]:gap-y-[2.5vh]">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <ProjectSkeleton key={`skeleton-${index}`} />
-          ))}
-        </div>
-      </div>
+      <section className="grid w-full grid-cols-2 gap-[5vh] px-[2vw] max-[600px]:grid-cols-1">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <ProjectSkeleton key={`skeleton-${index}`} />
+        ))}
+      </section>
     );
   }
 
-  if (isError)
+  if (isError) {
     return (
-      <div className="relative flex w-screen flex-col items-start gap-[10vh]">
-        <p className="px-[1vw] py-[6em] !text-[0.9em] !font-[300] text-[var(--wb500)]">
-          ● {t("worksHome.error")}
-        </p>
-      </div>
+      <p className="px-[2vw] py-[6em] text-[0.9em] font-[300] text-[var(--wb500)]">
+        ● {t("worksHome.error")}
+      </p>
     );
+  }
 
   return (
-    <section className="relative flex w-screen flex-col items-center gap-[8vh] px-[2vw] py-[6vh]">
-      <div className="flex w-[30vw] flex-col items-center gap-[2vh] text-center max-[1024px]:w-[60vw] max-[600px]:w-[90vw]">
+    <section className="relative flex w-full flex-col items-center gap-[6vh] py-[4vh]">
+      <div className="flex w-full max-w-[40em] flex-col items-center gap-[2vh] px-[2vw] text-center">
         <AnimatedSplit
           text={t("worksHome.title")}
           className="!text-[0.875em] !font-[200] opacity-50"
@@ -74,19 +68,14 @@ const WorksHomePage = () => {
         />
       </div>
 
-      <div className="grid w-screen grid-cols-4 gap-x-0 gap-y-[10vh] max-[1024px]:grid-cols-2 max-[1024px]:gap-y-[5vh] max-[600px]:grid-cols-1 max-[600px]:gap-y-[2.5vh]">
-        {lastThreeWorks.map((work, index) => (
-          <ProjectCard
-            key={work.link}
-            work={work}
-            index={index}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-          />
-        ))}
-      </div>
+      <ProjectsShowcase
+        projects={projects}
+        limit={6}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+      />
 
       <div className="self-center">
         <PrimerLink href="/projects" buttonText={t("worksHome.viewAll")} random />
@@ -112,4 +101,4 @@ const WorksHomePage = () => {
   );
 };
 
-export default WorksHomePage;
+export default Works;
