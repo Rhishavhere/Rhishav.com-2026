@@ -6,7 +6,7 @@ import { prefersReducedMotion } from "@/utils/motion";
 import IntroTopBar from "./IntroTopBar";
 
 // base speed and hover behavior in px/s
-const BASE_SPEED = 240; // normal flow (left)
+const BASE_SPEED = 180; // normal flow (left)
 const FAST_MULT = 3; // hover left → speed up
 const REVERSE_MULT = -1.4; // hover right → reverse
 const SMOOTH = 6; // speed transition smoothness (higher = settles faster)
@@ -132,7 +132,7 @@ const IntroSec = ({ active = true }) => {
       <div className={styles.vid}>
         <img
           className={styles.vidMedia}
-          src="/assets/me/back.jpg"
+          src="/assets/me/back.webp"
           alt=""
           fetchPriority={active ? "high" : "auto"}
         />

@@ -4,6 +4,19 @@
 @theme {
   --font-sans: "Outfit", system-ui, sans-serif;
 
+  --font-geist-sans: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-geist-mono: "Geist Mono", ui-monospace, monospace;
+  --font-geist-pixel-square: "Geist Pixel Square", "Geist Mono", ui-monospace,
+    monospace;
+  --font-geist-pixel-grid: "Geist Pixel Grid", "Geist Mono", ui-monospace,
+    monospace;
+  --font-geist-pixel-circle: "Geist Pixel Circle", "Geist Mono", ui-monospace,
+    monospace;
+  --font-geist-pixel-triangle: "Geist Pixel Triangle", "Geist Mono", ui-monospace,
+    monospace;
+  --font-geist-pixel-line: "Geist Pixel Line", "Geist Mono", ui-monospace,
+    monospace;
+
   --color-wb-50: var(--wb50);
   --color-wb-100: var(--wb100);
   --color-wb-200: var(--wb200);
